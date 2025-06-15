@@ -46,9 +46,9 @@ export default function Home() {
 								<button className="flex-1 bg-gray-900 hover:bg-gray-800 text-white px-3 sm:px-8 py-3 sm:py-4 rounded-lg sm:rounded-full text-xs sm:text-lg font-medium transition-colors shadow-md">
 									Discover & Explore
 								</button>
-								<button className="flex-1 bg-blue-500 hover:bg-blue-600 text-white px-3 sm:px-8 py-3 sm:py-4 rounded-lg sm:rounded-full text-xs sm:text-lg font-medium transition-colors shadow-md">
+								<Link href="#contact" className="flex-1 bg-blue-500 hover:bg-blue-600 text-white px-3 sm:px-8 py-3 sm:py-4 rounded-lg sm:rounded-full text-xs sm:text-lg font-medium transition-colors shadow-md text-center">
 									Contact Us
-								</button>
+								</Link>
 							</div>
 						</div>
 
