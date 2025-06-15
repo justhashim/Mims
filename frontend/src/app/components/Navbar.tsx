@@ -31,13 +31,13 @@ const Navbar = () => {
 				scrolled || isGalleryPage ? "bg-white shadow-md" : "bg-transparent"
 			}`}
 		>
-			<div className="container mx-auto px-6 py-3">
+			<div className="container mx-auto px-4 py-3">
 				<div className="flex items-center justify-between">
 					<Link
 						href="/"
-						className="flex items-center"
+						className="flex items-center flex-1 max-w-[80%]"
 					>
-						<div className="relative h-16 w-16 mr-3">
+						<div className="relative h-14 w-14 mr-2">
 							<Image
 								src="/images/logo.png"
 								alt="Mims Convention Centre Logo"
@@ -49,8 +49,8 @@ const Navbar = () => {
 						<span className="hidden md:block text-2xl font-semibold text-gray-900 font-heading tracking-normal">
 							Mims Convention Centre
 						</span>
-						<span className="md:hidden text-xl font-bold text-gray-900">
-							Mims
+						<span className="md:hidden text-lg font-medium text-gray-900 leading-tight font-heading">
+							Mims Convention Centre
 						</span>
 					</Link>
 
