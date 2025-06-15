@@ -29,16 +29,28 @@ export default function Home() {
 							{/* Stats Cards */}
 							<div className="grid grid-cols-3 gap-2 md:gap-6 mb-10">
 								<div className="bg-white p-3 md:p-6 rounded-xl shadow-md">
-									<div className="text-gray-900 text-2xl md:text-3xl font-bold">2000+</div>
-									<div className="text-gray-500 text-xs md:text-sm">Seating Capacity</div>
+									<div className="text-gray-900 text-2xl md:text-3xl font-bold">
+										2000+
+									</div>
+									<div className="text-gray-500 text-xs md:text-sm">
+										Seating Capacity
+									</div>
 								</div>
 								<div className="bg-white p-3 md:p-6 rounded-xl shadow-md">
-									<div className="text-gray-900 text-2xl md:text-3xl font-bold">12</div>
-									<div className="text-gray-500 text-xs md:text-sm">Event Spaces</div>
+									<div className="text-gray-900 text-2xl md:text-3xl font-bold">
+										12
+									</div>
+									<div className="text-gray-500 text-xs md:text-sm">
+										Event Spaces
+									</div>
 								</div>
 								<div className="bg-white p-3 md:p-6 rounded-xl shadow-md">
-									<div className="text-gray-900 text-2xl md:text-3xl font-bold">500+</div>
-									<div className="text-gray-500 text-xs md:text-sm">Events Hosted</div>
+									<div className="text-gray-900 text-2xl md:text-3xl font-bold">
+										500+
+									</div>
+									<div className="text-gray-500 text-xs md:text-sm">
+										Events Hosted
+									</div>
 								</div>
 							</div>
 
@@ -46,7 +58,10 @@ export default function Home() {
 								<button className="flex-1 bg-gray-900 hover:bg-gray-800 text-white px-3 sm:px-8 py-3 sm:py-4 rounded-lg sm:rounded-full text-xs sm:text-lg font-medium transition-colors shadow-md">
 									Discover & Explore
 								</button>
-								<Link href="#contact" className="flex-1 bg-blue-500 hover:bg-blue-600 text-white px-3 sm:px-8 py-3 sm:py-4 rounded-lg sm:rounded-full text-xs sm:text-lg font-medium transition-colors shadow-md text-center">
+								<Link
+									href="#contact"
+									className="flex-1 bg-blue-500 hover:bg-blue-600 text-white px-3 sm:px-8 py-3 sm:py-4 rounded-lg sm:rounded-full text-xs sm:text-lg font-medium transition-colors shadow-md text-center"
+								>
 									Contact Us
 								</Link>
 							</div>
@@ -381,11 +396,16 @@ export default function Home() {
 											</svg>
 										</div>
 										<div>
-											<h4 className="font-medium text-gray-800">Address</h4>
-											<p className="text-gray-600 mt-1">
-												2FF4+J5X, Ernakulam - Thekkady Rd, Pattimattom, Kerala
-												683562
-											</p>
+											<a
+												href="https://maps.app.goo.gl/hGPrwY4bsFPdP9XG9"
+												target="_blank"
+											>
+												<h4 className="font-medium text-gray-800">Address</h4>
+												<p className="text-gray-600 mt-1">
+													2FF4+J5X, Ernakulam - Thekkady Rd, Pattimattom, Kerala
+													683562
+												</p>
+											</a>
 										</div>
 									</div>
 
@@ -401,8 +421,10 @@ export default function Home() {
 											</svg>
 										</div>
 										<div>
-											<h4 className="font-medium text-gray-800">Phone</h4>
-											<p className="text-gray-600 mt-1">(123) 456-7890</p>
+											<a href="tel:+91 95443 11236" target="_blank">
+												<h4 className="font-medium text-gray-800">Phone</h4>
+												<p className="text-gray-600 mt-1">+91 95443 11236</p>
+											</a>
 										</div>
 									</div>
 
