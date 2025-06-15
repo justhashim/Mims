@@ -46,7 +46,7 @@ export default function Home() {
 								</div>
 								<div className="bg-white p-3 md:p-6 rounded-xl shadow-md">
 									<div className="text-gray-900 text-2xl md:text-3xl font-bold">
-										500+
+										50+
 									</div>
 									<div className="text-gray-500 text-xs md:text-sm">
 										Events Hosted
