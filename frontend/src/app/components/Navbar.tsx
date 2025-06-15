@@ -35,9 +35,9 @@ const Navbar = () => {
 				<div className="flex items-center justify-between">
 					<Link
 						href="/"
-						className="text-2xl font-bold text-gray-900 flex items-center"
+						className="flex items-center"
 					>
-						<div className="relative h-10 w-10 mr-2">
+						<div className="relative h-10 w-10 mr-3">
 							<Image
 								src="/images/logo.png"
 								alt="Mims Convention Centre Logo"
@@ -46,7 +46,12 @@ const Navbar = () => {
 								priority
 							/>
 						</div>
-						Mims Convention Centre
+						<span className="hidden md:block text-3xl font-semibold text-gray-900 font-heading tracking-normal">
+							Mims Convention Centre
+						</span>
+						<span className="md:hidden text-2xl font-bold text-gray-900">
+							Mims
+						</span>
 					</Link>
 
 					<div className="hidden md:flex items-center space-x-8">

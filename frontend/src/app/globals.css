@@ -24,3 +24,8 @@ body {
 	color: var(--foreground);
 	font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Custom font classes */
+.font-heading {
+  font-family: var(--font-heading), sans-serif;
+}

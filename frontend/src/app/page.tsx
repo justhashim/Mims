@@ -30,7 +30,7 @@ export default function Home() {
 							<div className="grid grid-cols-3 gap-2 md:gap-6 mb-10">
 								<div className="bg-white p-3 md:p-6 rounded-xl shadow-md">
 									<div className="text-gray-900 text-2xl md:text-3xl font-bold">
-										2000+
+										500+
 									</div>
 									<div className="text-gray-500 text-xs md:text-sm">
 										Seating Capacity
