@@ -7,11 +7,15 @@ import { useState, useEffect } from "react";
 const Navbar = () => {
 	const [scrolled, setScrolled] = useState(false);
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+	const [isGalleryPage, setIsGalleryPage] = useState(false);
 
 	useEffect(() => {
 		const handleScroll = () => {
 			setScrolled(window.scrollY > 20);
 		};
+
+		// Check if we're on the gallery page
+		setIsGalleryPage(window.location.pathname.includes('/gallery'));
 
 		window.addEventListener("scroll", handleScroll);
 		return () => window.removeEventListener("scroll", handleScroll);
@@ -24,7 +28,7 @@ const Navbar = () => {
 	return (
 		<nav
 			className={`fixed w-full top-0 z-50 transition-all duration-300 ${
-				scrolled ? "bg-white shadow-md" : "bg-transparent"
+				scrolled || isGalleryPage ? "bg-white shadow-md" : "bg-transparent"
 			}`}
 		>
 			<div className="container mx-auto px-6 py-4">
