@@ -14,7 +14,7 @@ export default function Home() {
 				<div className="container mx-auto px-4">
 					<div className="grid md:grid-cols-2 gap-12 items-center">
 						{/* Left side - Value proposition */}
-						<div className="text-left">
+						<div className="text-left bg-gray-100 p-8 rounded-xl shadow-lg h-[550px] flex flex-col justify-center">
 							<span className="text-gray-500 font-medium mb-2 block">
 								PREMIER EVENT VENUE
 							</span>
