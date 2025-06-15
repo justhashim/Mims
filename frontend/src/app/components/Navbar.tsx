@@ -1,10 +1,12 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 
 const Navbar = () => {
 	const [scrolled, setScrolled] = useState(false);
+	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
 	useEffect(() => {
 		const handleScroll = () => {
@@ -14,6 +16,10 @@ const Navbar = () => {
 		window.addEventListener("scroll", handleScroll);
 		return () => window.removeEventListener("scroll", handleScroll);
 	}, []);
+	
+	const toggleMobileMenu = () => {
+		setMobileMenuOpen(!mobileMenuOpen);
+	};
 
 	return (
 		<nav
@@ -27,7 +33,15 @@ const Navbar = () => {
 						href="/"
 						className="text-2xl font-bold text-gray-900 flex items-center"
 					>
-						<span className="bg-gray-900 h-8 w-2 rounded-full mr-2"></span>
+						<div className="relative h-10 w-10 mr-2">
+							<Image
+								src="/images/logo.png"
+								alt="Mims Convention Centre Logo"
+								fill
+								style={{ objectFit: "contain" }}
+								priority
+							/>
+						</div>
 						Mims Convention Centre
 					</Link>
 
@@ -72,7 +86,11 @@ const Navbar = () => {
 					</div>
 
 					<div className="md:hidden">
-						<button className="flex items-center p-2 text-gray-900 rounded-full hover:bg-gray-100">
+						<button 
+							onClick={toggleMobileMenu}
+							className="flex items-center p-2 text-gray-900 rounded-full hover:bg-gray-100"
+							aria-label="Toggle mobile menu"
+						>
 							<svg
 								className="w-6 h-6"
 								fill="none"
@@ -90,6 +108,53 @@ const Navbar = () => {
 						</button>
 					</div>
 				</div>
+				
+				{/* Mobile menu */}
+				{mobileMenuOpen && (
+					<div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg py-4 px-6 transition-all duration-300 ease-in-out">
+						<div className="flex flex-col space-y-4">
+							<Link
+								href="/"
+								className="px-2 py-2 text-gray-700 hover:text-gray-900 transition-colors text-sm font-medium"
+								onClick={() => setMobileMenuOpen(false)}
+							>
+								Home
+							</Link>
+							<Link
+								href="/#about"
+								className="px-2 py-2 text-gray-700 hover:text-gray-900 transition-colors text-sm font-medium"
+								onClick={() => setMobileMenuOpen(false)}
+							>
+								About
+							</Link>
+							<Link
+								href="/#facilities"
+								className="px-2 py-2 text-gray-700 hover:text-gray-900 transition-colors text-sm font-medium"
+								onClick={() => setMobileMenuOpen(false)}
+							>
+								Facilities
+							</Link>
+							<Link
+								href="/gallery"
+								className="px-2 py-2 text-gray-700 hover:text-gray-900 transition-colors text-sm font-medium"
+								onClick={() => setMobileMenuOpen(false)}
+							>
+								Gallery
+							</Link>
+							<div className="border-t border-gray-200 my-2"></div>
+							<a href="tel:+1234567890" className="px-2 py-2 text-gray-900 font-medium">
+								(123) 456-7890
+							</a>
+							<Link
+								href="/#contact"
+								className="mt-2 px-4 py-2 bg-gray-900 hover:bg-gray-800 text-white rounded-full transition-colors shadow-sm text-sm text-center"
+								onClick={() => setMobileMenuOpen(false)}
+							>
+								Contact
+							</Link>
+						</div>
+					</div>
+				)}
 			</div>
 		</nav>
 	);

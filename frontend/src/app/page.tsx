@@ -14,7 +14,7 @@ export default function Home() {
 				<div className="container mx-auto px-4">
 					<div className="grid md:grid-cols-2 gap-12 items-center">
 						{/* Left side - Value proposition */}
-						<div className="text-left bg-gray-100 p-8 rounded-xl shadow-lg h-[550px] flex flex-col justify-center">
+						<div className="text-left bg-gray-100 p-4 md:p-8 rounded-xl shadow-lg h-auto md:h-[550px] flex flex-col justify-center">
 							<span className="text-gray-500 font-medium mb-2 block">
 								PREMIER EVENT VENUE
 							</span>
@@ -27,28 +27,26 @@ export default function Home() {
 							</p>
 
 							{/* Stats Cards */}
-							<div className="grid grid-cols-3 gap-6 mb-10">
-								<div className="bg-white p-6 rounded-xl shadow-md">
-									<div className="text-gray-900 text-3xl font-bold">5000+</div>
-									<div className="text-gray-500 text-sm">
-										Seating Capacity
-									</div>
+							<div className="grid grid-cols-3 gap-2 md:gap-6 mb-10">
+								<div className="bg-white p-3 md:p-6 rounded-xl shadow-md">
+									<div className="text-gray-900 text-2xl md:text-3xl font-bold">2000+</div>
+									<div className="text-gray-500 text-xs md:text-sm">Seating Capacity</div>
 								</div>
-								<div className="bg-white p-6 rounded-xl shadow-md">
-									<div className="text-gray-900 text-3xl font-bold">12</div>
-									<div className="text-gray-500 text-sm">Event Spaces</div>
+								<div className="bg-white p-3 md:p-6 rounded-xl shadow-md">
+									<div className="text-gray-900 text-2xl md:text-3xl font-bold">12</div>
+									<div className="text-gray-500 text-xs md:text-sm">Event Spaces</div>
 								</div>
-								<div className="bg-white p-6 rounded-xl shadow-md">
-									<div className="text-gray-900 text-3xl font-bold">500+</div>
-									<div className="text-gray-500 text-sm">Events Hosted</div>
+								<div className="bg-white p-3 md:p-6 rounded-xl shadow-md">
+									<div className="text-gray-900 text-2xl md:text-3xl font-bold">500+</div>
+									<div className="text-gray-500 text-xs md:text-sm">Events Hosted</div>
 								</div>
 							</div>
 
-							<div className="flex space-x-4">
-								<button className="bg-gray-900 hover:bg-gray-800 text-white px-8 py-4 rounded-full text-lg font-medium transition-colors inline-block shadow-md">
+							<div className="flex space-x-2 sm:space-x-4">
+								<button className="flex-1 bg-gray-900 hover:bg-gray-800 text-white px-3 sm:px-8 py-3 sm:py-4 rounded-lg sm:rounded-full text-xs sm:text-lg font-medium transition-colors shadow-md">
 									Discover & Explore
 								</button>
-								<button className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-4 rounded-full text-lg font-medium transition-colors inline-block shadow-md">
+								<button className="flex-1 bg-blue-500 hover:bg-blue-600 text-white px-3 sm:px-8 py-3 sm:py-4 rounded-lg sm:rounded-full text-xs sm:text-lg font-medium transition-colors shadow-md">
 									Contact Us
 								</button>
 							</div>
@@ -204,10 +202,10 @@ export default function Home() {
 							<path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
 						</svg>
 						<p className="text-xl italic mb-6">
-							"Mims Convention Centre exceeded all our expectations. The venue
-							is stunning, the staff was professional, and our guests were
-							thoroughly impressed. We couldn't have asked for a better
-							experience for our annual corporate conference."
+							&ldquo;Mims Convention Centre exceeded all our expectations. The
+							venue is stunning, the staff was professional, and our guests were
+							thoroughly impressed. We couldn&apos;t have asked for a better
+							experience for our annual corporate conference.&rdquo;
 						</p>
 						<div className="flex items-center">
 							<div className="w-12 h-12 bg-blue-500 rounded-full mr-4"></div>
@@ -245,8 +243,8 @@ export default function Home() {
 							</p>
 							<p className="text-gray-600 mb-6">
 								Our venue has hosted thousands of successful events, from
-								international conferences to elegant weddings. We've built our
-								reputation on attention to detail, exceptional service, and
+								international conferences to elegant weddings. We&apos;ve built
+								our reputation on attention to detail, exceptional service, and
 								creating memorable experiences for every client.
 							</p>
 							<p className="text-gray-600">
@@ -270,10 +268,10 @@ export default function Home() {
 
 						<div className="bg-white p-8 rounded-lg shadow-lg">
 							<p className="text-gray-600 mb-6">
-								At Mims Convention Centre, we're committed to making your event
-								a success. We guarantee professional service, state-of-the-art
-								facilities, and dedicated support throughout your event planning
-								process.
+								At Mims Convention Centre, we&apos;re committed to making your
+								event a success. We guarantee professional service,
+								state-of-the-art facilities, and dedicated support throughout
+								your event planning process.
 							</p>
 							<p className="text-gray-600 mb-6">
 								Our flexible booking policies ensure peace of mind, with
@@ -282,9 +280,9 @@ export default function Home() {
 								needs and budget.
 							</p>
 							<p className="text-gray-600">
-								If any aspect of our service doesn't meet your expectations, our
-								management team will work directly with you to make it right.
-								Your satisfaction is our highest priority.
+								If any aspect of our service doesn&apos;t meet your
+								expectations, our management team will work directly with you to
+								make it right. Your satisfaction is our highest priority.
 							</p>
 						</div>
 					</div>
