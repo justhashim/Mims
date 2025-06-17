@@ -83,6 +83,24 @@ export default function Home() {
 		<div className="min-h-screen flex flex-col">
 			<Navbar />
 
+			{/* Floating Google Maps Button */}
+			<a
+				href="https://maps.app.goo.gl/hGPrwY4bsFPdP9XG9"
+				target="_blank"
+				rel="noopener noreferrer"
+				className="floating-maps-btn"
+				aria-label="Open Google Maps"
+			>
+				<div className="floating-maps-tooltip">View on Google Maps</div>
+				<svg
+					viewBox="0 0 24 24"
+					fill="currentColor"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+				</svg>
+			</a>
+
 			{/* 1. Headline Section - Modern and elegant hero */}
 			<section className="min-h-screen py-24 bg-gradient-to-br from-slate-50 via-white to-indigo-50 flex items-center relative overflow-hidden">
 				{/* Background decoration */}
@@ -91,56 +109,56 @@ export default function Home() {
 				<div className="absolute bottom-0 left-0 translate-y-12 -translate-x-12 w-96 h-96 bg-gradient-to-br from-amber-400/20 to-orange-400/20 rounded-full blur-3xl -z-10"></div>
 
 				<div className="container mx-auto px-4">
-					<div className="grid md:grid-cols-2 gap-12 items-center">
+					<div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
 						{/* Left side - Value proposition */}
 						<div className="text-left modern-card p-6 md:p-10 rounded-2xl h-auto md:h-[550px] flex flex-col justify-center animate-fade-in-up">
-							<span className="text-indigo-600 font-semibold mb-3 block animate-fade-in-up animation-delay-200 text-sm tracking-wide uppercase">
+							<span className="text-indigo-600 font-semibold mb-3 block animate-fade-in-up animation-delay-200 text-xs md:text-sm tracking-wide uppercase">
 								PREMIER EVENT VENUE
 							</span>
-							<h1 className="text-4xl md:text-6xl font-bold text-slate-900 mb-6 animate-fade-in-up animation-delay-400 leading-tight">
+							<h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-slate-900 mb-4 md:mb-6 animate-fade-in-up animation-delay-400 leading-tight">
 								Your Perfect
 								<span className="gradient-text block">Event Space</span>
 							</h1>
-							<p className="text-xl text-slate-600 mb-8 max-w-xl animate-fade-in-up animation-delay-600 leading-relaxed">
+							<p className="text-lg md:text-xl text-slate-600 mb-6 md:mb-8 max-w-xl animate-fade-in-up animation-delay-600 leading-relaxed">
 								Mims Convention Centre offers versatile spaces for any occasion,
 								from corporate events to elegant weddings.
 							</p>
 
 							{/* Stats Cards */}
-							<div className="grid grid-cols-3 gap-3 md:gap-6 mb-10 animate-fade-in-up animation-delay-800">
-								<div className="modern-card p-4 md:p-6 rounded-2xl hover:shadow-2xl hover:scale-105 transition-all duration-500 group border border-indigo-100">
-									<div className="text-slate-900 text-2xl md:text-3xl font-bold group-hover:text-indigo-600 transition-colors duration-300">
+							<div className="grid grid-cols-3 gap-2 sm:gap-3 md:gap-6 mb-8 md:mb-10 animate-fade-in-up animation-delay-800">
+								<div className="modern-card p-3 sm:p-4 md:p-6 rounded-xl md:rounded-2xl hover:shadow-2xl hover:scale-105 transition-all duration-500 group border border-indigo-100">
+									<div className="text-slate-900 text-xl sm:text-2xl md:text-3xl font-bold group-hover:text-indigo-600 transition-colors duration-300">
 										500+
 									</div>
-									<div className="text-slate-500 text-xs md:text-sm font-medium">
+									<div className="text-slate-500 text-xs sm:text-sm font-medium leading-tight">
 										Seating Capacity
 									</div>
 								</div>
-								<div className="modern-card p-4 md:p-6 rounded-2xl hover:shadow-2xl hover:scale-105 transition-all duration-500 group border border-cyan-100 animation-delay-100">
-									<div className="text-slate-900 text-2xl md:text-3xl font-bold group-hover:text-cyan-600 transition-colors duration-300">
+								<div className="modern-card p-3 sm:p-4 md:p-6 rounded-xl md:rounded-2xl hover:shadow-2xl hover:scale-105 transition-all duration-500 group border border-cyan-100 animation-delay-100">
+									<div className="text-slate-900 text-xl sm:text-2xl md:text-3xl font-bold group-hover:text-cyan-600 transition-colors duration-300">
 										250+
 									</div>
-									<div className="text-slate-500 text-xs md:text-sm font-medium">
+									<div className="text-slate-500 text-xs sm:text-sm font-medium leading-tight">
 										Parking Space
 									</div>
 								</div>
-								<div className="modern-card p-4 md:p-6 rounded-2xl hover:shadow-2xl hover:scale-105 transition-all duration-500 group border border-amber-100 animation-delay-200">
-									<div className="text-slate-900 text-2xl md:text-3xl font-bold group-hover:text-amber-600 transition-colors duration-300">
+								<div className="modern-card p-3 sm:p-4 md:p-6 rounded-xl md:rounded-2xl hover:shadow-2xl hover:scale-105 transition-all duration-500 group border border-amber-100 animation-delay-200">
+									<div className="text-slate-900 text-xl sm:text-2xl md:text-3xl font-bold group-hover:text-amber-600 transition-colors duration-300">
 										50+
 									</div>
-									<div className="text-slate-500 text-xs md:text-sm font-medium">
+									<div className="text-slate-500 text-xs sm:text-sm font-medium leading-tight">
 										Events Hosted
 									</div>
 								</div>
 							</div>
 
-							<div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up animation-delay-1000">
-								<button className="btn-primary px-8 py-4 rounded-2xl text-base font-semibold shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
+							<div className="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fade-in-up animation-delay-1000">
+								<button className="btn-primary px-6 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl text-sm sm:text-base font-semibold shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
 									Discover & Explore
 								</button>
 								<Link
 									href="#contact"
-									className="btn-secondary px-8 py-4 rounded-2xl text-base font-semibold shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 text-center inline-block"
+									className="btn-secondary px-6 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl text-sm sm:text-base font-semibold shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 text-center inline-block"
 								>
 									Contact Us
 								</Link>
@@ -408,7 +426,7 @@ export default function Home() {
 						)}
 
 						{/* Main Image Display */}
-						<div className="relative h-96 md:h-[500px] rounded-xl overflow-hidden shadow-2xl group carousel-container">
+						<div className="relative h-64 sm:h-80 md:h-[500px] rounded-xl md:rounded-2xl overflow-hidden shadow-2xl group carousel-container">
 							<Image
 								src={galleryImages[currentImageIndex].src}
 								alt={galleryImages[currentImageIndex].alt}
@@ -419,11 +437,11 @@ export default function Home() {
 
 							{/* Overlay with title */}
 							<div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end">
-								<div className="p-6 md:p-8">
-									<h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
+								<div className="p-4 sm:p-6 md:p-8">
+									<h3 className="text-lg sm:text-xl md:text-3xl font-bold text-white mb-1 sm:mb-2">
 										{galleryImages[currentImageIndex].title}
 									</h3>
-									<p className="text-gray-200">
+									<p className="text-gray-200 text-sm sm:text-base">
 										{galleryImages[currentImageIndex].alt}
 									</p>
 								</div>
@@ -511,14 +529,14 @@ export default function Home() {
 						</div>
 
 						{/* Thumbnail Navigation */}
-						<div className="flex justify-center mt-6 space-x-2 overflow-x-auto pb-2 thumbnail-grid">
+						<div className="flex justify-center mt-4 sm:mt-6 space-x-1 sm:space-x-2 overflow-x-auto pb-2 thumbnail-grid px-4 sm:px-0">
 							{galleryImages.map((image, index) => (
 								<button
 									key={index}
 									onClick={() => goToImage(index)}
-									className={`relative flex-shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-lg overflow-hidden transition-all duration-300 ${
+									className={`relative flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-lg overflow-hidden transition-all duration-300 ${
 										index === currentImageIndex
-											? "ring-4 ring-blue-500 scale-110"
+											? "ring-2 sm:ring-4 ring-indigo-500 scale-110"
 											: "hover:scale-105 opacity-70 hover:opacity-100"
 									}`}
 								>
@@ -681,23 +699,23 @@ export default function Home() {
 						</p>
 					</div>
 
-					<div className="grid md:grid-cols-2 gap-12">
+					<div className="grid md:grid-cols-2 gap-8 md:gap-12">
 						<div className="space-y-6 animate-fade-in-left animation-delay-200">
-							<div className="bg-gray-50 p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105 group">
+							<div className="modern-card p-6 md:p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105 group">
 								<h3 className="text-2xl font-bold text-gray-800 mb-6 group-hover:text-blue-600 transition-colors duration-300">
 									Contact Information
 								</h3>
 
-								<div className="space-y-6">
+								<div className="space-y-4 sm:space-y-6">
 									<div className="flex items-start">
 										<a
 											href="https://maps.app.goo.gl/hGPrwY4bsFPdP9XG9"
 											target="_blank"
-											className="flex items-start hover:opacity-80 transition-opacity"
+											className="flex items-start hover:opacity-80 transition-opacity w-full"
 										>
-											<div className="bg-blue-100 p-3 rounded-full mr-4">
+											<div className="bg-indigo-100 p-3 rounded-2xl mr-4 flex-shrink-0">
 												<svg
-													className="w-6 h-6 text-blue-600"
+													className="w-6 h-6 text-indigo-600"
 													fill="currentColor"
 													viewBox="0 0 20 20"
 													xmlns="http://www.w3.org/2000/svg"
@@ -709,9 +727,11 @@ export default function Home() {
 													></path>
 												</svg>
 											</div>
-											<div>
-												<h4 className="font-medium text-gray-800">Address</h4>
-												<p className="text-gray-600 mt-1">
+											<div className="min-w-0 flex-1">
+												<h4 className="font-semibold text-slate-800 mb-1">
+													Address
+												</h4>
+												<p className="text-slate-600 text-sm sm:text-base leading-relaxed">
 													2FF4+J5X, Ernakulam - Thekkady Rd, Pattimattom, Kerala
 													683562
 												</p>
@@ -722,11 +742,11 @@ export default function Home() {
 									<div className="flex items-start">
 										<a
 											href="tel:+919544311236"
-											className="flex items-start hover:opacity-80 transition-opacity"
+											className="flex items-start hover:opacity-80 transition-opacity w-full"
 										>
-											<div className="bg-blue-100 p-3 rounded-full mr-4">
+											<div className="bg-cyan-100 p-3 rounded-2xl mr-4 flex-shrink-0">
 												<svg
-													className="w-6 h-6 text-blue-600"
+													className="w-6 h-6 text-cyan-600"
 													fill="currentColor"
 													viewBox="0 0 20 20"
 													xmlns="http://www.w3.org/2000/svg"
@@ -734,9 +754,13 @@ export default function Home() {
 													<path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
 												</svg>
 											</div>
-											<div>
-												<h4 className="font-medium text-gray-800">Phone</h4>
-												<p className="text-gray-600 mt-1">+91 95443 11236</p>
+											<div className="min-w-0 flex-1">
+												<h4 className="font-semibold text-slate-800 mb-1">
+													Phone
+												</h4>
+												<p className="text-slate-600 text-sm sm:text-base">
+													+91 95443 11236
+												</p>
 											</div>
 										</a>
 									</div>
@@ -744,11 +768,11 @@ export default function Home() {
 									<div className="flex items-start">
 										<a
 											href="mailto:info@mimsconvention.com"
-											className="flex items-start hover:opacity-80 transition-opacity"
+											className="flex items-start hover:opacity-80 transition-opacity w-full"
 										>
-											<div className="bg-blue-100 p-3 rounded-full mr-4">
+											<div className="bg-amber-100 p-3 rounded-2xl mr-4 flex-shrink-0">
 												<svg
-													className="w-6 h-6 text-blue-600"
+													className="w-6 h-6 text-amber-600"
 													fill="currentColor"
 													viewBox="0 0 20 20"
 													xmlns="http://www.w3.org/2000/svg"
@@ -757,9 +781,11 @@ export default function Home() {
 													<path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
 												</svg>
 											</div>
-											<div>
-												<h4 className="font-medium text-gray-800">Email</h4>
-												<p className="text-gray-600 mt-1">
+											<div className="min-w-0 flex-1">
+												<h4 className="font-semibold text-slate-800 mb-1">
+													Email
+												</h4>
+												<p className="text-slate-600 text-sm sm:text-base break-all">
 													info@mimsconvention.com
 												</p>
 											</div>

@@ -216,15 +216,15 @@ const Navbar = () => {
 
 				{/* Mobile menu */}
 				{mobileMenuOpen && (
-					<div className="md:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-lg shadow-xl border-t border-slate-200/50 py-6 px-6 transition-all duration-300 ease-in-out">
-						<div className="flex flex-col space-y-4">
+					<div className="md:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-lg shadow-xl border-t border-slate-200/50 py-6 px-4 transition-all duration-300 ease-in-out animate-fade-in-up">
+						<div className="flex flex-col space-y-2">
 							<a
 								href="/"
 								onClick={(e) => {
 									scrollToTop(e);
 									setMobileMenuOpen(false);
 								}}
-								className="px-2 py-2 text-gray-700 hover:text-gray-900 transition-colors text-sm font-medium cursor-pointer"
+								className="px-4 py-3 text-slate-700 hover:text-indigo-600 hover:bg-indigo-50 transition-all duration-300 text-base font-semibold cursor-pointer rounded-xl"
 							>
 								Home
 							</a>
@@ -234,7 +234,7 @@ const Navbar = () => {
 									scrollToSection(e, "about");
 									setMobileMenuOpen(false);
 								}}
-								className="px-2 py-2 text-gray-700 hover:text-gray-900 transition-colors text-sm font-medium cursor-pointer"
+								className="px-4 py-3 text-slate-700 hover:text-indigo-600 hover:bg-indigo-50 transition-all duration-300 text-base font-semibold cursor-pointer rounded-xl"
 							>
 								About
 							</a>
@@ -244,7 +244,7 @@ const Navbar = () => {
 									scrollToSection(e, "facilities");
 									setMobileMenuOpen(false);
 								}}
-								className="px-2 py-2 text-gray-700 hover:text-gray-900 transition-colors text-sm font-medium cursor-pointer"
+								className="px-4 py-3 text-slate-700 hover:text-indigo-600 hover:bg-indigo-50 transition-all duration-300 text-base font-semibold cursor-pointer rounded-xl"
 							>
 								Facilities
 							</a>
@@ -268,14 +268,14 @@ const Navbar = () => {
 										window.location.href = "/gallery";
 									}
 								}}
-								className="px-2 py-2 text-gray-700 hover:text-gray-900 transition-colors text-sm font-medium cursor-pointer"
+								className="px-4 py-3 text-slate-700 hover:text-indigo-600 hover:bg-indigo-50 transition-all duration-300 text-base font-semibold cursor-pointer rounded-xl"
 							>
 								Gallery
 							</a>
-							<div className="border-t border-gray-200 my-2"></div>
+							<div className="border-t border-slate-200/50 my-4"></div>
 							<a
 								href="tel:+919544311236"
-								className="mt-2 px-4 py-2 bg-gray-900 hover:bg-gray-800 text-white rounded-full transition-colors shadow-sm text-sm text-center flex items-center justify-center gap-2"
+								className="px-6 py-4 bg-gradient-to-r from-indigo-600 to-cyan-600 hover:from-indigo-700 hover:to-cyan-700 text-white rounded-2xl transition-all duration-300 shadow-lg hover:shadow-xl text-base text-center flex items-center justify-center gap-2 font-semibold"
 								onClick={() => setMobileMenuOpen(false)}
 							>
 								<svg
