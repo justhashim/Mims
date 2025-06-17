@@ -17,12 +17,76 @@ const Navbar = () => {
 		// Check if we're on the gallery page
 		setIsGalleryPage(window.location.pathname.includes("/gallery"));
 
+		// Handle hash navigation on page load
+		const handleHashNavigation = () => {
+			const hash = window.location.hash;
+			if (hash) {
+				const sectionId = hash.substring(1); // Remove the # symbol
+				const section = document.getElementById(sectionId);
+				if (section) {
+					// Small delay to ensure page is fully loaded
+					setTimeout(() => {
+						section.scrollIntoView({
+							behavior: "smooth",
+							block: "start",
+						});
+					}, 100);
+				}
+			}
+		};
+
 		window.addEventListener("scroll", handleScroll);
-		return () => window.removeEventListener("scroll", handleScroll);
+		window.addEventListener("hashchange", handleHashNavigation);
+
+		// Handle initial hash on page load
+		handleHashNavigation();
+
+		return () => {
+			window.removeEventListener("scroll", handleScroll);
+			window.removeEventListener("hashchange", handleHashNavigation);
+		};
 	}, []);
 
 	const toggleMobileMenu = () => {
 		setMobileMenuOpen(!mobileMenuOpen);
+	};
+
+	const scrollToTop = (e: React.MouseEvent<HTMLAnchorElement>) => {
+		e.preventDefault();
+
+		// Check if we're on the home page
+		if (window.location.pathname === "/") {
+			// Smooth scroll to top
+			window.scrollTo({
+				top: 0,
+				behavior: "smooth",
+			});
+		} else {
+			// If we're on a different page, navigate to home
+			window.location.href = "/";
+		}
+	};
+
+	const scrollToSection = (
+		e: React.MouseEvent<HTMLAnchorElement>,
+		sectionId: string
+	) => {
+		e.preventDefault();
+
+		// Check if we're on the home page
+		if (window.location.pathname === "/") {
+			// Find the section and scroll to it
+			const section = document.getElementById(sectionId);
+			if (section) {
+				section.scrollIntoView({
+					behavior: "smooth",
+					block: "start",
+				});
+			}
+		} else {
+			// If we're on a different page, navigate to home with hash
+			window.location.href = `/#${sectionId}`;
+		}
 	};
 
 	return (
@@ -52,30 +116,50 @@ const Navbar = () => {
 					</Link>
 
 					<div className="hidden md:flex items-center space-x-8">
-						<Link
+						<a
 							href="/"
-							className="px-2 py-1 text-gray-700 hover:text-gray-900 transition-colors text-sm font-medium"
+							onClick={scrollToTop}
+							className="px-2 py-1 text-gray-700 hover:text-gray-900 transition-colors text-sm font-medium cursor-pointer"
 						>
 							Home
-						</Link>
-						<Link
+						</a>
+						<a
 							href="/#about"
-							className="px-2 py-1 text-gray-700 hover:text-gray-900 transition-colors text-sm font-medium"
+							onClick={(e) => scrollToSection(e, "about")}
+							className="px-2 py-1 text-gray-700 hover:text-gray-900 transition-colors text-sm font-medium cursor-pointer"
 						>
 							About
-						</Link>
-						<Link
+						</a>
+						<a
 							href="/#facilities"
-							className="px-2 py-1 text-gray-700 hover:text-gray-900 transition-colors text-sm font-medium"
+							onClick={(e) => scrollToSection(e, "facilities")}
+							className="px-2 py-1 text-gray-700 hover:text-gray-900 transition-colors text-sm font-medium cursor-pointer"
 						>
 							Facilities
-						</Link>
-						<Link
+						</a>
+						<a
 							href="/#gallery"
-							className="px-2 py-1 text-gray-700 hover:text-gray-900 transition-colors text-sm font-medium"
+							onClick={(e) => {
+								e.preventDefault();
+								// Check if we're on the home page
+								if (window.location.pathname === "/") {
+									// Scroll to gallery section on home page
+									const section = document.getElementById("gallery");
+									if (section) {
+										section.scrollIntoView({
+											behavior: "smooth",
+											block: "start",
+										});
+									}
+								} else {
+									// Navigate to gallery page
+									window.location.href = "/gallery";
+								}
+							}}
+							className="px-2 py-1 text-gray-700 hover:text-gray-900 transition-colors text-sm font-medium cursor-pointer"
 						>
 							Gallery
-						</Link>
+						</a>
 
 						<div className="border-l border-gray-300 h-6 mx-2"></div>
 
@@ -129,34 +213,60 @@ const Navbar = () => {
 				{mobileMenuOpen && (
 					<div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg py-4 px-6 transition-all duration-300 ease-in-out">
 						<div className="flex flex-col space-y-4">
-							<Link
+							<a
 								href="/"
-								className="px-2 py-2 text-gray-700 hover:text-gray-900 transition-colors text-sm font-medium"
-								onClick={() => setMobileMenuOpen(false)}
+								onClick={(e) => {
+									scrollToTop(e);
+									setMobileMenuOpen(false);
+								}}
+								className="px-2 py-2 text-gray-700 hover:text-gray-900 transition-colors text-sm font-medium cursor-pointer"
 							>
 								Home
-							</Link>
-							<Link
+							</a>
+							<a
 								href="/#about"
-								className="px-2 py-2 text-gray-700 hover:text-gray-900 transition-colors text-sm font-medium"
-								onClick={() => setMobileMenuOpen(false)}
+								onClick={(e) => {
+									scrollToSection(e, "about");
+									setMobileMenuOpen(false);
+								}}
+								className="px-2 py-2 text-gray-700 hover:text-gray-900 transition-colors text-sm font-medium cursor-pointer"
 							>
 								About
-							</Link>
-							<Link
+							</a>
+							<a
 								href="/#facilities"
-								className="px-2 py-2 text-gray-700 hover:text-gray-900 transition-colors text-sm font-medium"
-								onClick={() => setMobileMenuOpen(false)}
+								onClick={(e) => {
+									scrollToSection(e, "facilities");
+									setMobileMenuOpen(false);
+								}}
+								className="px-2 py-2 text-gray-700 hover:text-gray-900 transition-colors text-sm font-medium cursor-pointer"
 							>
 								Facilities
-							</Link>
-							<Link
-								href="/gallery"
-								className="px-2 py-2 text-gray-700 hover:text-gray-900 transition-colors text-sm font-medium"
-								onClick={() => setMobileMenuOpen(false)}
+							</a>
+							<a
+								href="/#gallery"
+								onClick={(e) => {
+									e.preventDefault();
+									setMobileMenuOpen(false);
+									// Check if we're on the home page
+									if (window.location.pathname === "/") {
+										// Scroll to gallery section on home page
+										const section = document.getElementById("gallery");
+										if (section) {
+											section.scrollIntoView({
+												behavior: "smooth",
+												block: "start",
+											});
+										}
+									} else {
+										// Navigate to gallery page
+										window.location.href = "/gallery";
+									}
+								}}
+								className="px-2 py-2 text-gray-700 hover:text-gray-900 transition-colors text-sm font-medium cursor-pointer"
 							>
 								Gallery
-							</Link>
+							</a>
 							<div className="border-t border-gray-200 my-2"></div>
 							<a
 								href="tel:+919544311236"
