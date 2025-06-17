@@ -68,7 +68,7 @@ export default function Gallery() {
 			{/* Gallery Hero */}
 			<section className="relative py-24 bg-gray-800 mt-16">
 				<div className="container mx-auto px-4 text-center">
-					<div className="bg-teal-600 text-white py-2 px-6 inline-block mb-6 transform -skew-x-12">
+					<div className="bg-gradient-to-r from-teal-600 to-blue-600 text-white py-2 px-6 inline-block mb-6 transform -skew-x-12">
 						<span className="block transform skew-x-12 text-lg font-medium">
 							OUR SPACES
 						</span>
@@ -85,19 +85,19 @@ export default function Gallery() {
 			<section className="py-12 bg-gray-900">
 				<div className="container mx-auto px-4">
 					<div className="flex flex-wrap justify-center gap-4 mb-12">
-						<button className="px-6 py-2 bg-teal-600 text-white rounded-md">
+						<button className="px-6 py-2 bg-gradient-to-r from-teal-600 to-blue-600 text-white rounded-md">
 							All
 						</button>
-						<button className="px-6 py-2 bg-gray-800 hover:bg-teal-700 text-gray-300 hover:text-white rounded-md transition-colors">
+						<button className="px-6 py-2 bg-gray-800 hover:bg-gradient-to-r hover:from-teal-600 hover:to-blue-600 text-gray-300 hover:text-white rounded-md transition-all duration-300">
 							Venues
 						</button>
-						<button className="px-6 py-2 bg-gray-800 hover:bg-teal-700 text-gray-300 hover:text-white rounded-md transition-colors">
+						<button className="px-6 py-2 bg-gray-800 hover:bg-gradient-to-r hover:from-teal-600 hover:to-blue-600 text-gray-300 hover:text-white rounded-md transition-all duration-300">
 							Events
 						</button>
-						<button className="px-6 py-2 bg-gray-800 hover:bg-teal-700 text-gray-300 hover:text-white rounded-md transition-colors">
+						<button className="px-6 py-2 bg-gray-800 hover:bg-gradient-to-r hover:from-teal-600 hover:to-blue-600 text-gray-300 hover:text-white rounded-md transition-all duration-300">
 							Weddings
 						</button>
-						<button className="px-6 py-2 bg-gray-800 hover:bg-teal-700 text-gray-300 hover:text-white rounded-md transition-colors">
+						<button className="px-6 py-2 bg-gray-800 hover:bg-gradient-to-r hover:from-teal-600 hover:to-blue-600 text-gray-300 hover:text-white rounded-md transition-all duration-300">
 							Facilities
 						</button>
 					</div>
@@ -120,7 +120,7 @@ export default function Gallery() {
 								</div>
 								<div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
 									<h3 className="text-white font-bold text-lg">{image.alt}</h3>
-									<p className="text-teal-300">{image.category}</p>
+									<p className="text-blue-300">{image.category}</p>
 								</div>
 							</div>
 						))}
@@ -128,7 +128,7 @@ export default function Gallery() {
 
 					{/* Load More Button */}
 					<div className="text-center mt-12">
-						<button className="bg-teal-600 hover:bg-teal-700 text-white px-8 py-3 rounded-md text-lg font-medium transition-colors">
+						<button className="bg-gradient-to-r from-teal-600 to-blue-600 hover:from-teal-700 hover:to-blue-700 text-white px-8 py-3 rounded-md text-lg font-medium transition-all duration-300">
 							Load More
 						</button>
 					</div>
@@ -147,7 +147,7 @@ export default function Gallery() {
 					</p>
 					<Link
 						href="/#contact"
-						className="bg-teal-600 hover:bg-teal-700 text-white px-8 py-3 rounded-md text-lg font-medium transition-colors inline-block"
+						className="bg-gradient-to-r from-teal-600 to-blue-600 hover:from-teal-700 hover:to-blue-700 text-white px-8 py-3 rounded-md text-lg font-medium transition-all duration-300 inline-block"
 					>
 						Contact Us
 					</Link>
@@ -295,7 +295,7 @@ export default function Gallery() {
 								/>
 								<button
 									type="submit"
-									className="bg-teal-600 hover:bg-teal-700 text-white px-4 py-2 rounded-r-md transition-colors"
+									className="bg-gradient-to-r from-teal-600 to-blue-600 hover:from-teal-700 hover:to-blue-700 text-white px-4 py-2 rounded-r-md transition-all duration-300"
 								>
 									Subscribe
 								</button>

@@ -84,11 +84,11 @@ export default function Home() {
 			<Navbar />
 
 			{/* 1. Headline Section - Modern and elegant hero */}
-			<section className="min-h-screen py-24 bg-gradient-to-br from-slate-50 via-white to-teal-50 flex items-center relative overflow-hidden">
+			<section className="min-h-screen py-24 bg-gradient-to-br from-slate-50 via-white to-blue-50 flex items-center relative overflow-hidden">
 				{/* Background decoration */}
 				<div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] -z-10"></div>
-				<div className="absolute top-0 right-0 -translate-y-12 translate-x-12 w-96 h-96 bg-gradient-to-br from-teal-400/20 to-cyan-400/20 rounded-full blur-3xl -z-10"></div>
-				<div className="absolute bottom-0 left-0 translate-y-12 -translate-x-12 w-96 h-96 bg-gradient-to-br from-emerald-400/20 to-teal-400/20 rounded-full blur-3xl -z-10"></div>
+				<div className="absolute top-0 right-0 -translate-y-12 translate-x-12 w-96 h-96 bg-gradient-to-br from-teal-400/20 to-blue-400/20 rounded-full blur-3xl -z-10"></div>
+				<div className="absolute bottom-0 left-0 translate-y-12 -translate-x-12 w-96 h-96 bg-gradient-to-br from-blue-400/20 to-teal-400/20 rounded-full blur-3xl -z-10"></div>
 
 				<div className="container mx-auto px-4">
 					<div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
@@ -167,17 +167,17 @@ export default function Home() {
 			</section>
 
 			{/* 2. Visual Focus Section */}
-			<section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-teal-900 text-white relative overflow-hidden">
+			<section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 text-white relative overflow-hidden">
 				{/* Background decoration */}
 				<div className="absolute inset-0 bg-grid-white/[0.05] -z-10"></div>
-				<div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-teal-500/10 to-cyan-500/10 rounded-full blur-3xl -z-10"></div>
+				<div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-teal-500/10 to-blue-500/10 rounded-full blur-3xl -z-10"></div>
 
 				<div className="container mx-auto px-4">
 					<div className="text-center mb-16">
 						<h2 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in-up">
 							Experience <span className="gradient-text">Excellence</span>
 						</h2>
-						<div className="w-24 h-1 bg-gradient-to-r from-teal-500 to-cyan-500 mx-auto animate-scale-in animation-delay-300 rounded-full"></div>
+						<div className="w-24 h-1 bg-gradient-to-r from-teal-500 to-blue-500 mx-auto animate-scale-in animation-delay-300 rounded-full"></div>
 					</div>
 
 					<div className="relative h-96 md:h-[500px] w-full max-w-5xl mx-auto rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 animate-fade-in-up animation-delay-500 group border border-white/10">
@@ -216,7 +216,7 @@ export default function Home() {
 						<h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 animate-fade-in-up">
 							Why Choose <span className="gradient-text">Us</span>
 						</h2>
-						<div className="w-24 h-1 bg-gradient-to-r from-teal-500 to-cyan-500 mx-auto mb-6 animate-scale-in animation-delay-300 rounded-full"></div>
+						<div className="w-24 h-1 bg-gradient-to-r from-teal-500 to-blue-500 mx-auto mb-6 animate-scale-in animation-delay-300 rounded-full"></div>
 					</div>
 
 					<div className="grid md:grid-cols-3 gap-8">
@@ -246,8 +246,8 @@ export default function Home() {
 						</div>
 
 						{/* Benefit 2 */}
-						<div className="modern-card rounded-2xl p-8 text-center shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 group animate-fade-in-up animation-delay-400 border border-cyan-100">
-							<div className="bg-gradient-to-br from-cyan-500 to-cyan-600 text-white p-4 rounded-2xl w-16 h-16 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 shadow-lg">
+						<div className="modern-card rounded-2xl p-8 text-center shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 group animate-fade-in-up animation-delay-400 border border-blue-100">
+							<div className="bg-gradient-to-br from-blue-600 to-blue-700 text-white p-4 rounded-2xl w-16 h-16 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 shadow-lg">
 								<svg
 									className="w-8 h-8 group-hover:animate-pulse"
 									fill="currentColor"
@@ -257,7 +257,7 @@ export default function Home() {
 									<path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v1h8v-1zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-1a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v1h-3zM4.75 12.094A5.973 5.973 0 004 15v1H1v-1a3 3 0 013.75-2.906z"></path>
 								</svg>
 							</div>
-							<h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-cyan-600 transition-colors duration-300">
+							<h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors duration-300">
 								Expert Staff
 							</h3>
 							<p className="text-slate-600 group-hover:text-slate-700 transition-colors duration-300 leading-relaxed">
@@ -376,19 +376,19 @@ export default function Home() {
 			{/* 5.5. Gallery Section */}
 			<section
 				id="gallery"
-				className="py-20 bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900 text-white relative overflow-hidden"
+				className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white relative overflow-hidden"
 			>
 				{/* Background decoration */}
 				<div className="absolute inset-0 bg-grid-white/[0.02] -z-10"></div>
-				<div className="absolute top-1/4 right-1/4 w-96 h-96 bg-gradient-to-br from-teal-500/20 to-cyan-500/20 rounded-full blur-3xl -z-10"></div>
-				<div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-full blur-3xl -z-10"></div>
+				<div className="absolute top-1/4 right-1/4 w-96 h-96 bg-gradient-to-br from-teal-500/20 to-blue-500/20 rounded-full blur-3xl -z-10"></div>
+				<div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-gradient-to-br from-blue-500/20 to-teal-500/20 rounded-full blur-3xl -z-10"></div>
 
 				<div className="container mx-auto px-4">
 					<div className="text-center mb-16">
 						<h2 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in-up">
 							Our <span className="gradient-text">Gallery</span>
 						</h2>
-						<div className="w-24 h-1 bg-gradient-to-r from-teal-500 to-cyan-500 mx-auto mb-6 animate-scale-in animation-delay-300 rounded-full"></div>
+						<div className="w-24 h-1 bg-gradient-to-r from-teal-500 to-blue-500 mx-auto mb-6 animate-scale-in animation-delay-300 rounded-full"></div>
 						<p className="text-slate-300 max-w-3xl mx-auto animate-fade-in-up animation-delay-500 text-lg leading-relaxed">
 							Explore our stunning venue through these captivating images
 						</p>
@@ -635,16 +635,16 @@ export default function Home() {
 							</Link>
 						</div>
 
-						<div className="bg-teal-600 p-8 rounded-lg text-center shadow-lg hover:shadow-xl transition-all duration-500 transform scale-105 hover:scale-110 group animate-fade-in-up animation-delay-400 animate-pulse">
+						<div className="bg-gradient-to-r from-teal-600 to-blue-600 p-8 rounded-lg text-center shadow-lg hover:shadow-xl transition-all duration-500 transform scale-105 hover:scale-110 group animate-fade-in-up animation-delay-400 animate-pulse">
 							<h3 className="text-xl font-bold mb-4 group-hover:animate-bounce">
 								Request a Quote
 							</h3>
-							<p className="text-teal-100 mb-6 group-hover:text-white transition-colors duration-300">
+							<p className="text-blue-100 mb-6 group-hover:text-white transition-colors duration-300">
 								Get a customized proposal for your event
 							</p>
 							<Link
 								href="#contact"
-								className="inline-block bg-white hover:bg-gray-100 text-teal-600 px-6 py-3 rounded-md transition-all duration-300 w-full font-medium hover:scale-105 transform hover:shadow-lg"
+								className="inline-block bg-white hover:bg-gray-100 text-blue-600 px-6 py-3 rounded-md transition-all duration-300 w-full font-medium hover:scale-105 transform hover:shadow-lg"
 							>
 								Get Quote
 							</Link>
@@ -954,7 +954,7 @@ export default function Home() {
 								/>
 								<button
 									type="submit"
-									className="bg-teal-600 hover:bg-teal-700 text-white px-4 py-2 rounded-r-md transition-all duration-300 hover:scale-105 transform"
+									className="bg-gradient-to-r from-teal-600 to-blue-600 hover:from-teal-700 hover:to-blue-700 text-white px-4 py-2 rounded-r-md transition-all duration-300 hover:scale-105 transform"
 								>
 									Subscribe
 								</button>

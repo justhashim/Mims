@@ -4,14 +4,17 @@
 	--background: #ffffff;
 	--foreground: #0f172a;
 
-	/* Professional Teal Color Palette - Based on Logo #00AC9D */
+	/* Professional Teal & Navy Color Palette - Based on Logo #00AC9D */
 	--primary: #00ac9d;
 	--primary-dark: #008a7b;
 	--primary-light: #26d0c1;
-	--secondary: #0d7377;
-	--secondary-dark: #14a085;
+	--secondary: #1e3a8a;
+	--secondary-dark: #1e40af;
 	--accent: #329d9c;
-	--accent-dark: #205072;
+	--accent-dark: #0f172a;
+	--navy: #1e3a8a;
+	--navy-dark: #1e293b;
+	--navy-light: #3b82f6;
 
 	/* Neutral Colors */
 	--neutral-50: #f8fafc;
@@ -29,7 +32,7 @@
 	--gradient-primary: linear-gradient(
 		135deg,
 		var(--primary) 0%,
-		var(--accent) 100%
+		var(--navy) 100%
 	);
 	--gradient-secondary: linear-gradient(
 		135deg,
@@ -38,8 +41,13 @@
 	);
 	--gradient-dark: linear-gradient(
 		135deg,
-		var(--neutral-800) 0%,
+		var(--navy-dark) 0%,
 		var(--neutral-900) 100%
+	);
+	--gradient-navy-teal: linear-gradient(
+		135deg,
+		var(--navy) 0%,
+		var(--primary) 100%
 	);
 }
 
@@ -317,7 +325,7 @@ body {
 
 .btn-secondary:hover {
 	transform: translateY(-2px);
-	box-shadow: 0 10px 25px rgba(13, 115, 119, 0.3);
+	box-shadow: 0 10px 25px rgba(30, 58, 138, 0.3);
 }
 
 /* Smooth scrolling */
@@ -386,7 +394,7 @@ html {
 .floating-maps-btn {
 	width: 60px;
 	height: 60px;
-	background: linear-gradient(to right, #00ac9d, #329d9c);
+	background: linear-gradient(to right, #00ac9d, #1e3a8a);
 	border-radius: 50%;
 	display: flex;
 	align-items: center;
@@ -399,9 +407,9 @@ html {
 }
 
 .floating-maps-btn:hover {
-	background: linear-gradient(to right, #008a7b, #0d7377);
+	background: linear-gradient(to right, #008a7b, #1e293b);
 	transform: translateY(-2px) scale(1.05);
-	box-shadow: 0 12px 35px rgba(0, 172, 157, 0.4);
+	box-shadow: 0 12px 35px rgba(30, 58, 138, 0.4);
 }
 
 .floating-maps-btn:active {
@@ -426,7 +434,7 @@ html {
 .floating-call-btn {
 	width: 60px;
 	height: 60px;
-	background: linear-gradient(to right, #00ac9d, #329d9c);
+	background: linear-gradient(to right, #00ac9d, #1e3a8a);
 	border-radius: 50%;
 	display: flex;
 	align-items: center;
@@ -439,9 +447,9 @@ html {
 }
 
 .floating-call-btn:hover {
-	background: linear-gradient(to right, #008a7b, #0d7377);
+	background: linear-gradient(to right, #008a7b, #1e293b);
 	transform: translateY(-2px) scale(1.05);
-	box-shadow: 0 12px 35px rgba(0, 172, 157, 0.4);
+	box-shadow: 0 12px 35px rgba(30, 58, 138, 0.4);
 }
 
 .floating-call-btn:active {

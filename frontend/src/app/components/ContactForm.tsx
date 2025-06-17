@@ -113,7 +113,7 @@ const ContactForm = () => {
 
 				<button
 					type="submit"
-					className="w-full bg-teal-600 text-white py-2 px-4 rounded-md hover:bg-teal-700 transition-colors focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2"
+					className="w-full bg-gradient-to-r from-teal-600 to-blue-600 text-white py-2 px-4 rounded-md hover:from-teal-700 hover:to-blue-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2"
 				>
 					Send Message
 				</button>

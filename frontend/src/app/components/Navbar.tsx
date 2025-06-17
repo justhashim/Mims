@@ -124,7 +124,7 @@ const Navbar = () => {
 							className="px-3 py-2 text-slate-600 hover:text-teal-600 transition-all duration-300 text-sm font-semibold cursor-pointer relative group"
 						>
 							Home
-							<span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-teal-500 to-cyan-500 group-hover:w-full transition-all duration-300"></span>
+							<span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-teal-500 to-blue-600 group-hover:w-full transition-all duration-300"></span>
 						</Link>
 						<Link
 							href="/#about"
@@ -132,7 +132,7 @@ const Navbar = () => {
 							className="px-3 py-2 text-slate-600 hover:text-teal-600 transition-all duration-300 text-sm font-semibold cursor-pointer relative group"
 						>
 							About
-							<span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-teal-500 to-cyan-500 group-hover:w-full transition-all duration-300"></span>
+							<span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-teal-500 to-blue-600 group-hover:w-full transition-all duration-300"></span>
 						</Link>
 						<Link
 							href="/#facilities"
@@ -140,7 +140,7 @@ const Navbar = () => {
 							className="px-3 py-2 text-slate-600 hover:text-teal-600 transition-all duration-300 text-sm font-semibold cursor-pointer relative group"
 						>
 							Facilities
-							<span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-teal-500 to-cyan-500 group-hover:w-full transition-all duration-300"></span>
+							<span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-teal-500 to-blue-600 group-hover:w-full transition-all duration-300"></span>
 						</Link>
 						<Link
 							href="/#gallery"
@@ -164,7 +164,7 @@ const Navbar = () => {
 							className="px-3 py-2 text-slate-600 hover:text-teal-600 transition-all duration-300 text-sm font-semibold cursor-pointer relative group"
 						>
 							Gallery
-							<span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-teal-500 to-cyan-500 group-hover:w-full transition-all duration-300"></span>
+							<span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-teal-500 to-blue-600 group-hover:w-full transition-all duration-300"></span>
 						</Link>
 						<a
 							href="https://maps.app.goo.gl/hGPrwY4bsFPdP9XG9"
@@ -181,14 +181,14 @@ const Navbar = () => {
 								<path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
 							</svg>
 							Location
-							<span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-teal-500 to-cyan-500 group-hover:w-full transition-all duration-300"></span>
+							<span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-teal-500 to-blue-600 group-hover:w-full transition-all duration-300"></span>
 						</a>
 
 						<div className="border-l border-gray-300 h-6 mx-2"></div>
 
 						<a
 							href="tel:+919544311236"
-							className="px-6 py-2.5 bg-gradient-to-r from-teal-600 to-cyan-600 hover:from-teal-700 hover:to-cyan-700 text-white rounded-full transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 text-sm flex items-center gap-2 font-semibold"
+							className="px-6 py-2.5 bg-gradient-to-r from-teal-600 to-blue-600 hover:from-teal-700 hover:to-blue-700 text-white rounded-full transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 text-sm flex items-center gap-2 font-semibold"
 						>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
@@ -310,7 +310,7 @@ const Navbar = () => {
 							<div className="border-t border-slate-200/50 my-4"></div>
 							<a
 								href="tel:+919544311236"
-								className="px-6 py-4 bg-gradient-to-r from-teal-600 to-cyan-600 hover:from-teal-700 hover:to-cyan-700 text-white rounded-2xl transition-all duration-300 shadow-lg hover:shadow-xl text-base text-center flex items-center justify-center gap-2 font-semibold"
+								className="px-6 py-4 bg-gradient-to-r from-teal-600 to-blue-600 hover:from-teal-700 hover:to-blue-700 text-white rounded-2xl transition-all duration-300 shadow-lg hover:shadow-xl text-base text-center flex items-center justify-center gap-2 font-semibold"
 								onClick={() => setMobileMenuOpen(false)}
 							>
 								<svg
