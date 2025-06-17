@@ -112,7 +112,7 @@ const ContactForm = () => {
 							Send Us a Message
 						</h3>
 						<p className="text-slate-800 text-base sm:text-lg">
-							We'll get back to you within 24 hours
+							We&apos;ll get back to you within 24 hours
 						</p>
 					</div>
 				</div>
@@ -140,7 +140,7 @@ const ContactForm = () => {
 									Message Sent Successfully!
 								</p>
 								<p className="text-emerald-700">
-									Thank you! We'll get back to you within 24 hours.
+									Thank you! We&apos;ll get back to you within 24 hours.
 								</p>
 							</div>
 						</div>

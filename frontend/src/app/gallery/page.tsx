@@ -232,7 +232,7 @@ export default function Gallery() {
 						</h2>
 						<p className="text-body-large text-slate-300 max-w-3xl mx-auto mb-10">
 							Contact our team today to schedule a tour or discuss your event
-							requirements. Let's make your vision a reality.
+							requirements. Let&apos;s make your vision a reality.
 						</p>
 
 						<div className="flex flex-col sm:flex-row gap-4 justify-center">

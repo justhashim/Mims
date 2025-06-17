@@ -571,10 +571,11 @@ export default function Home() {
 
 								{/* Testimonial text */}
 								<blockquote className="text-2xl lg:text-3xl text-slate-200 text-center mb-12 leading-relaxed animate-fade-in-up animation-delay-700 group-hover:text-white transition-colors duration-300 font-light italic">
-									"Mims Convention Centre exceeded all our expectations. The
-									venue is stunning, the staff was professional, and our guests
-									were thoroughly impressed. We couldn't have asked for a better
-									experience for our annual corporate conference."
+									&ldquo;Mims Convention Centre exceeded all our expectations.
+									The venue is stunning, the staff was professional, and our
+									guests were thoroughly impressed. We couldn&apos;t have asked
+									for a better experience for our annual corporate
+									conference.&rdquo;
 								</blockquote>
 
 								{/* Client info */}
@@ -975,8 +976,8 @@ export default function Home() {
 						</h2>
 						<div className="w-24 h-1 bg-gradient-to-r from-teal-500 to-blue-500 mx-auto mb-6 animate-scale-in animation-delay-400 rounded-full"></div>
 						<p className="text-slate-600 max-w-3xl mx-auto animate-fade-in-up animation-delay-500 text-lg leading-relaxed">
-							Ready to make your event extraordinary? We're here to help you
-							every step of the way.
+							Ready to make your event extraordinary? We&apos;re here to help
+							you every step of the way.
 						</p>
 					</div>
 
