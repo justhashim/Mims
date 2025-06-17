@@ -104,17 +104,17 @@ export default function Home() {
 			</div>
 
 			{/* 1. Headline Section - Modern and elegant hero */}
-			<section className="min-h-screen py-24 bg-gradient-to-br from-slate-50 via-white to-indigo-50 flex items-center relative overflow-hidden">
+			<section className="min-h-screen py-24 bg-gradient-to-br from-slate-50 via-white to-teal-50 flex items-center relative overflow-hidden">
 				{/* Background decoration */}
 				<div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] -z-10"></div>
-				<div className="absolute top-0 right-0 -translate-y-12 translate-x-12 w-96 h-96 bg-gradient-to-br from-indigo-400/20 to-cyan-400/20 rounded-full blur-3xl -z-10"></div>
-				<div className="absolute bottom-0 left-0 translate-y-12 -translate-x-12 w-96 h-96 bg-gradient-to-br from-amber-400/20 to-orange-400/20 rounded-full blur-3xl -z-10"></div>
+				<div className="absolute top-0 right-0 -translate-y-12 translate-x-12 w-96 h-96 bg-gradient-to-br from-teal-400/20 to-cyan-400/20 rounded-full blur-3xl -z-10"></div>
+				<div className="absolute bottom-0 left-0 translate-y-12 -translate-x-12 w-96 h-96 bg-gradient-to-br from-emerald-400/20 to-teal-400/20 rounded-full blur-3xl -z-10"></div>
 
 				<div className="container mx-auto px-4">
 					<div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
 						{/* Left side - Value proposition */}
 						<div className="text-left modern-card p-6 md:p-10 rounded-2xl h-auto md:h-[550px] flex flex-col justify-center animate-fade-in-up">
-							<span className="text-indigo-600 font-semibold mb-3 block animate-fade-in-up animation-delay-200 text-xs md:text-sm tracking-wide uppercase">
+							<span className="text-teal-600 font-semibold mb-3 block animate-fade-in-up animation-delay-200 text-xs md:text-sm tracking-wide uppercase">
 								PREMIER EVENT VENUE
 							</span>
 							<h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-slate-900 mb-4 md:mb-6 animate-fade-in-up animation-delay-400 leading-tight">
@@ -128,8 +128,8 @@ export default function Home() {
 
 							{/* Stats Cards */}
 							<div className="grid grid-cols-3 gap-2 sm:gap-3 md:gap-6 mb-8 md:mb-10 animate-fade-in-up animation-delay-800">
-								<div className="modern-card p-3 sm:p-4 md:p-6 rounded-xl md:rounded-2xl hover:shadow-2xl hover:scale-105 transition-all duration-500 group border border-indigo-100">
-									<div className="text-slate-900 text-xl sm:text-2xl md:text-3xl font-bold group-hover:text-indigo-600 transition-colors duration-300">
+								<div className="modern-card p-3 sm:p-4 md:p-6 rounded-xl md:rounded-2xl hover:shadow-2xl hover:scale-105 transition-all duration-500 group border border-teal-100">
+									<div className="text-slate-900 text-xl sm:text-2xl md:text-3xl font-bold group-hover:text-teal-600 transition-colors duration-300">
 										500+
 									</div>
 									<div className="text-slate-500 text-xs sm:text-sm font-medium leading-tight">
@@ -144,8 +144,8 @@ export default function Home() {
 										Parking Space
 									</div>
 								</div>
-								<div className="modern-card p-3 sm:p-4 md:p-6 rounded-xl md:rounded-2xl hover:shadow-2xl hover:scale-105 transition-all duration-500 group border border-amber-100 animation-delay-200">
-									<div className="text-slate-900 text-xl sm:text-2xl md:text-3xl font-bold group-hover:text-amber-600 transition-colors duration-300">
+								<div className="modern-card p-3 sm:p-4 md:p-6 rounded-xl md:rounded-2xl hover:shadow-2xl hover:scale-105 transition-all duration-500 group border border-emerald-100 animation-delay-200">
+									<div className="text-slate-900 text-xl sm:text-2xl md:text-3xl font-bold group-hover:text-emerald-600 transition-colors duration-300">
 										50+
 									</div>
 									<div className="text-slate-500 text-xs sm:text-sm font-medium leading-tight">
@@ -187,17 +187,17 @@ export default function Home() {
 			</section>
 
 			{/* 2. Visual Focus Section */}
-			<section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-indigo-900 text-white relative overflow-hidden">
+			<section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-teal-900 text-white relative overflow-hidden">
 				{/* Background decoration */}
 				<div className="absolute inset-0 bg-grid-white/[0.05] -z-10"></div>
-				<div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-indigo-500/10 to-cyan-500/10 rounded-full blur-3xl -z-10"></div>
+				<div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-teal-500/10 to-cyan-500/10 rounded-full blur-3xl -z-10"></div>
 
 				<div className="container mx-auto px-4">
 					<div className="text-center mb-16">
 						<h2 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in-up">
 							Experience <span className="gradient-text">Excellence</span>
 						</h2>
-						<div className="w-24 h-1 bg-gradient-to-r from-indigo-500 to-cyan-500 mx-auto animate-scale-in animation-delay-300 rounded-full"></div>
+						<div className="w-24 h-1 bg-gradient-to-r from-teal-500 to-cyan-500 mx-auto animate-scale-in animation-delay-300 rounded-full"></div>
 					</div>
 
 					<div className="relative h-96 md:h-[500px] w-full max-w-5xl mx-auto rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 animate-fade-in-up animation-delay-500 group border border-white/10">
@@ -228,21 +228,21 @@ export default function Home() {
 				className="py-20 bg-gradient-to-br from-slate-50 to-white relative overflow-hidden"
 			>
 				{/* Background decoration */}
-				<div className="absolute top-0 right-0 w-72 h-72 bg-gradient-to-br from-indigo-100 to-cyan-100 rounded-full blur-3xl opacity-60 -z-10"></div>
-				<div className="absolute bottom-0 left-0 w-72 h-72 bg-gradient-to-br from-amber-100 to-orange-100 rounded-full blur-3xl opacity-60 -z-10"></div>
+				<div className="absolute top-0 right-0 w-72 h-72 bg-gradient-to-br from-teal-100 to-cyan-100 rounded-full blur-3xl opacity-60 -z-10"></div>
+				<div className="absolute bottom-0 left-0 w-72 h-72 bg-gradient-to-br from-emerald-100 to-teal-100 rounded-full blur-3xl opacity-60 -z-10"></div>
 
 				<div className="container mx-auto px-4">
 					<div className="text-center mb-16">
 						<h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 animate-fade-in-up">
 							Why Choose <span className="gradient-text">Us</span>
 						</h2>
-						<div className="w-24 h-1 bg-gradient-to-r from-indigo-500 to-cyan-500 mx-auto mb-6 animate-scale-in animation-delay-300 rounded-full"></div>
+						<div className="w-24 h-1 bg-gradient-to-r from-teal-500 to-cyan-500 mx-auto mb-6 animate-scale-in animation-delay-300 rounded-full"></div>
 					</div>
 
 					<div className="grid md:grid-cols-3 gap-8">
 						{/* Benefit 1 */}
-						<div className="modern-card rounded-2xl p-8 text-center shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 group animate-fade-in-up animation-delay-200 border border-indigo-100">
-							<div className="bg-gradient-to-br from-indigo-500 to-indigo-600 text-white p-4 rounded-2xl w-16 h-16 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 shadow-lg">
+						<div className="modern-card rounded-2xl p-8 text-center shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 group animate-fade-in-up animation-delay-200 border border-teal-100">
+							<div className="bg-gradient-to-br from-teal-500 to-teal-600 text-white p-4 rounded-2xl w-16 h-16 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 shadow-lg">
 								<svg
 									className="w-8 h-8 group-hover:animate-pulse"
 									fill="currentColor"
@@ -256,7 +256,7 @@ export default function Home() {
 									></path>
 								</svg>
 							</div>
-							<h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-indigo-600 transition-colors duration-300">
+							<h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-teal-600 transition-colors duration-300">
 								Innovative Design
 							</h3>
 							<p className="text-slate-600 group-hover:text-slate-700 transition-colors duration-300 leading-relaxed">
@@ -287,8 +287,8 @@ export default function Home() {
 						</div>
 
 						{/* Benefit 3 */}
-						<div className="modern-card rounded-2xl p-8 text-center shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 group animate-fade-in-up animation-delay-600 border border-amber-100">
-							<div className="bg-gradient-to-br from-amber-500 to-amber-600 text-white p-4 rounded-2xl w-16 h-16 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 shadow-lg">
+						<div className="modern-card rounded-2xl p-8 text-center shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 group animate-fade-in-up animation-delay-600 border border-emerald-100">
+							<div className="bg-gradient-to-br from-emerald-500 to-emerald-600 text-white p-4 rounded-2xl w-16 h-16 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 shadow-lg">
 								<svg
 									className="w-8 h-8 group-hover:animate-pulse"
 									fill="currentColor"
@@ -302,7 +302,7 @@ export default function Home() {
 									></path>
 								</svg>
 							</div>
-							<h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-amber-600 transition-colors duration-300">
+							<h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-emerald-600 transition-colors duration-300">
 								Cutting-Edge Technology
 							</h3>
 							<p className="text-slate-600 group-hover:text-slate-700 transition-colors duration-300 leading-relaxed">
@@ -321,30 +321,30 @@ export default function Home() {
 						<h2 className="text-4xl font-bold mb-4 animate-fade-in-up">
 							What Our Clients Say
 						</h2>
-						<div className="w-24 h-1 bg-blue-500 mx-auto animate-scale-in animation-delay-300"></div>
+						<div className="w-24 h-1 bg-teal-500 mx-auto animate-scale-in animation-delay-300"></div>
 					</div>
 
 					<div className="max-w-4xl mx-auto bg-gray-800 p-10 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 animate-fade-in-up animation-delay-500 group">
 						<svg
-							className="w-12 h-12 text-blue-500 mb-6 animate-bounce group-hover:animate-pulse"
+							className="w-12 h-12 text-teal-500 mb-6 animate-bounce group-hover:animate-pulse"
 							fill="currentColor"
 							viewBox="0 0 24 24"
 						>
 							<path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
 						</svg>
-						<p className="text-xl italic mb-6 animate-fade-in-up animation-delay-700 group-hover:text-blue-100 transition-colors duration-300">
+						<p className="text-xl italic mb-6 animate-fade-in-up animation-delay-700 group-hover:text-teal-100 transition-colors duration-300">
 							&ldquo;Mims Convention Centre exceeded all our expectations. The
 							venue is stunning, the staff was professional, and our guests were
 							thoroughly impressed. We couldn&apos;t have asked for a better
 							experience for our annual corporate conference.&rdquo;
 						</p>
 						<div className="flex items-center animate-fade-in-up animation-delay-900">
-							<div className="w-12 h-12 bg-blue-500 rounded-full mr-4 group-hover:scale-110 transition-transform duration-300 animate-pulse"></div>
+							<div className="w-12 h-12 bg-teal-500 rounded-full mr-4 group-hover:scale-110 transition-transform duration-300 animate-pulse"></div>
 							<div>
-								<h4 className="font-bold group-hover:text-blue-300 transition-colors duration-300">
+								<h4 className="font-bold group-hover:text-teal-300 transition-colors duration-300">
 									Sarah Johnson
 								</h4>
-								<p className="text-blue-400 group-hover:text-blue-200 transition-colors duration-300">
+								<p className="text-teal-400 group-hover:text-teal-200 transition-colors duration-300">
 									CEO, TechCorp International
 								</p>
 							</div>
@@ -371,7 +371,7 @@ export default function Home() {
 							<h2 className="text-4xl font-bold text-gray-800 mb-6 animate-fade-in-up">
 								Our Story
 							</h2>
-							<div className="w-24 h-1 bg-blue-500 mb-6 animate-scale-in animation-delay-500"></div>
+							<div className="w-24 h-1 bg-teal-500 mb-6 animate-scale-in animation-delay-500"></div>
 							<p className="text-gray-600 mb-6 animate-fade-in-up animation-delay-600">
 								Established in 2025, Mims Convention Centre was born from a
 								vision to create a premier event destination that combines
@@ -396,19 +396,19 @@ export default function Home() {
 			{/* 5.5. Gallery Section */}
 			<section
 				id="gallery"
-				className="py-20 bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 text-white relative overflow-hidden"
+				className="py-20 bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900 text-white relative overflow-hidden"
 			>
 				{/* Background decoration */}
 				<div className="absolute inset-0 bg-grid-white/[0.02] -z-10"></div>
-				<div className="absolute top-1/4 right-1/4 w-96 h-96 bg-gradient-to-br from-indigo-500/20 to-cyan-500/20 rounded-full blur-3xl -z-10"></div>
-				<div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl -z-10"></div>
+				<div className="absolute top-1/4 right-1/4 w-96 h-96 bg-gradient-to-br from-teal-500/20 to-cyan-500/20 rounded-full blur-3xl -z-10"></div>
+				<div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-full blur-3xl -z-10"></div>
 
 				<div className="container mx-auto px-4">
 					<div className="text-center mb-16">
 						<h2 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in-up">
 							Our <span className="gradient-text">Gallery</span>
 						</h2>
-						<div className="w-24 h-1 bg-gradient-to-r from-indigo-500 to-cyan-500 mx-auto mb-6 animate-scale-in animation-delay-300 rounded-full"></div>
+						<div className="w-24 h-1 bg-gradient-to-r from-teal-500 to-cyan-500 mx-auto mb-6 animate-scale-in animation-delay-300 rounded-full"></div>
 						<p className="text-slate-300 max-w-3xl mx-auto animate-fade-in-up animation-delay-500 text-lg leading-relaxed">
 							Explore our stunning venue through these captivating images
 						</p>
@@ -423,7 +423,7 @@ export default function Home() {
 						{/* Auto-play Progress Bar */}
 						{isAutoPlaying && (
 							<div className="absolute top-0 left-0 right-0 h-1 bg-gray-700/30 z-10 rounded-t-xl">
-								<div className="h-full bg-blue-500 progress-bar rounded-t-xl"></div>
+								<div className="h-full bg-teal-500 progress-bar rounded-t-xl"></div>
 							</div>
 						)}
 
@@ -538,7 +538,7 @@ export default function Home() {
 									onClick={() => goToImage(index)}
 									className={`relative flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-lg overflow-hidden transition-all duration-300 ${
 										index === currentImageIndex
-											? "ring-2 sm:ring-4 ring-indigo-500 scale-110"
+											? "ring-2 sm:ring-4 ring-teal-500 scale-110"
 											: "hover:scale-105 opacity-70 hover:opacity-100"
 									}`}
 								>
@@ -561,7 +561,7 @@ export default function Home() {
 									onClick={() => goToImage(index)}
 									className={`w-3 h-3 rounded-full transition-all duration-300 ${
 										index === currentImageIndex
-											? "bg-blue-500 scale-125"
+											? "bg-teal-500 scale-125"
 											: "bg-gray-500 hover:bg-gray-400"
 									}`}
 									aria-label={`Go to image ${index + 1}`}
@@ -602,7 +602,7 @@ export default function Home() {
 						<h2 className="text-4xl font-bold text-gray-800 mb-6 animate-fade-in-up">
 							Our Guarantee
 						</h2>
-						<div className="w-24 h-1 bg-blue-500 mx-auto mb-8 animate-scale-in animation-delay-300"></div>
+						<div className="w-24 h-1 bg-teal-500 mx-auto mb-8 animate-scale-in animation-delay-300"></div>
 
 						<div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105 animate-fade-in-up animation-delay-500 group">
 							<p className="text-gray-600 mb-6 animate-fade-in-up animation-delay-600 group-hover:text-gray-700 transition-colors duration-300">
@@ -641,7 +641,7 @@ export default function Home() {
 
 					<div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
 						<div className="bg-gray-800 p-8 rounded-lg text-center shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105 hover:bg-gray-700 group animate-fade-in-up animation-delay-200">
-							<h3 className="text-xl font-bold mb-4 group-hover:text-blue-300 transition-colors duration-300">
+							<h3 className="text-xl font-bold mb-4 group-hover:text-teal-300 transition-colors duration-300">
 								Book a Tour
 							</h3>
 							<p className="text-gray-400 mb-6 group-hover:text-gray-300 transition-colors duration-300">
@@ -655,23 +655,23 @@ export default function Home() {
 							</Link>
 						</div>
 
-						<div className="bg-blue-600 p-8 rounded-lg text-center shadow-lg hover:shadow-xl transition-all duration-500 transform scale-105 hover:scale-110 group animate-fade-in-up animation-delay-400 animate-pulse">
+						<div className="bg-teal-600 p-8 rounded-lg text-center shadow-lg hover:shadow-xl transition-all duration-500 transform scale-105 hover:scale-110 group animate-fade-in-up animation-delay-400 animate-pulse">
 							<h3 className="text-xl font-bold mb-4 group-hover:animate-bounce">
 								Request a Quote
 							</h3>
-							<p className="text-blue-100 mb-6 group-hover:text-white transition-colors duration-300">
+							<p className="text-teal-100 mb-6 group-hover:text-white transition-colors duration-300">
 								Get a customized proposal for your event
 							</p>
 							<Link
 								href="#contact"
-								className="inline-block bg-white hover:bg-gray-100 text-blue-600 px-6 py-3 rounded-md transition-all duration-300 w-full font-medium hover:scale-105 transform hover:shadow-lg"
+								className="inline-block bg-white hover:bg-gray-100 text-teal-600 px-6 py-3 rounded-md transition-all duration-300 w-full font-medium hover:scale-105 transform hover:shadow-lg"
 							>
 								Get Quote
 							</Link>
 						</div>
 
 						<div className="bg-gray-800 p-8 rounded-lg text-center shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105 hover:bg-gray-700 group animate-fade-in-up animation-delay-600">
-							<h3 className="text-xl font-bold mb-4 group-hover:text-blue-300 transition-colors duration-300">
+							<h3 className="text-xl font-bold mb-4 group-hover:text-teal-300 transition-colors duration-300">
 								Contact Us
 							</h3>
 							<p className="text-gray-400 mb-6 group-hover:text-gray-300 transition-colors duration-300">
@@ -695,7 +695,7 @@ export default function Home() {
 						<h2 className="text-4xl font-bold text-gray-800 mb-4 animate-fade-in-up">
 							Get In Touch
 						</h2>
-						<div className="w-24 h-1 bg-blue-500 mx-auto mb-6 animate-scale-in animation-delay-300"></div>
+						<div className="w-24 h-1 bg-teal-500 mx-auto mb-6 animate-scale-in animation-delay-300"></div>
 						<p className="text-gray-600 max-w-3xl mx-auto animate-fade-in-up animation-delay-500">
 							Have questions or ready to book your event? Contact us today.
 						</p>
@@ -704,7 +704,7 @@ export default function Home() {
 					<div className="grid md:grid-cols-2 gap-8 md:gap-12">
 						<div className="space-y-6 animate-fade-in-left animation-delay-200">
 							<div className="modern-card p-6 md:p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105 group">
-								<h3 className="text-2xl font-bold text-gray-800 mb-6 group-hover:text-blue-600 transition-colors duration-300">
+								<h3 className="text-2xl font-bold text-gray-800 mb-6 group-hover:text-teal-600 transition-colors duration-300">
 									Contact Information
 								</h3>
 
@@ -715,9 +715,9 @@ export default function Home() {
 											target="_blank"
 											className="flex items-start hover:opacity-80 transition-opacity w-full"
 										>
-											<div className="bg-indigo-100 p-3 rounded-2xl mr-4 flex-shrink-0">
+											<div className="bg-teal-100 p-3 rounded-2xl mr-4 flex-shrink-0">
 												<svg
-													className="w-6 h-6 text-indigo-600"
+													className="w-6 h-6 text-teal-600"
 													fill="currentColor"
 													viewBox="0 0 20 20"
 													xmlns="http://www.w3.org/2000/svg"
@@ -772,9 +772,9 @@ export default function Home() {
 											href="mailto:info@mimsconvention.com"
 											className="flex items-start hover:opacity-80 transition-opacity w-full"
 										>
-											<div className="bg-amber-100 p-3 rounded-2xl mr-4 flex-shrink-0">
+											<div className="bg-emerald-100 p-3 rounded-2xl mr-4 flex-shrink-0">
 												<svg
-													className="w-6 h-6 text-amber-600"
+													className="w-6 h-6 text-emerald-600"
 													fill="currentColor"
 													viewBox="0 0 20 20"
 													xmlns="http://www.w3.org/2000/svg"
@@ -812,7 +812,7 @@ export default function Home() {
 				<div className="container mx-auto px-4">
 					<div className="grid md:grid-cols-4 gap-8">
 						<div className="animate-fade-in-up animation-delay-200">
-							<h3 className="text-xl font-bold mb-4 hover:text-blue-300 transition-colors duration-300">
+							<h3 className="text-xl font-bold mb-4 hover:text-teal-300 transition-colors duration-300">
 								Mims Convention Centre
 							</h3>
 							<p className="text-gray-400 mb-4 hover:text-gray-300 transition-colors duration-300">
@@ -864,7 +864,7 @@ export default function Home() {
 						</div>
 
 						<div className="animate-fade-in-up animation-delay-400">
-							<h3 className="text-lg font-semibold mb-4 hover:text-blue-300 transition-colors duration-300">
+							<h3 className="text-lg font-semibold mb-4 hover:text-teal-300 transition-colors duration-300">
 								Quick Links
 							</h3>
 							<ul className="space-y-2">
@@ -912,7 +912,7 @@ export default function Home() {
 						</div>
 
 						<div className="animate-fade-in-up animation-delay-600">
-							<h3 className="text-lg font-semibold mb-4 hover:text-blue-300 transition-colors duration-300">
+							<h3 className="text-lg font-semibold mb-4 hover:text-teal-300 transition-colors duration-300">
 								Services
 							</h3>
 							<ul className="space-y-2">
@@ -960,7 +960,7 @@ export default function Home() {
 						</div>
 
 						<div className="animate-fade-in-up animation-delay-800">
-							<h3 className="text-lg font-semibold mb-4 hover:text-blue-300 transition-colors duration-300">
+							<h3 className="text-lg font-semibold mb-4 hover:text-teal-300 transition-colors duration-300">
 								Newsletter
 							</h3>
 							<p className="text-gray-400 mb-4 hover:text-gray-300 transition-colors duration-300">
@@ -970,11 +970,11 @@ export default function Home() {
 								<input
 									type="email"
 									placeholder="Your email"
-									className="px-4 py-2 w-full rounded-l-md focus:outline-none text-gray-800 focus:ring-2 focus:ring-blue-500 transition-all duration-300"
+									className="px-4 py-2 w-full rounded-l-md focus:outline-none text-gray-800 focus:ring-2 focus:ring-teal-500 transition-all duration-300"
 								/>
 								<button
 									type="submit"
-									className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-r-md transition-all duration-300 hover:scale-105 transform"
+									className="bg-teal-600 hover:bg-teal-700 text-white px-4 py-2 rounded-r-md transition-all duration-300 hover:scale-105 transform"
 								>
 									Subscribe
 								</button>

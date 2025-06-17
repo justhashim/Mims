@@ -121,26 +121,26 @@ const Navbar = () => {
 						<Link
 							href="/"
 							onClick={scrollToTop}
-							className="px-3 py-2 text-slate-600 hover:text-indigo-600 transition-all duration-300 text-sm font-semibold cursor-pointer relative group"
+							className="px-3 py-2 text-slate-600 hover:text-teal-600 transition-all duration-300 text-sm font-semibold cursor-pointer relative group"
 						>
 							Home
-							<span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-500 to-cyan-500 group-hover:w-full transition-all duration-300"></span>
+							<span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-teal-500 to-cyan-500 group-hover:w-full transition-all duration-300"></span>
 						</Link>
 						<Link
 							href="/#about"
 							onClick={(e) => scrollToSection(e, "about")}
-							className="px-3 py-2 text-slate-600 hover:text-indigo-600 transition-all duration-300 text-sm font-semibold cursor-pointer relative group"
+							className="px-3 py-2 text-slate-600 hover:text-teal-600 transition-all duration-300 text-sm font-semibold cursor-pointer relative group"
 						>
 							About
-							<span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-500 to-cyan-500 group-hover:w-full transition-all duration-300"></span>
+							<span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-teal-500 to-cyan-500 group-hover:w-full transition-all duration-300"></span>
 						</Link>
 						<Link
 							href="/#facilities"
 							onClick={(e) => scrollToSection(e, "facilities")}
-							className="px-3 py-2 text-slate-600 hover:text-indigo-600 transition-all duration-300 text-sm font-semibold cursor-pointer relative group"
+							className="px-3 py-2 text-slate-600 hover:text-teal-600 transition-all duration-300 text-sm font-semibold cursor-pointer relative group"
 						>
 							Facilities
-							<span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-500 to-cyan-500 group-hover:w-full transition-all duration-300"></span>
+							<span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-teal-500 to-cyan-500 group-hover:w-full transition-all duration-300"></span>
 						</Link>
 						<Link
 							href="/#gallery"
@@ -161,16 +161,17 @@ const Navbar = () => {
 									window.location.href = "/gallery";
 								}
 							}}
-							className="px-2 py-1 text-gray-700 hover:text-gray-900 transition-colors text-sm font-medium cursor-pointer"
+							className="px-3 py-2 text-slate-600 hover:text-teal-600 transition-all duration-300 text-sm font-semibold cursor-pointer relative group"
 						>
 							Gallery
+							<span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-teal-500 to-cyan-500 group-hover:w-full transition-all duration-300"></span>
 						</Link>
 
 						<div className="border-l border-gray-300 h-6 mx-2"></div>
 
 						<a
 							href="tel:+919544311236"
-							className="px-6 py-2.5 bg-gradient-to-r from-indigo-600 to-cyan-600 hover:from-indigo-700 hover:to-cyan-700 text-white rounded-full transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 text-sm flex items-center gap-2 font-semibold"
+							className="px-6 py-2.5 bg-gradient-to-r from-teal-600 to-cyan-600 hover:from-teal-700 hover:to-cyan-700 text-white rounded-full transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 text-sm flex items-center gap-2 font-semibold"
 						>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
@@ -224,7 +225,7 @@ const Navbar = () => {
 									scrollToTop(e);
 									setMobileMenuOpen(false);
 								}}
-								className="px-4 py-3 text-slate-700 hover:text-indigo-600 hover:bg-indigo-50 transition-all duration-300 text-base font-semibold cursor-pointer rounded-xl"
+								className="px-4 py-3 text-slate-700 hover:text-teal-600 hover:bg-teal-50 transition-all duration-300 text-base font-semibold cursor-pointer rounded-xl"
 							>
 								Home
 							</Link>
@@ -234,7 +235,7 @@ const Navbar = () => {
 									scrollToSection(e, "about");
 									setMobileMenuOpen(false);
 								}}
-								className="px-4 py-3 text-slate-700 hover:text-indigo-600 hover:bg-indigo-50 transition-all duration-300 text-base font-semibold cursor-pointer rounded-xl"
+								className="px-4 py-3 text-slate-700 hover:text-teal-600 hover:bg-teal-50 transition-all duration-300 text-base font-semibold cursor-pointer rounded-xl"
 							>
 								About
 							</Link>
@@ -244,7 +245,7 @@ const Navbar = () => {
 									scrollToSection(e, "facilities");
 									setMobileMenuOpen(false);
 								}}
-								className="px-4 py-3 text-slate-700 hover:text-indigo-600 hover:bg-indigo-50 transition-all duration-300 text-base font-semibold cursor-pointer rounded-xl"
+								className="px-4 py-3 text-slate-700 hover:text-teal-600 hover:bg-teal-50 transition-all duration-300 text-base font-semibold cursor-pointer rounded-xl"
 							>
 								Facilities
 							</Link>
@@ -268,14 +269,14 @@ const Navbar = () => {
 										window.location.href = "/gallery";
 									}
 								}}
-								className="px-4 py-3 text-slate-700 hover:text-indigo-600 hover:bg-indigo-50 transition-all duration-300 text-base font-semibold cursor-pointer rounded-xl"
+								className="px-4 py-3 text-slate-700 hover:text-teal-600 hover:bg-teal-50 transition-all duration-300 text-base font-semibold cursor-pointer rounded-xl"
 							>
 								Gallery
 							</Link>
 							<div className="border-t border-slate-200/50 my-4"></div>
 							<a
 								href="tel:+919544311236"
-								className="px-6 py-4 bg-gradient-to-r from-indigo-600 to-cyan-600 hover:from-indigo-700 hover:to-cyan-700 text-white rounded-2xl transition-all duration-300 shadow-lg hover:shadow-xl text-base text-center flex items-center justify-center gap-2 font-semibold"
+								className="px-6 py-4 bg-gradient-to-r from-teal-600 to-cyan-600 hover:from-teal-700 hover:to-cyan-700 text-white rounded-2xl transition-all duration-300 shadow-lg hover:shadow-xl text-base text-center flex items-center justify-center gap-2 font-semibold"
 								onClick={() => setMobileMenuOpen(false)}
 							>
 								<svg
