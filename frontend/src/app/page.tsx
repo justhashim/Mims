@@ -84,57 +84,63 @@ export default function Home() {
 			<Navbar />
 
 			{/* 1. Headline Section - Modern and elegant hero */}
-			<section className="min-h-screen py-24 bg-gray-50 flex items-center">
+			<section className="min-h-screen py-24 bg-gradient-to-br from-slate-50 via-white to-indigo-50 flex items-center relative overflow-hidden">
+				{/* Background decoration */}
+				<div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] -z-10"></div>
+				<div className="absolute top-0 right-0 -translate-y-12 translate-x-12 w-96 h-96 bg-gradient-to-br from-indigo-400/20 to-cyan-400/20 rounded-full blur-3xl -z-10"></div>
+				<div className="absolute bottom-0 left-0 translate-y-12 -translate-x-12 w-96 h-96 bg-gradient-to-br from-amber-400/20 to-orange-400/20 rounded-full blur-3xl -z-10"></div>
+
 				<div className="container mx-auto px-4">
 					<div className="grid md:grid-cols-2 gap-12 items-center">
 						{/* Left side - Value proposition */}
-						<div className="text-left bg-gray-100 p-4 md:p-8 rounded-xl shadow-lg h-auto md:h-[550px] flex flex-col justify-center animate-fade-in-up">
-							<span className="text-gray-500 font-medium mb-2 block animate-fade-in-up animation-delay-200">
+						<div className="text-left modern-card p-6 md:p-10 rounded-2xl h-auto md:h-[550px] flex flex-col justify-center animate-fade-in-up">
+							<span className="text-indigo-600 font-semibold mb-3 block animate-fade-in-up animation-delay-200 text-sm tracking-wide uppercase">
 								PREMIER EVENT VENUE
 							</span>
-							<h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 animate-fade-in-up animation-delay-400">
-								Your Perfect Event Space
+							<h1 className="text-4xl md:text-6xl font-bold text-slate-900 mb-6 animate-fade-in-up animation-delay-400 leading-tight">
+								Your Perfect
+								<span className="gradient-text block">Event Space</span>
 							</h1>
-							<p className="text-xl text-gray-600 mb-8 max-w-xl animate-fade-in-up animation-delay-600">
+							<p className="text-xl text-slate-600 mb-8 max-w-xl animate-fade-in-up animation-delay-600 leading-relaxed">
 								Mims Convention Centre offers versatile spaces for any occasion,
 								from corporate events to elegant weddings.
 							</p>
 
 							{/* Stats Cards */}
-							<div className="grid grid-cols-3 gap-2 md:gap-6 mb-10 animate-fade-in-up animation-delay-800">
-								<div className="bg-white p-3 md:p-6 rounded-xl shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 hover:bg-blue-50 group">
-									<div className="text-gray-900 text-2xl md:text-3xl font-bold group-hover:text-blue-600 transition-colors duration-300">
+							<div className="grid grid-cols-3 gap-3 md:gap-6 mb-10 animate-fade-in-up animation-delay-800">
+								<div className="modern-card p-4 md:p-6 rounded-2xl hover:shadow-2xl hover:scale-105 transition-all duration-500 group border border-indigo-100">
+									<div className="text-slate-900 text-2xl md:text-3xl font-bold group-hover:text-indigo-600 transition-colors duration-300">
 										500+
 									</div>
-									<div className="text-gray-500 text-xs md:text-sm">
+									<div className="text-slate-500 text-xs md:text-sm font-medium">
 										Seating Capacity
 									</div>
 								</div>
-								<div className="bg-white p-3 md:p-6 rounded-xl shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 hover:bg-blue-50 group animation-delay-100">
-									<div className="text-gray-900 text-2xl md:text-3xl font-bold group-hover:text-blue-600 transition-colors duration-300">
+								<div className="modern-card p-4 md:p-6 rounded-2xl hover:shadow-2xl hover:scale-105 transition-all duration-500 group border border-cyan-100 animation-delay-100">
+									<div className="text-slate-900 text-2xl md:text-3xl font-bold group-hover:text-cyan-600 transition-colors duration-300">
 										250+
 									</div>
-									<div className="text-gray-500 text-xs md:text-sm">
+									<div className="text-slate-500 text-xs md:text-sm font-medium">
 										Parking Space
 									</div>
 								</div>
-								<div className="bg-white p-3 md:p-6 rounded-xl shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 hover:bg-blue-50 group animation-delay-200">
-									<div className="text-gray-900 text-2xl md:text-3xl font-bold group-hover:text-blue-600 transition-colors duration-300">
+								<div className="modern-card p-4 md:p-6 rounded-2xl hover:shadow-2xl hover:scale-105 transition-all duration-500 group border border-amber-100 animation-delay-200">
+									<div className="text-slate-900 text-2xl md:text-3xl font-bold group-hover:text-amber-600 transition-colors duration-300">
 										50+
 									</div>
-									<div className="text-gray-500 text-xs md:text-sm">
+									<div className="text-slate-500 text-xs md:text-sm font-medium">
 										Events Hosted
 									</div>
 								</div>
 							</div>
 
-							<div className="flex space-x-2 sm:space-x-4 animate-fade-in-up animation-delay-1000">
-								<button className="flex-1 bg-gray-900 hover:bg-gray-800 text-white px-3 sm:px-8 py-3 sm:py-4 rounded-lg sm:rounded-full text-xs sm:text-lg font-medium transition-all duration-300 shadow-md hover:shadow-xl hover:scale-105 transform">
+							<div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up animation-delay-1000">
+								<button className="btn-primary px-8 py-4 rounded-2xl text-base font-semibold shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
 									Discover & Explore
 								</button>
 								<Link
 									href="#contact"
-									className="flex-1 bg-blue-500 hover:bg-blue-600 text-white px-3 sm:px-8 py-3 sm:py-4 rounded-lg sm:rounded-full text-xs sm:text-lg font-medium transition-all duration-300 shadow-md hover:shadow-xl hover:scale-105 transform text-center"
+									className="btn-secondary px-8 py-4 rounded-2xl text-base font-semibold shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 text-center inline-block"
 								>
 									Contact Us
 								</Link>
@@ -161,29 +167,33 @@ export default function Home() {
 			</section>
 
 			{/* 2. Visual Focus Section */}
-			<section className="py-20 bg-gray-800 text-white">
+			<section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-indigo-900 text-white relative overflow-hidden">
+				{/* Background decoration */}
+				<div className="absolute inset-0 bg-grid-white/[0.05] -z-10"></div>
+				<div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-indigo-500/10 to-cyan-500/10 rounded-full blur-3xl -z-10"></div>
+
 				<div className="container mx-auto px-4">
 					<div className="text-center mb-16">
-						<h2 className="text-4xl font-bold mb-4 animate-fade-in-up">
-							Experience Excellence
+						<h2 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in-up">
+							Experience <span className="gradient-text">Excellence</span>
 						</h2>
-						<div className="w-24 h-1 bg-blue-500 mx-auto animate-scale-in animation-delay-300"></div>
+						<div className="w-24 h-1 bg-gradient-to-r from-indigo-500 to-cyan-500 mx-auto animate-scale-in animation-delay-300 rounded-full"></div>
 					</div>
 
-					<div className="relative h-96 w-full max-w-4xl mx-auto rounded-lg overflow-hidden shadow-2xl hover:shadow-3xl transition-shadow duration-500 animate-fade-in-up animation-delay-500 group">
+					<div className="relative h-96 md:h-[500px] w-full max-w-5xl mx-auto rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 animate-fade-in-up animation-delay-500 group border border-white/10">
 						<Image
 							src="/images/interior.jpg"
 							alt="Mims Convention Centre Interior"
 							fill
 							style={{ objectFit: "cover" }}
-							className="group-hover:scale-105 transition-transform duration-700"
+							className="group-hover:scale-110 transition-transform duration-700"
 						/>
-						<div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent flex items-end">
-							<div className="p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-								<h3 className="text-2xl font-bold mb-2 animate-fade-in-up animation-delay-700">
+						<div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent flex items-end">
+							<div className="p-8 md:p-12 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+								<h3 className="text-2xl md:text-3xl font-bold mb-3 animate-fade-in-up animation-delay-700">
 									State-of-the-Art Facilities
 								</h3>
-								<p className="text-gray-300 animate-fade-in-up animation-delay-900">
+								<p className="text-slate-300 text-lg animate-fade-in-up animation-delay-900">
 									Designed to impress and built to perform
 								</p>
 							</div>
@@ -193,19 +203,26 @@ export default function Home() {
 			</section>
 
 			{/* 3. Benefits Section */}
-			<section id="facilities" className="py-20 bg-white">
+			<section
+				id="facilities"
+				className="py-20 bg-gradient-to-br from-slate-50 to-white relative overflow-hidden"
+			>
+				{/* Background decoration */}
+				<div className="absolute top-0 right-0 w-72 h-72 bg-gradient-to-br from-indigo-100 to-cyan-100 rounded-full blur-3xl opacity-60 -z-10"></div>
+				<div className="absolute bottom-0 left-0 w-72 h-72 bg-gradient-to-br from-amber-100 to-orange-100 rounded-full blur-3xl opacity-60 -z-10"></div>
+
 				<div className="container mx-auto px-4">
 					<div className="text-center mb-16">
-						<h2 className="text-4xl font-bold text-gray-800 mb-4 animate-fade-in-up">
-							Why Choose Us
+						<h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 animate-fade-in-up">
+							Why Choose <span className="gradient-text">Us</span>
 						</h2>
-						<div className="w-24 h-1 bg-blue-500 mx-auto mb-6 animate-scale-in animation-delay-300"></div>
+						<div className="w-24 h-1 bg-gradient-to-r from-indigo-500 to-cyan-500 mx-auto mb-6 animate-scale-in animation-delay-300 rounded-full"></div>
 					</div>
 
 					<div className="grid md:grid-cols-3 gap-8">
 						{/* Benefit 1 */}
-						<div className="bg-gray-50 rounded-lg p-8 text-center shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105 hover:bg-blue-50 group animate-fade-in-up animation-delay-200">
-							<div className="bg-blue-500 text-white p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 group-hover:bg-blue-600">
+						<div className="modern-card rounded-2xl p-8 text-center shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 group animate-fade-in-up animation-delay-200 border border-indigo-100">
+							<div className="bg-gradient-to-br from-indigo-500 to-indigo-600 text-white p-4 rounded-2xl w-16 h-16 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 shadow-lg">
 								<svg
 									className="w-8 h-8 group-hover:animate-pulse"
 									fill="currentColor"
@@ -219,18 +236,18 @@ export default function Home() {
 									></path>
 								</svg>
 							</div>
-							<h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-blue-600 transition-colors duration-300">
+							<h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-indigo-600 transition-colors duration-300">
 								Innovative Design
 							</h3>
-							<p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300">
+							<p className="text-slate-600 group-hover:text-slate-700 transition-colors duration-300 leading-relaxed">
 								Award-winning architecture that blends functionality with
 								aesthetic beauty.
 							</p>
 						</div>
 
 						{/* Benefit 2 */}
-						<div className="bg-gray-50 rounded-lg p-8 text-center shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105 hover:bg-blue-50 group animate-fade-in-up animation-delay-400">
-							<div className="bg-blue-500 text-white p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 group-hover:bg-blue-600">
+						<div className="modern-card rounded-2xl p-8 text-center shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 group animate-fade-in-up animation-delay-400 border border-cyan-100">
+							<div className="bg-gradient-to-br from-cyan-500 to-cyan-600 text-white p-4 rounded-2xl w-16 h-16 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 shadow-lg">
 								<svg
 									className="w-8 h-8 group-hover:animate-pulse"
 									fill="currentColor"
@@ -240,18 +257,18 @@ export default function Home() {
 									<path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v1h8v-1zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-1a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v1h-3zM4.75 12.094A5.973 5.973 0 004 15v1H1v-1a3 3 0 013.75-2.906z"></path>
 								</svg>
 							</div>
-							<h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-blue-600 transition-colors duration-300">
+							<h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-cyan-600 transition-colors duration-300">
 								Expert Staff
 							</h3>
-							<p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300">
+							<p className="text-slate-600 group-hover:text-slate-700 transition-colors duration-300 leading-relaxed">
 								Dedicated event professionals to ensure your event runs
 								flawlessly.
 							</p>
 						</div>
 
 						{/* Benefit 3 */}
-						<div className="bg-gray-50 rounded-lg p-8 text-center shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105 hover:bg-blue-50 group animate-fade-in-up animation-delay-600">
-							<div className="bg-blue-500 text-white p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 group-hover:bg-blue-600">
+						<div className="modern-card rounded-2xl p-8 text-center shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 group animate-fade-in-up animation-delay-600 border border-amber-100">
+							<div className="bg-gradient-to-br from-amber-500 to-amber-600 text-white p-4 rounded-2xl w-16 h-16 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 shadow-lg">
 								<svg
 									className="w-8 h-8 group-hover:animate-pulse"
 									fill="currentColor"
@@ -265,10 +282,10 @@ export default function Home() {
 									></path>
 								</svg>
 							</div>
-							<h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-blue-600 transition-colors duration-300">
+							<h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-amber-600 transition-colors duration-300">
 								Cutting-Edge Technology
 							</h3>
-							<p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300">
+							<p className="text-slate-600 group-hover:text-slate-700 transition-colors duration-300 leading-relaxed">
 								Advanced audio-visual systems and high-speed connectivity
 								throughout.
 							</p>
@@ -357,14 +374,22 @@ export default function Home() {
 			</section>
 
 			{/* 5.5. Gallery Section */}
-			<section id="gallery" className="py-20 bg-gray-800 text-white">
+			<section
+				id="gallery"
+				className="py-20 bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 text-white relative overflow-hidden"
+			>
+				{/* Background decoration */}
+				<div className="absolute inset-0 bg-grid-white/[0.02] -z-10"></div>
+				<div className="absolute top-1/4 right-1/4 w-96 h-96 bg-gradient-to-br from-indigo-500/20 to-cyan-500/20 rounded-full blur-3xl -z-10"></div>
+				<div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl -z-10"></div>
+
 				<div className="container mx-auto px-4">
 					<div className="text-center mb-16">
-						<h2 className="text-4xl font-bold mb-4 animate-fade-in-up">
-							Our Gallery
+						<h2 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in-up">
+							Our <span className="gradient-text">Gallery</span>
 						</h2>
-						<div className="w-24 h-1 bg-blue-500 mx-auto mb-6 animate-scale-in animation-delay-300"></div>
-						<p className="text-gray-300 max-w-3xl mx-auto animate-fade-in-up animation-delay-500">
+						<div className="w-24 h-1 bg-gradient-to-r from-indigo-500 to-cyan-500 mx-auto mb-6 animate-scale-in animation-delay-300 rounded-full"></div>
+						<p className="text-slate-300 max-w-3xl mx-auto animate-fade-in-up animation-delay-500 text-lg leading-relaxed">
 							Explore our stunning venue through these captivating images
 						</p>
 					</div>
@@ -529,7 +554,7 @@ export default function Home() {
 					<div className="text-center mt-12 animate-fade-in-up animation-delay-900">
 						<Link
 							href="/gallery"
-							className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full text-lg font-medium transition-all duration-300 hover:scale-105 transform hover:shadow-xl group"
+							className="btn-primary inline-flex items-center px-8 py-4 rounded-2xl text-lg font-semibold transition-all duration-300 hover:scale-105 transform hover:shadow-2xl group"
 						>
 							<span>View More Photos</span>
 							<svg

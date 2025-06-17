@@ -2,7 +2,45 @@
 
 :root {
 	--background: #ffffff;
-	--foreground: #171717;
+	--foreground: #0f172a;
+
+	/* Modern Color Palette */
+	--primary: #6366f1;
+	--primary-dark: #4f46e5;
+	--primary-light: #818cf8;
+	--secondary: #f59e0b;
+	--secondary-dark: #d97706;
+	--accent: #06b6d4;
+	--accent-dark: #0891b2;
+
+	/* Neutral Colors */
+	--neutral-50: #f8fafc;
+	--neutral-100: #f1f5f9;
+	--neutral-200: #e2e8f0;
+	--neutral-300: #cbd5e1;
+	--neutral-400: #94a3b8;
+	--neutral-500: #64748b;
+	--neutral-600: #475569;
+	--neutral-700: #334155;
+	--neutral-800: #1e293b;
+	--neutral-900: #0f172a;
+
+	/* Gradients */
+	--gradient-primary: linear-gradient(
+		135deg,
+		var(--primary) 0%,
+		var(--accent) 100%
+	);
+	--gradient-secondary: linear-gradient(
+		135deg,
+		var(--secondary) 0%,
+		var(--primary) 100%
+	);
+	--gradient-dark: linear-gradient(
+		135deg,
+		var(--neutral-800) 0%,
+		var(--neutral-900) 100%
+	);
 }
 
 @theme inline {
@@ -200,9 +238,18 @@ body {
 	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
-/* Gradient Text Animation */
+/* Modern Gradient Text Animation */
 .gradient-text {
-	background: linear-gradient(45deg, #3b82f6, #8b5cf6, #06b6d4);
+	background: var(--gradient-primary);
+	background-size: 300% 300%;
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	animation: gradientShift 3s ease infinite;
+}
+
+.gradient-text-secondary {
+	background: var(--gradient-secondary);
 	background-size: 300% 300%;
 	background-clip: text;
 	-webkit-background-clip: text;
@@ -218,6 +265,59 @@ body {
 	50% {
 		background-position: 100% 50%;
 	}
+}
+
+/* Modern Glass Effect */
+.glass {
+	background: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(10px);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.glass-dark {
+	background: rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(10px);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Modern Card Styles */
+.modern-card {
+	background: rgba(255, 255, 255, 0.95);
+	backdrop-filter: blur(20px);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.modern-card-dark {
+	background: rgba(30, 41, 59, 0.95);
+	backdrop-filter: blur(20px);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Modern Button Styles */
+.btn-primary {
+	background: var(--gradient-primary);
+	border: none;
+	color: white;
+	transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 10px 25px rgba(99, 102, 241, 0.3);
+}
+
+.btn-secondary {
+	background: var(--gradient-secondary);
+	border: none;
+	color: white;
+	transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 10px 25px rgba(245, 158, 11, 0.3);
 }
 
 /* Smooth scrolling */

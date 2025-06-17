@@ -91,8 +91,10 @@ const Navbar = () => {
 
 	return (
 		<nav
-			className={`fixed w-full top-0 z-50 transition-all duration-300 ${
-				scrolled || isGalleryPage ? "bg-white shadow-md" : "bg-transparent"
+			className={`fixed w-full top-0 z-50 transition-all duration-500 ${
+				scrolled || isGalleryPage
+					? "bg-white/95 backdrop-blur-lg shadow-lg border-b border-slate-200/50"
+					: "bg-transparent"
 			}`}
 		>
 			<div className="container mx-auto px-4 py-3">
@@ -107,10 +109,10 @@ const Navbar = () => {
 								priority
 							/>
 						</div>
-						<span className="hidden md:block text-2xl font-semibold text-gray-900 font-heading tracking-normal">
+						<span className="hidden md:block text-2xl font-bold text-slate-900 font-heading tracking-tight">
 							Mims Convention Centre
 						</span>
-						<span className="md:hidden text-lg font-medium text-gray-900 leading-tight font-heading">
+						<span className="md:hidden text-lg font-bold text-slate-900 leading-tight font-heading">
 							Mims Convention Centre
 						</span>
 					</Link>
@@ -119,23 +121,26 @@ const Navbar = () => {
 						<a
 							href="/"
 							onClick={scrollToTop}
-							className="px-2 py-1 text-gray-700 hover:text-gray-900 transition-colors text-sm font-medium cursor-pointer"
+							className="px-3 py-2 text-slate-600 hover:text-indigo-600 transition-all duration-300 text-sm font-semibold cursor-pointer relative group"
 						>
 							Home
+							<span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-500 to-cyan-500 group-hover:w-full transition-all duration-300"></span>
 						</a>
 						<a
 							href="/#about"
 							onClick={(e) => scrollToSection(e, "about")}
-							className="px-2 py-1 text-gray-700 hover:text-gray-900 transition-colors text-sm font-medium cursor-pointer"
+							className="px-3 py-2 text-slate-600 hover:text-indigo-600 transition-all duration-300 text-sm font-semibold cursor-pointer relative group"
 						>
 							About
+							<span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-500 to-cyan-500 group-hover:w-full transition-all duration-300"></span>
 						</a>
 						<a
 							href="/#facilities"
 							onClick={(e) => scrollToSection(e, "facilities")}
-							className="px-2 py-1 text-gray-700 hover:text-gray-900 transition-colors text-sm font-medium cursor-pointer"
+							className="px-3 py-2 text-slate-600 hover:text-indigo-600 transition-all duration-300 text-sm font-semibold cursor-pointer relative group"
 						>
 							Facilities
+							<span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-500 to-cyan-500 group-hover:w-full transition-all duration-300"></span>
 						</a>
 						<a
 							href="/#gallery"
@@ -165,7 +170,7 @@ const Navbar = () => {
 
 						<a
 							href="tel:+919544311236"
-							className="px-4 py-2 bg-gray-900 hover:bg-gray-800 text-white rounded-full transition-colors shadow-sm text-sm flex items-center gap-2"
+							className="px-6 py-2.5 bg-gradient-to-r from-indigo-600 to-cyan-600 hover:from-indigo-700 hover:to-cyan-700 text-white rounded-full transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 text-sm flex items-center gap-2 font-semibold"
 						>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
@@ -211,7 +216,7 @@ const Navbar = () => {
 
 				{/* Mobile menu */}
 				{mobileMenuOpen && (
-					<div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg py-4 px-6 transition-all duration-300 ease-in-out">
+					<div className="md:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-lg shadow-xl border-t border-slate-200/50 py-6 px-6 transition-all duration-300 ease-in-out">
 						<div className="flex flex-col space-y-4">
 							<a
 								href="/"
