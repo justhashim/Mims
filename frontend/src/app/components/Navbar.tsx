@@ -118,31 +118,31 @@ const Navbar = () => {
 					</Link>
 
 					<div className="hidden md:flex items-center space-x-8">
-						<a
+						<Link
 							href="/"
 							onClick={scrollToTop}
 							className="px-3 py-2 text-slate-600 hover:text-indigo-600 transition-all duration-300 text-sm font-semibold cursor-pointer relative group"
 						>
 							Home
 							<span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-500 to-cyan-500 group-hover:w-full transition-all duration-300"></span>
-						</a>
-						<a
+						</Link>
+						<Link
 							href="/#about"
 							onClick={(e) => scrollToSection(e, "about")}
 							className="px-3 py-2 text-slate-600 hover:text-indigo-600 transition-all duration-300 text-sm font-semibold cursor-pointer relative group"
 						>
 							About
 							<span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-500 to-cyan-500 group-hover:w-full transition-all duration-300"></span>
-						</a>
-						<a
+						</Link>
+						<Link
 							href="/#facilities"
 							onClick={(e) => scrollToSection(e, "facilities")}
 							className="px-3 py-2 text-slate-600 hover:text-indigo-600 transition-all duration-300 text-sm font-semibold cursor-pointer relative group"
 						>
 							Facilities
 							<span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-500 to-cyan-500 group-hover:w-full transition-all duration-300"></span>
-						</a>
-						<a
+						</Link>
+						<Link
 							href="/#gallery"
 							onClick={(e) => {
 								e.preventDefault();
@@ -164,7 +164,7 @@ const Navbar = () => {
 							className="px-2 py-1 text-gray-700 hover:text-gray-900 transition-colors text-sm font-medium cursor-pointer"
 						>
 							Gallery
-						</a>
+						</Link>
 
 						<div className="border-l border-gray-300 h-6 mx-2"></div>
 
@@ -218,7 +218,7 @@ const Navbar = () => {
 				{mobileMenuOpen && (
 					<div className="md:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-lg shadow-xl border-t border-slate-200/50 py-6 px-4 transition-all duration-300 ease-in-out animate-fade-in-up">
 						<div className="flex flex-col space-y-2">
-							<a
+							<Link
 								href="/"
 								onClick={(e) => {
 									scrollToTop(e);
@@ -227,8 +227,8 @@ const Navbar = () => {
 								className="px-4 py-3 text-slate-700 hover:text-indigo-600 hover:bg-indigo-50 transition-all duration-300 text-base font-semibold cursor-pointer rounded-xl"
 							>
 								Home
-							</a>
-							<a
+							</Link>
+							<Link
 								href="/#about"
 								onClick={(e) => {
 									scrollToSection(e, "about");
@@ -237,8 +237,8 @@ const Navbar = () => {
 								className="px-4 py-3 text-slate-700 hover:text-indigo-600 hover:bg-indigo-50 transition-all duration-300 text-base font-semibold cursor-pointer rounded-xl"
 							>
 								About
-							</a>
-							<a
+							</Link>
+							<Link
 								href="/#facilities"
 								onClick={(e) => {
 									scrollToSection(e, "facilities");
@@ -247,8 +247,8 @@ const Navbar = () => {
 								className="px-4 py-3 text-slate-700 hover:text-indigo-600 hover:bg-indigo-50 transition-all duration-300 text-base font-semibold cursor-pointer rounded-xl"
 							>
 								Facilities
-							</a>
-							<a
+							</Link>
+							<Link
 								href="/#gallery"
 								onClick={(e) => {
 									e.preventDefault();
@@ -271,7 +271,7 @@ const Navbar = () => {
 								className="px-4 py-3 text-slate-700 hover:text-indigo-600 hover:bg-indigo-50 transition-all duration-300 text-base font-semibold cursor-pointer rounded-xl"
 							>
 								Gallery
-							</a>
+							</Link>
 							<div className="border-t border-slate-200/50 my-4"></div>
 							<a
 								href="tel:+919544311236"
