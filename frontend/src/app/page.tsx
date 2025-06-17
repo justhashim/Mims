@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "./components/Navbar";
 import ContactForm from "./components/ContactForm";
-import Map from "./components/Map";
 import { useState, useEffect } from "react";
 
 export default function Home() {
@@ -83,102 +82,178 @@ export default function Home() {
 		<div className="min-h-screen flex flex-col">
 			<Navbar />
 
-			{/* Floating Google Maps Button */}
-			<div className="floating-maps-container">
-				<div className="floating-maps-tooltip">View on Google Maps</div>
-				<a
-					href="https://maps.app.goo.gl/hGPrwY4bsFPdP9XG9"
-					target="_blank"
-					rel="noopener noreferrer"
-					className="floating-maps-btn"
-					aria-label="Open Google Maps"
-				>
-					<svg
-						viewBox="0 0 24 24"
-						fill="currentColor"
-						xmlns="http://www.w3.org/2000/svg"
-					>
-						<path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
-					</svg>
-				</a>
-			</div>
-
 			{/* 1. Headline Section - Modern and elegant hero */}
-			<section className="min-h-screen py-24 bg-gradient-to-br from-slate-50 via-white to-teal-50 flex items-center relative overflow-hidden">
-				{/* Background decoration */}
+			<section className="min-h-screen section-padding bg-gradient-to-br from-slate-50 via-white to-blue-50 relative overflow-hidden pt-24 sm:pt-28 lg:pt-24">
+				{/* Enhanced Background decoration */}
 				<div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] -z-10"></div>
-				<div className="absolute top-0 right-0 -translate-y-12 translate-x-12 w-96 h-96 bg-gradient-to-br from-teal-400/20 to-cyan-400/20 rounded-full blur-3xl -z-10"></div>
-				<div className="absolute bottom-0 left-0 translate-y-12 -translate-x-12 w-96 h-96 bg-gradient-to-br from-emerald-400/20 to-teal-400/20 rounded-full blur-3xl -z-10"></div>
+				<div className="absolute top-0 right-0 -translate-y-12 translate-x-12 w-96 h-96 bg-gradient-to-br from-teal-400/15 to-blue-400/15 rounded-full blur-3xl -z-10 animate-pulse"></div>
+				<div className="absolute bottom-0 left-0 translate-y-12 -translate-x-12 w-96 h-96 bg-gradient-to-br from-blue-400/15 to-teal-400/15 rounded-full blur-3xl -z-10 animate-pulse animation-delay-1000"></div>
+				<div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-teal-500/5 to-blue-500/5 rounded-full blur-3xl -z-10"></div>
 
-				<div className="container mx-auto px-4">
-					<div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-						{/* Left side - Value proposition */}
-						<div className="text-left modern-card p-6 md:p-10 rounded-2xl h-auto md:h-[550px] flex flex-col justify-center animate-fade-in-up">
-							<span className="text-teal-600 font-semibold mb-3 block animate-fade-in-up animation-delay-200 text-xs md:text-sm tracking-wide uppercase">
-								PREMIER EVENT VENUE
-							</span>
-							<h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-slate-900 mb-4 md:mb-6 animate-fade-in-up animation-delay-400 leading-tight">
-								Your Perfect
-								<span className="gradient-text block">Event Space</span>
-							</h1>
-							<p className="text-lg md:text-xl text-slate-600 mb-6 md:mb-8 max-w-xl animate-fade-in-up animation-delay-600 leading-relaxed">
-								Mims Convention Centre offers versatile spaces for any occasion,
-								from corporate events to elegant weddings.
-							</p>
+				<div className="container mx-auto container-padding flex items-center min-h-screen">
+					<div className="w-full mt-20 sm:mt-16 md:mt-12 lg:mt-0">
+						<div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+							{/* Left side - Enhanced Value proposition */}
+							<div className="text-center lg:text-left modern-card p-6 sm:p-8 lg:p-12 rounded-3xl min-h-[500px] sm:min-h-[600px] flex flex-col justify-center animate-fade-in-up shadow-soft">
+								<div className="inline-flex items-center bg-gradient-to-r from-teal-50 to-blue-50 text-teal-700 px-3 sm:px-4 py-2 rounded-full mb-4 sm:mb-6 animate-fade-in-up animation-delay-200 border border-teal-200 text-center sm:text-left">
+									<svg
+										className="w-3 h-3 sm:w-4 sm:h-4 mr-2"
+										fill="currentColor"
+										viewBox="0 0 20 20"
+									>
+										<path
+											fillRule="evenodd"
+											d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+											clipRule="evenodd"
+										></path>
+									</svg>
+									<span className="text-xs sm:text-sm font-semibold tracking-wide uppercase">
+										PREMIER EVENT VENUE
+									</span>
+								</div>
+								<h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl font-bold text-slate-900 mb-6 animate-fade-in-up animation-delay-400 leading-tight">
+									Your Perfect
+									<span className="text-gradient block">Event Space</span>
+								</h1>
+								<p className="text-body-large text-slate-600 mb-8 max-w-xl animate-fade-in-up animation-delay-600">
+									Mims Convention Centre offers versatile spaces for any
+									occasion, from corporate events to elegant weddings.
+									Experience excellence in every detail.
+								</p>
 
-							{/* Stats Cards */}
-							<div className="grid grid-cols-3 gap-2 sm:gap-3 md:gap-6 mb-8 md:mb-10 animate-fade-in-up animation-delay-800">
-								<div className="modern-card p-3 sm:p-4 md:p-6 rounded-xl md:rounded-2xl hover:shadow-2xl hover:scale-105 transition-all duration-500 group border border-teal-100">
-									<div className="text-slate-900 text-xl sm:text-2xl md:text-3xl font-bold group-hover:text-teal-600 transition-colors duration-300">
-										500+
+								{/* Enhanced Stats Cards */}
+								<div className="grid grid-cols-3 gap-2 sm:gap-3 lg:gap-6 mb-8 sm:mb-10 animate-fade-in-up animation-delay-800">
+									<div className="modern-card p-3 sm:p-4 lg:p-6 rounded-xl sm:rounded-2xl transition-all duration-500 group border border-teal-100 hover:border-teal-300 hover:shadow-teal">
+										<div className="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-teal-500 to-teal-600 rounded-lg sm:rounded-xl mb-2 sm:mb-3 mx-auto group-hover:scale-110 transition-transform duration-300">
+											<svg
+												className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white"
+												fill="currentColor"
+												viewBox="0 0 20 20"
+											>
+												<path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v1h8v-1z"></path>
+											</svg>
+										</div>
+										<div className="text-slate-900 text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold group-hover:text-teal-600 transition-colors duration-300 text-center">
+											500+
+										</div>
+										<div className="text-slate-500 text-xs sm:text-sm font-medium leading-tight text-center">
+											Seating Capacity
+										</div>
 									</div>
-									<div className="text-slate-500 text-xs sm:text-sm font-medium leading-tight">
-										Seating Capacity
+									<div className="modern-card p-3 sm:p-4 lg:p-6 rounded-xl sm:rounded-2xl transition-all duration-500 group border border-blue-100 hover:border-blue-300 hover:shadow-blue animation-delay-100">
+										<div className="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg sm:rounded-xl mb-2 sm:mb-3 mx-auto group-hover:scale-110 transition-transform duration-300">
+											<svg
+												className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white"
+												fill="currentColor"
+												viewBox="0 0 20 20"
+											>
+												<path
+													fillRule="evenodd"
+													d="M4 4a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2H4zm3 5a1 1 0 011-1h4a1 1 0 110 2H8a1 1 0 01-1-1z"
+													clipRule="evenodd"
+												></path>
+											</svg>
+										</div>
+										<div className="text-slate-900 text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold group-hover:text-blue-600 transition-colors duration-300 text-center">
+											150+
+										</div>
+										<div className="text-slate-500 text-xs sm:text-sm font-medium leading-tight text-center">
+											Parking Space
+										</div>
+									</div>
+									<div className="modern-card p-3 sm:p-4 lg:p-6 rounded-xl sm:rounded-2xl transition-all duration-500 group border border-emerald-100 hover:border-emerald-300 hover:shadow-medium animation-delay-200">
+										<div className="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-lg sm:rounded-xl mb-2 sm:mb-3 mx-auto group-hover:scale-110 transition-transform duration-300">
+											<svg
+												className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white"
+												fill="currentColor"
+												viewBox="0 0 20 20"
+											>
+												<path
+													fillRule="evenodd"
+													d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+													clipRule="evenodd"
+												></path>
+											</svg>
+										</div>
+										<div className="text-slate-900 text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold group-hover:text-emerald-600 transition-colors duration-300 text-center">
+											1000+
+										</div>
+										<div className="text-slate-500 text-xs sm:text-sm font-medium leading-tight text-center">
+											Events Hosted
+										</div>
 									</div>
 								</div>
-								<div className="modern-card p-3 sm:p-4 md:p-6 rounded-xl md:rounded-2xl hover:shadow-2xl hover:scale-105 transition-all duration-500 group border border-cyan-100 animation-delay-100">
-									<div className="text-slate-900 text-xl sm:text-2xl md:text-3xl font-bold group-hover:text-cyan-600 transition-colors duration-300">
-										250+
-									</div>
-									<div className="text-slate-500 text-xs sm:text-sm font-medium leading-tight">
-										Parking Space
-									</div>
-								</div>
-								<div className="modern-card p-3 sm:p-4 md:p-6 rounded-xl md:rounded-2xl hover:shadow-2xl hover:scale-105 transition-all duration-500 group border border-emerald-100 animation-delay-200">
-									<div className="text-slate-900 text-xl sm:text-2xl md:text-3xl font-bold group-hover:text-emerald-600 transition-colors duration-300">
-										50+
-									</div>
-									<div className="text-slate-500 text-xs sm:text-sm font-medium leading-tight">
-										Events Hosted
-									</div>
+
+								<div className="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fade-in-up animation-delay-1000">
+									<button className="btn-primary px-6 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl text-sm sm:text-base font-semibold shadow-soft hover:shadow-teal transform hover:scale-105 transition-all duration-300 flex items-center justify-center group touch-manipulation min-h-[48px]">
+										<span>Discover & Explore</span>
+										<svg
+											className="w-4 h-4 sm:w-5 sm:h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300"
+											fill="none"
+											stroke="currentColor"
+											viewBox="0 0 24 24"
+										>
+											<path
+												strokeLinecap="round"
+												strokeLinejoin="round"
+												strokeWidth={2}
+												d="M17 8l4 4m0 0l-4 4m4-4H3"
+											/>
+										</svg>
+									</button>
+									<Link
+										href="#contact"
+										className="btn-secondary px-6 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl text-sm sm:text-base font-semibold shadow-soft hover:shadow-blue transform hover:scale-105 transition-all duration-300 text-center inline-flex items-center justify-center group touch-manipulation min-h-[48px]"
+									>
+										<span>Contact Us</span>
+										<svg
+											className="w-4 h-4 sm:w-5 sm:h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300"
+											fill="none"
+											stroke="currentColor"
+											viewBox="0 0 24 24"
+										>
+											<path
+												strokeLinecap="round"
+												strokeLinejoin="round"
+												strokeWidth={2}
+												d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+											/>
+										</svg>
+									</Link>
 								</div>
 							</div>
 
-							<div className="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fade-in-up animation-delay-1000">
-								<button className="btn-primary px-6 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl text-sm sm:text-base font-semibold shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
-									Discover & Explore
-								</button>
-								<Link
-									href="#contact"
-									className="btn-secondary px-6 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl text-sm sm:text-base font-semibold shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 text-center inline-block"
-								>
-									Contact Us
-								</Link>
-							</div>
-						</div>
+							{/* Right side - Enhanced Image */}
+							<div className="relative animate-fade-in-right animation-delay-500">
+								<div className="relative">
+									{/* Decorative elements */}
+									<div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-teal-400 to-blue-400 rounded-full opacity-20 blur-xl"></div>
+									<div className="absolute -bottom-4 -left-4 w-32 h-32 bg-gradient-to-br from-blue-400 to-teal-400 rounded-full opacity-20 blur-xl"></div>
 
-						{/* Right side - Image */}
-						<div className="relative animate-fade-in-right animation-delay-500">
-							<div className="rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-500">
-								<div className="relative h-[550px] w-full">
-									<Image
-										src="/images/convention-center.jpg"
-										alt="Mims Convention Centre"
-										fill
-										style={{ objectFit: "cover" }}
-										priority
-										className="hover:scale-110 transition-transform duration-700"
-									/>
+									<div className="rounded-3xl overflow-hidden shadow-strong hover:shadow-3xl transition-all duration-500 group border border-white/50">
+										<div className="relative h-[600px] w-full">
+											<Image
+												src="/images/convention-center.jpg"
+												alt="Mims Convention Centre"
+												fill
+												style={{ objectFit: "cover" }}
+												priority
+												className="group-hover:scale-105 transition-transform duration-700"
+											/>
+											{/* Overlay with gradient */}
+											<div className="absolute inset-0 bg-gradient-to-t from-slate-900/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+											{/* Floating badge */}
+											<div className="absolute top-6 left-6 bg-white/95 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
+												<div className="flex items-center space-x-2">
+													<div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+													<span className="text-sm font-semibold text-slate-700">
+														Available Now
+													</span>
+												</div>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -187,17 +262,17 @@ export default function Home() {
 			</section>
 
 			{/* 2. Visual Focus Section */}
-			<section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-teal-900 text-white relative overflow-hidden">
+			<section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 text-white relative overflow-hidden">
 				{/* Background decoration */}
 				<div className="absolute inset-0 bg-grid-white/[0.05] -z-10"></div>
-				<div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-teal-500/10 to-cyan-500/10 rounded-full blur-3xl -z-10"></div>
+				<div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-teal-500/10 to-blue-500/10 rounded-full blur-3xl -z-10"></div>
 
 				<div className="container mx-auto px-4">
 					<div className="text-center mb-16">
 						<h2 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in-up">
 							Experience <span className="gradient-text">Excellence</span>
 						</h2>
-						<div className="w-24 h-1 bg-gradient-to-r from-teal-500 to-cyan-500 mx-auto animate-scale-in animation-delay-300 rounded-full"></div>
+						<div className="w-24 h-1 bg-gradient-to-r from-teal-500 to-blue-500 mx-auto animate-scale-in animation-delay-300 rounded-full"></div>
 					</div>
 
 					<div className="relative h-96 md:h-[500px] w-full max-w-5xl mx-auto rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 animate-fade-in-up animation-delay-500 group border border-white/10">
@@ -222,131 +297,316 @@ export default function Home() {
 				</div>
 			</section>
 
-			{/* 3. Benefits Section */}
+			{/* 3. Enhanced Benefits Section */}
 			<section
 				id="facilities"
-				className="py-20 bg-gradient-to-br from-slate-50 to-white relative overflow-hidden"
+				className="section-padding bg-gradient-to-br from-slate-50 to-white relative overflow-hidden"
 			>
-				{/* Background decoration */}
-				<div className="absolute top-0 right-0 w-72 h-72 bg-gradient-to-br from-teal-100 to-cyan-100 rounded-full blur-3xl opacity-60 -z-10"></div>
-				<div className="absolute bottom-0 left-0 w-72 h-72 bg-gradient-to-br from-emerald-100 to-teal-100 rounded-full blur-3xl opacity-60 -z-10"></div>
+				{/* Enhanced Background decoration */}
+				<div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-teal-100 to-cyan-100 rounded-full blur-3xl opacity-40 -z-10 animate-pulse"></div>
+				<div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-br from-emerald-100 to-teal-100 rounded-full blur-3xl opacity-40 -z-10 animate-pulse animation-delay-1000"></div>
+				<div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-teal-50/30 to-blue-50/30 rounded-full blur-3xl -z-10"></div>
 
-				<div className="container mx-auto px-4">
-					<div className="text-center mb-16">
-						<h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 animate-fade-in-up">
-							Why Choose <span className="gradient-text">Us</span>
+				<div className="container mx-auto container-padding">
+					<div className="text-center mb-20">
+						<div className="inline-flex items-center bg-gradient-to-r from-teal-50 to-blue-50 text-teal-700 px-6 py-3 rounded-full mb-6 animate-fade-in-up border border-teal-200">
+							<svg
+								className="w-5 h-5 mr-2"
+								fill="currentColor"
+								viewBox="0 0 20 20"
+							>
+								<path
+									fillRule="evenodd"
+									d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z"
+									clipRule="evenodd"
+								></path>
+							</svg>
+							<span className="font-semibold tracking-wide uppercase">
+								Our Advantages
+							</span>
+						</div>
+						<h2 className="heading-secondary text-slate-900 mb-6 animate-fade-in-up animation-delay-200">
+							Why Choose <span className="text-gradient">Us</span>
 						</h2>
-						<div className="w-24 h-1 bg-gradient-to-r from-teal-500 to-cyan-500 mx-auto mb-6 animate-scale-in animation-delay-300 rounded-full"></div>
+						<div className="w-24 h-1 bg-gradient-to-r from-teal-500 to-blue-500 mx-auto mb-6 animate-scale-in animation-delay-400 rounded-full"></div>
+						<p className="text-body-large text-slate-600 max-w-3xl mx-auto animate-fade-in-up animation-delay-500">
+							Experience the difference with our world-class facilities, expert
+							team, and commitment to excellence
+						</p>
 					</div>
 
-					<div className="grid md:grid-cols-3 gap-8">
-						{/* Benefit 1 */}
-						<div className="modern-card rounded-2xl p-8 text-center shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 group animate-fade-in-up animation-delay-200 border border-teal-100">
-							<div className="bg-gradient-to-br from-teal-500 to-teal-600 text-white p-4 rounded-2xl w-16 h-16 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 shadow-lg">
-								<svg
-									className="w-8 h-8 group-hover:animate-pulse"
-									fill="currentColor"
-									viewBox="0 0 20 20"
-									xmlns="http://www.w3.org/2000/svg"
-								>
-									<path
-										fillRule="evenodd"
-										d="M6.672 1.911a1 1 0 10-1.932.518l.259.966a1 1 0 001.932-.518l-.26-.966zM2.429 4.74a1 1 0 10-.517 1.932l.966.259a1 1 0 00.517-1.932l-.966-.26zm8.814-.569a1 1 0 00-1.415-1.414l-.707.707a1 1 0 101.415 1.415l.707-.708zm-7.071 7.072l.707-.707A1 1 0 003.465 9.12l-.708.707a1 1 0 001.415 1.415zm3.2-5.171a1 1 0 00-1.3 1.3l4 10a1 1 0 001.823.075l1.38-2.759 3.018 3.02a1 1 0 001.414-1.415l-3.019-3.02 2.76-1.379a1 1 0 00-.076-1.822l-10-4z"
-										clipRule="evenodd"
-									></path>
-								</svg>
+					<div className="grid lg:grid-cols-3 gap-8 lg:gap-10">
+						{/* Enhanced Benefit 1 */}
+						<div className="modern-card rounded-3xl p-10 text-center shadow-soft hover:shadow-teal transition-all duration-500 group animate-fade-in-up animation-delay-600 border border-teal-100 hover:border-teal-300 relative overflow-hidden">
+							{/* Background pattern */}
+							<div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-teal-50 to-transparent rounded-full -translate-y-16 translate-x-16 opacity-50"></div>
+
+							<div className="relative z-10">
+								<div className="bg-gradient-to-br from-teal-500 to-teal-600 text-white p-6 rounded-3xl w-20 h-20 flex items-center justify-center mx-auto mb-8 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-teal">
+									<svg
+										className="w-10 h-10 group-hover:animate-pulse"
+										fill="currentColor"
+										viewBox="0 0 20 20"
+									>
+										<path
+											fillRule="evenodd"
+											d="M6.672 1.911a1 1 0 10-1.932.518l.259.966a1 1 0 001.932-.518l-.26-.966zM2.429 4.74a1 1 0 10-.517 1.932l.966.259a1 1 0 00.517-1.932l-.966-.26zm8.814-.569a1 1 0 00-1.415-1.414l-.707.707a1 1 0 101.415 1.415l.707-.708zm-7.071 7.072l.707-.707A1 1 0 003.465 9.12l-.708.707a1 1 0 001.415 1.415zm3.2-5.171a1 1 0 00-1.3 1.3l4 10a1 1 0 001.823.075l1.38-2.759 3.018 3.02a1 1 0 001.414-1.415l-3.019-3.02 2.76-1.379a1 1 0 00-.076-1.822l-10-4z"
+											clipRule="evenodd"
+										></path>
+									</svg>
+								</div>
+								<h3 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-teal-600 transition-colors duration-300">
+									Innovative Design
+								</h3>
+								<p className="text-slate-600 group-hover:text-slate-700 transition-colors duration-300 leading-relaxed text-lg">
+									Award-winning architecture that blends functionality with
+									aesthetic beauty for unforgettable experiences.
+								</p>
+
+								{/* Feature list */}
+								<div className="mt-6 space-y-2">
+									<div className="flex items-center justify-center text-sm text-teal-600">
+										<svg
+											className="w-4 h-4 mr-2"
+											fill="currentColor"
+											viewBox="0 0 20 20"
+										>
+											<path
+												fillRule="evenodd"
+												d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+												clipRule="evenodd"
+											></path>
+										</svg>
+										Modern Architecture
+									</div>
+									<div className="flex items-center justify-center text-sm text-teal-600">
+										<svg
+											className="w-4 h-4 mr-2"
+											fill="currentColor"
+											viewBox="0 0 20 20"
+										>
+											<path
+												fillRule="evenodd"
+												d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+												clipRule="evenodd"
+											></path>
+										</svg>
+										Flexible Layouts
+									</div>
+								</div>
 							</div>
-							<h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-teal-600 transition-colors duration-300">
-								Innovative Design
-							</h3>
-							<p className="text-slate-600 group-hover:text-slate-700 transition-colors duration-300 leading-relaxed">
-								Award-winning architecture that blends functionality with
-								aesthetic beauty.
-							</p>
 						</div>
 
-						{/* Benefit 2 */}
-						<div className="modern-card rounded-2xl p-8 text-center shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 group animate-fade-in-up animation-delay-400 border border-cyan-100">
-							<div className="bg-gradient-to-br from-cyan-500 to-cyan-600 text-white p-4 rounded-2xl w-16 h-16 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 shadow-lg">
-								<svg
-									className="w-8 h-8 group-hover:animate-pulse"
-									fill="currentColor"
-									viewBox="0 0 20 20"
-									xmlns="http://www.w3.org/2000/svg"
-								>
-									<path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v1h8v-1zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-1a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v1h-3zM4.75 12.094A5.973 5.973 0 004 15v1H1v-1a3 3 0 013.75-2.906z"></path>
-								</svg>
+						{/* Enhanced Benefit 2 */}
+						<div className="modern-card rounded-3xl p-10 text-center shadow-soft hover:shadow-blue transition-all duration-500 group animate-fade-in-up animation-delay-700 border border-blue-100 hover:border-blue-300 relative overflow-hidden">
+							{/* Background pattern */}
+							<div className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-blue-50 to-transparent rounded-full -translate-y-16 -translate-x-16 opacity-50"></div>
+
+							<div className="relative z-10">
+								<div className="bg-gradient-to-br from-blue-600 to-blue-700 text-white p-6 rounded-3xl w-20 h-20 flex items-center justify-center mx-auto mb-8 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-blue">
+									<svg
+										className="w-10 h-10 group-hover:animate-pulse"
+										fill="currentColor"
+										viewBox="0 0 20 20"
+									>
+										<path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v1h8v-1zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-1a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v1h-3zM4.75 12.094A5.973 5.973 0 004 15v1H1v-1a3 3 0 013.75-2.906z"></path>
+									</svg>
+								</div>
+								<h3 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-blue-600 transition-colors duration-300">
+									Expert Staff
+								</h3>
+								<p className="text-slate-600 group-hover:text-slate-700 transition-colors duration-300 leading-relaxed text-lg">
+									Dedicated event professionals to ensure your event runs
+									flawlessly from start to finish.
+								</p>
+
+								{/* Feature list */}
+								<div className="mt-6 space-y-2">
+									<div className="flex items-center justify-center text-sm text-blue-600">
+										<svg
+											className="w-4 h-4 mr-2"
+											fill="currentColor"
+											viewBox="0 0 20 20"
+										>
+											<path
+												fillRule="evenodd"
+												d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+												clipRule="evenodd"
+											></path>
+										</svg>
+										24/7 Support
+									</div>
+									<div className="flex items-center justify-center text-sm text-blue-600">
+										<svg
+											className="w-4 h-4 mr-2"
+											fill="currentColor"
+											viewBox="0 0 20 20"
+										>
+											<path
+												fillRule="evenodd"
+												d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+												clipRule="evenodd"
+											></path>
+										</svg>
+										Event Coordination
+									</div>
+								</div>
 							</div>
-							<h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-cyan-600 transition-colors duration-300">
-								Expert Staff
-							</h3>
-							<p className="text-slate-600 group-hover:text-slate-700 transition-colors duration-300 leading-relaxed">
-								Dedicated event professionals to ensure your event runs
-								flawlessly.
-							</p>
 						</div>
 
-						{/* Benefit 3 */}
-						<div className="modern-card rounded-2xl p-8 text-center shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 group animate-fade-in-up animation-delay-600 border border-emerald-100">
-							<div className="bg-gradient-to-br from-emerald-500 to-emerald-600 text-white p-4 rounded-2xl w-16 h-16 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 shadow-lg">
-								<svg
-									className="w-8 h-8 group-hover:animate-pulse"
-									fill="currentColor"
-									viewBox="0 0 20 20"
-									xmlns="http://www.w3.org/2000/svg"
-								>
-									<path
-										fillRule="evenodd"
-										d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z"
-										clipRule="evenodd"
-									></path>
-								</svg>
+						{/* Enhanced Benefit 3 */}
+						<div className="modern-card rounded-3xl p-10 text-center shadow-soft hover:shadow-medium transition-all duration-500 group animate-fade-in-up animation-delay-800 border border-emerald-100 hover:border-emerald-300 relative overflow-hidden">
+							{/* Background pattern */}
+							<div className="absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-br from-emerald-50 to-transparent rounded-full translate-y-16 translate-x-16 opacity-50"></div>
+
+							<div className="relative z-10">
+								<div className="bg-gradient-to-br from-emerald-500 to-emerald-600 text-white p-6 rounded-3xl w-20 h-20 flex items-center justify-center mx-auto mb-8 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-medium">
+									<svg
+										className="w-10 h-10 group-hover:animate-pulse"
+										fill="currentColor"
+										viewBox="0 0 20 20"
+									>
+										<path
+											fillRule="evenodd"
+											d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z"
+											clipRule="evenodd"
+										></path>
+									</svg>
+								</div>
+								<h3 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-emerald-600 transition-colors duration-300">
+									Cutting-Edge Technology
+								</h3>
+								<p className="text-slate-600 group-hover:text-slate-700 transition-colors duration-300 leading-relaxed text-lg">
+									Advanced audio-visual systems and high-speed connectivity
+									throughout the venue.
+								</p>
+
+								{/* Feature list */}
+								<div className="mt-6 space-y-2">
+									<div className="flex items-center justify-center text-sm text-emerald-600">
+										<svg
+											className="w-4 h-4 mr-2"
+											fill="currentColor"
+											viewBox="0 0 20 20"
+										>
+											<path
+												fillRule="evenodd"
+												d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+												clipRule="evenodd"
+											></path>
+										</svg>
+										4K AV Systems
+									</div>
+									<div className="flex items-center justify-center text-sm text-emerald-600">
+										<svg
+											className="w-4 h-4 mr-2"
+											fill="currentColor"
+											viewBox="0 0 20 20"
+										>
+											<path
+												fillRule="evenodd"
+												d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+												clipRule="evenodd"
+											></path>
+										</svg>
+										High-Speed WiFi
+									</div>
+								</div>
 							</div>
-							<h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-emerald-600 transition-colors duration-300">
-								Cutting-Edge Technology
-							</h3>
-							<p className="text-slate-600 group-hover:text-slate-700 transition-colors duration-300 leading-relaxed">
-								Advanced audio-visual systems and high-speed connectivity
-								throughout.
-							</p>
 						</div>
 					</div>
 				</div>
 			</section>
 
-			{/* 4. Social Proof Section */}
-			<section className="py-20 bg-gray-900 text-white">
-				<div className="container mx-auto px-4">
-					<div className="text-center mb-16">
-						<h2 className="text-4xl font-bold mb-4 animate-fade-in-up">
-							What Our Clients Say
+			{/* 4. Enhanced Social Proof Section */}
+			<section className="section-padding bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white relative overflow-hidden">
+				{/* Background decoration */}
+				<div className="absolute inset-0 bg-grid-white/[0.02] -z-10"></div>
+				<div className="absolute top-1/4 right-1/4 w-96 h-96 bg-gradient-to-br from-teal-500/15 to-blue-500/15 rounded-full blur-3xl -z-10 animate-pulse"></div>
+				<div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-gradient-to-br from-blue-500/15 to-teal-500/15 rounded-full blur-3xl -z-10 animate-pulse animation-delay-1000"></div>
+
+				<div className="container mx-auto container-padding">
+					<div className="text-center mb-20">
+						<div className="inline-flex items-center bg-gradient-to-r from-teal-50 to-blue-50 text-teal-700 px-6 py-3 rounded-full mb-8 animate-fade-in-up border border-teal-200">
+							<svg
+								className="w-5 h-5 mr-2"
+								fill="currentColor"
+								viewBox="0 0 20 20"
+							>
+								<path
+									fillRule="evenodd"
+									d="M18 13V5a2 2 0 00-2-2H4a2 2 0 00-2 2v8a2 2 0 002 2h3l3 3 3-3h3a2 2 0 002-2zM5 7a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1zm1 3a1 1 0 100 2h3a1 1 0 100-2H6z"
+									clipRule="evenodd"
+								></path>
+							</svg>
+							<span className="font-semibold tracking-wide uppercase">
+								Client Testimonials
+							</span>
+						</div>
+						<h2 className="heading-secondary text-white mb-6 animate-fade-in-up animation-delay-200">
+							What Our <span className="text-gradient">Clients Say</span>
 						</h2>
-						<div className="w-24 h-1 bg-teal-500 mx-auto animate-scale-in animation-delay-300"></div>
+						<div className="w-24 h-1 bg-gradient-to-r from-teal-500 to-blue-500 mx-auto animate-scale-in animation-delay-400 rounded-full"></div>
 					</div>
 
-					<div className="max-w-4xl mx-auto bg-gray-800 p-10 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 animate-fade-in-up animation-delay-500 group">
-						<svg
-							className="w-12 h-12 text-teal-500 mb-6 animate-bounce group-hover:animate-pulse"
-							fill="currentColor"
-							viewBox="0 0 24 24"
-						>
-							<path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-						</svg>
-						<p className="text-xl italic mb-6 animate-fade-in-up animation-delay-700 group-hover:text-teal-100 transition-colors duration-300">
-							&ldquo;Mims Convention Centre exceeded all our expectations. The
-							venue is stunning, the staff was professional, and our guests were
-							thoroughly impressed. We couldn&apos;t have asked for a better
-							experience for our annual corporate conference.&rdquo;
-						</p>
-						<div className="flex items-center animate-fade-in-up animation-delay-900">
-							<div className="w-12 h-12 bg-teal-500 rounded-full mr-4 group-hover:scale-110 transition-transform duration-300 animate-pulse"></div>
-							<div>
-								<h4 className="font-bold group-hover:text-teal-300 transition-colors duration-300">
-									Sarah Johnson
-								</h4>
-								<p className="text-teal-400 group-hover:text-teal-200 transition-colors duration-300">
-									CEO, TechCorp International
-								</p>
+					<div className="max-w-5xl mx-auto">
+						<div className="modern-card-dark rounded-3xl p-10 lg:p-16 shadow-strong hover:shadow-3xl transition-all duration-500 group border border-white/10 hover:border-teal-500/50 relative overflow-hidden">
+							{/* Background pattern */}
+							<div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-teal-500/10 to-transparent rounded-full -translate-y-20 translate-x-20"></div>
+							<div className="absolute bottom-0 left-0 w-40 h-40 bg-gradient-to-br from-blue-500/10 to-transparent rounded-full translate-y-20 -translate-x-20"></div>
+
+							<div className="relative z-10">
+								{/* Quote icon */}
+								<div className="text-center mb-10 animate-fade-in-up animation-delay-500">
+									<div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-teal-500 to-blue-500 rounded-full mb-6 group-hover:scale-110 transition-transform duration-300 shadow-teal">
+										<svg
+											className="w-10 h-10 text-white"
+											fill="currentColor"
+											viewBox="0 0 24 24"
+										>
+											<path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+										</svg>
+									</div>
+								</div>
+
+								{/* Testimonial text */}
+								<blockquote className="text-2xl lg:text-3xl text-slate-200 text-center mb-12 leading-relaxed animate-fade-in-up animation-delay-700 group-hover:text-white transition-colors duration-300 font-light italic">
+									&ldquo;Mims Convention Centre exceeded all our expectations.
+									The venue is stunning, the staff was professional, and our
+									guests were thoroughly impressed. We couldn&apos;t have asked
+									for a better experience for our annual corporate
+									conference.&rdquo;
+								</blockquote>
+
+								{/* Client info */}
+								<div className="flex items-center justify-center animate-fade-in-up animation-delay-900">
+									<div className="flex items-center bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+										<div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-blue-500 rounded-full mr-6 group-hover:scale-110 transition-transform duration-300 flex items-center justify-center">
+											<span className="text-white font-bold text-xl">SJ</span>
+										</div>
+										<div className="text-left">
+											<h4 className="text-xl font-bold text-white group-hover:text-teal-300 transition-colors duration-300 mb-1">
+												Sarah Johnson
+											</h4>
+											<p className="text-teal-400 group-hover:text-teal-200 transition-colors duration-300 font-medium">
+												CEO, TechCorp International
+											</p>
+											<div className="flex items-center mt-2">
+												{/* Star rating */}
+												{[...Array(5)].map((_, i) => (
+													<svg
+														key={i}
+														className="w-4 h-4 text-yellow-400 mr-1"
+														fill="currentColor"
+														viewBox="0 0 20 20"
+													>
+														<path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+													</svg>
+												))}
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -396,19 +656,19 @@ export default function Home() {
 			{/* 5.5. Gallery Section */}
 			<section
 				id="gallery"
-				className="py-20 bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900 text-white relative overflow-hidden"
+				className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white relative overflow-hidden"
 			>
 				{/* Background decoration */}
 				<div className="absolute inset-0 bg-grid-white/[0.02] -z-10"></div>
-				<div className="absolute top-1/4 right-1/4 w-96 h-96 bg-gradient-to-br from-teal-500/20 to-cyan-500/20 rounded-full blur-3xl -z-10"></div>
-				<div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-full blur-3xl -z-10"></div>
+				<div className="absolute top-1/4 right-1/4 w-96 h-96 bg-gradient-to-br from-teal-500/20 to-blue-500/20 rounded-full blur-3xl -z-10"></div>
+				<div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-gradient-to-br from-blue-500/20 to-teal-500/20 rounded-full blur-3xl -z-10"></div>
 
 				<div className="container mx-auto px-4">
 					<div className="text-center mb-16">
 						<h2 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in-up">
 							Our <span className="gradient-text">Gallery</span>
 						</h2>
-						<div className="w-24 h-1 bg-gradient-to-r from-teal-500 to-cyan-500 mx-auto mb-6 animate-scale-in animation-delay-300 rounded-full"></div>
+						<div className="w-24 h-1 bg-gradient-to-r from-teal-500 to-blue-500 mx-auto mb-6 animate-scale-in animation-delay-300 rounded-full"></div>
 						<p className="text-slate-300 max-w-3xl mx-auto animate-fade-in-up animation-delay-500 text-lg leading-relaxed">
 							Explore our stunning venue through these captivating images
 						</p>
@@ -449,14 +709,14 @@ export default function Home() {
 								</div>
 							</div>
 
-							{/* Navigation Arrows */}
+							{/* Navigation Arrows - Always visible on mobile */}
 							<button
 								onClick={prevImage}
-								className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full transition-all duration-300 hover:scale-110 group/btn carousel-nav-button opacity-0 group-hover:opacity-100"
+								className="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 sm:p-3 rounded-full transition-all duration-300 hover:scale-110 group/btn carousel-nav-button opacity-100 sm:opacity-0 sm:group-hover:opacity-100 touch-manipulation"
 								aria-label="Previous image"
 							>
 								<svg
-									className="w-6 h-6 group-hover/btn:scale-110 transition-transform duration-300"
+									className="w-5 h-5 sm:w-6 sm:h-6 group-hover/btn:scale-110 transition-transform duration-300"
 									fill="none"
 									stroke="currentColor"
 									viewBox="0 0 24 24"
@@ -472,11 +732,11 @@ export default function Home() {
 
 							<button
 								onClick={nextImage}
-								className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full transition-all duration-300 hover:scale-110 group/btn carousel-nav-button opacity-0 group-hover:opacity-100"
+								className="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 sm:p-3 rounded-full transition-all duration-300 hover:scale-110 group/btn carousel-nav-button opacity-100 sm:opacity-0 sm:group-hover:opacity-100 touch-manipulation"
 								aria-label="Next image"
 							>
 								<svg
-									className="w-6 h-6 group-hover/btn:scale-110 transition-transform duration-300"
+									className="w-5 h-5 sm:w-6 sm:h-6 group-hover/btn:scale-110 transition-transform duration-300"
 									fill="none"
 									stroke="currentColor"
 									viewBox="0 0 24 24"
@@ -493,14 +753,14 @@ export default function Home() {
 							{/* Play/Pause Button */}
 							<button
 								onClick={() => setIsAutoPlaying(!isAutoPlaying)}
-								className="absolute top-4 right-4 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all duration-300 hover:scale-110 opacity-0 group-hover:opacity-100"
+								className="absolute top-2 sm:top-4 right-2 sm:right-4 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all duration-300 hover:scale-110 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 touch-manipulation"
 								aria-label={
 									isAutoPlaying ? "Pause slideshow" : "Play slideshow"
 								}
 							>
 								{isAutoPlaying ? (
 									<svg
-										className="w-5 h-5"
+										className="w-4 h-4 sm:w-5 sm:h-5"
 										fill="none"
 										stroke="currentColor"
 										viewBox="0 0 24 24"
@@ -514,7 +774,7 @@ export default function Home() {
 									</svg>
 								) : (
 									<svg
-										className="w-5 h-5"
+										className="w-4 h-4 sm:w-5 sm:h-5"
 										fill="none"
 										stroke="currentColor"
 										viewBox="0 0 24 24"
@@ -536,7 +796,7 @@ export default function Home() {
 								<button
 									key={index}
 									onClick={() => goToImage(index)}
-									className={`relative flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-lg overflow-hidden transition-all duration-300 ${
+									className={`relative flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-lg overflow-hidden transition-all duration-300 touch-manipulation ${
 										index === currentImageIndex
 											? "ring-2 sm:ring-4 ring-teal-500 scale-110"
 											: "hover:scale-105 opacity-70 hover:opacity-100"
@@ -559,13 +819,21 @@ export default function Home() {
 								<button
 									key={index}
 									onClick={() => goToImage(index)}
-									className={`w-3 h-3 rounded-full transition-all duration-300 ${
+									className={`w-3 h-3 sm:w-4 sm:h-4 rounded-full transition-all duration-300 touch-manipulation min-w-[24px] min-h-[24px] flex items-center justify-center ${
 										index === currentImageIndex
 											? "bg-teal-500 scale-125"
 											: "bg-gray-500 hover:bg-gray-400"
 									}`}
 									aria-label={`Go to image ${index + 1}`}
-								/>
+								>
+									<span
+										className={`w-3 h-3 sm:w-4 sm:h-4 rounded-full ${
+											index === currentImageIndex
+												? "bg-teal-500"
+												: "bg-gray-500"
+										}`}
+									></span>
+								</button>
 							))}
 						</div>
 					</div>
@@ -655,16 +923,16 @@ export default function Home() {
 							</Link>
 						</div>
 
-						<div className="bg-teal-600 p-8 rounded-lg text-center shadow-lg hover:shadow-xl transition-all duration-500 transform scale-105 hover:scale-110 group animate-fade-in-up animation-delay-400 animate-pulse">
+						<div className="bg-gradient-to-r from-teal-600 to-blue-600 p-8 rounded-lg text-center shadow-lg hover:shadow-xl transition-all duration-500 transform scale-105 hover:scale-110 group animate-fade-in-up animation-delay-400 animate-pulse">
 							<h3 className="text-xl font-bold mb-4 group-hover:animate-bounce">
 								Request a Quote
 							</h3>
-							<p className="text-teal-100 mb-6 group-hover:text-white transition-colors duration-300">
+							<p className="text-blue-100 mb-6 group-hover:text-white transition-colors duration-300">
 								Get a customized proposal for your event
 							</p>
 							<Link
 								href="#contact"
-								className="inline-block bg-white hover:bg-gray-100 text-teal-600 px-6 py-3 rounded-md transition-all duration-300 w-full font-medium hover:scale-105 transform hover:shadow-lg"
+								className="inline-block bg-white hover:bg-gray-100 text-blue-600 px-6 py-3 rounded-md transition-all duration-300 w-full font-medium hover:scale-105 transform hover:shadow-lg"
 							>
 								Get Quote
 							</Link>
@@ -689,119 +957,190 @@ export default function Home() {
 			</section>
 
 			{/* Contact Section */}
-			<section id="contact" className="py-20 bg-white">
+			<section
+				id="contact"
+				className="py-20 bg-gradient-to-br from-slate-50 via-white to-blue-50 relative overflow-hidden"
+			>
+				{/* Background decoration */}
+				<div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] -z-10"></div>
+				<div className="absolute top-0 right-0 -translate-y-12 translate-x-12 w-96 h-96 bg-gradient-to-br from-teal-400/10 to-blue-400/10 rounded-full blur-3xl -z-10"></div>
+				<div className="absolute bottom-0 left-0 translate-y-12 -translate-x-12 w-96 h-96 bg-gradient-to-br from-blue-400/10 to-teal-400/10 rounded-full blur-3xl -z-10"></div>
+
 				<div className="container mx-auto px-4">
 					<div className="text-center mb-16">
-						<h2 className="text-4xl font-bold text-gray-800 mb-4 animate-fade-in-up">
-							Get In Touch
+						<span className="text-teal-600 font-semibold mb-3 block animate-fade-in-up text-sm tracking-wide uppercase">
+							CONTACT US
+						</span>
+						<h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 animate-fade-in-up animation-delay-200">
+							Get In <span className="gradient-text">Touch</span>
 						</h2>
-						<div className="w-24 h-1 bg-teal-500 mx-auto mb-6 animate-scale-in animation-delay-300"></div>
-						<p className="text-gray-600 max-w-3xl mx-auto animate-fade-in-up animation-delay-500">
-							Have questions or ready to book your event? Contact us today.
+						<div className="w-24 h-1 bg-gradient-to-r from-teal-500 to-blue-500 mx-auto mb-6 animate-scale-in animation-delay-400 rounded-full"></div>
+						<p className="text-slate-600 max-w-3xl mx-auto animate-fade-in-up animation-delay-500 text-lg leading-relaxed">
+							Ready to make your event extraordinary? We&apos;re here to help
+							you every step of the way.
 						</p>
 					</div>
 
-					<div className="grid md:grid-cols-2 gap-8 md:gap-12">
-						<div className="space-y-6 animate-fade-in-left animation-delay-200">
-							<div className="modern-card p-6 md:p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105 group">
-								<h3 className="text-2xl font-bold text-gray-800 mb-6 group-hover:text-teal-600 transition-colors duration-300">
-									Contact Information
-								</h3>
-
-								<div className="space-y-4 sm:space-y-6">
-									<div className="flex items-start">
-										<a
-											href="https://maps.app.goo.gl/hGPrwY4bsFPdP9XG9"
-											target="_blank"
-											className="flex items-start hover:opacity-80 transition-opacity w-full"
+					<div className="grid lg:grid-cols-3 gap-8 md:gap-12">
+						{/* Contact Information Cards */}
+						<div className="lg:col-span-1 space-y-6 animate-fade-in-left animation-delay-200">
+							{/* Address Card */}
+							<div className="modern-card p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105 group border border-teal-100">
+								<a
+									href="https://maps.app.goo.gl/hGPrwY4bsFPdP9XG9"
+									target="_blank"
+									rel="noopener noreferrer"
+									className="flex items-start hover:opacity-80 transition-opacity w-full"
+								>
+									<div className="bg-gradient-to-br from-teal-500 to-teal-600 text-white p-4 rounded-2xl mr-4 flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+										<svg
+											className="w-6 h-6"
+											fill="currentColor"
+											viewBox="0 0 20 20"
 										>
-											<div className="bg-teal-100 p-3 rounded-2xl mr-4 flex-shrink-0">
-												<svg
-													className="w-6 h-6 text-teal-600"
-													fill="currentColor"
-													viewBox="0 0 20 20"
-													xmlns="http://www.w3.org/2000/svg"
-												>
-													<path
-														fillRule="evenodd"
-														d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
-														clipRule="evenodd"
-													></path>
-												</svg>
-											</div>
-											<div className="min-w-0 flex-1">
-												<h4 className="font-semibold text-slate-800 mb-1">
-													Address
-												</h4>
-												<p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-													2FF4+J5X, Ernakulam - Thekkady Rd, Pattimattom, Kerala
-													683562
-												</p>
-											</div>
-										</a>
+											<path
+												fillRule="evenodd"
+												d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+												clipRule="evenodd"
+											></path>
+										</svg>
 									</div>
-
-									<div className="flex items-start">
-										<a
-											href="tel:+919544311236"
-											className="flex items-start hover:opacity-80 transition-opacity w-full"
-										>
-											<div className="bg-cyan-100 p-3 rounded-2xl mr-4 flex-shrink-0">
-												<svg
-													className="w-6 h-6 text-cyan-600"
-													fill="currentColor"
-													viewBox="0 0 20 20"
-													xmlns="http://www.w3.org/2000/svg"
-												>
-													<path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
-												</svg>
-											</div>
-											<div className="min-w-0 flex-1">
-												<h4 className="font-semibold text-slate-800 mb-1">
-													Phone
-												</h4>
-												<p className="text-slate-600 text-sm sm:text-base">
-													+91 95443 11236
-												</p>
-											</div>
-										</a>
+									<div className="min-w-0 flex-1">
+										<h4 className="font-bold text-slate-800 mb-2 group-hover:text-teal-600 transition-colors duration-300">
+											Visit Our Venue
+										</h4>
+										<p className="text-slate-600 text-sm leading-relaxed">
+											2FF4+J5X, Ernakulam - Thekkady Rd
+											<br />
+											Pattimattom, Kerala 683562
+										</p>
+										<span className="text-teal-600 text-sm font-medium mt-2 inline-block group-hover:translate-x-1 transition-transform duration-300">
+											View on Maps →
+										</span>
 									</div>
+								</a>
+							</div>
 
-									<div className="flex items-start">
-										<a
-											href="mailto:info@mimsconvention.com"
-											className="flex items-start hover:opacity-80 transition-opacity w-full"
+							{/* Phone Card */}
+							<div className="modern-card p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105 group border border-blue-100">
+								<a
+									href="tel:+919544311236"
+									className="flex items-start hover:opacity-80 transition-opacity w-full"
+								>
+									<div className="bg-gradient-to-br from-blue-600 to-blue-700 text-white p-4 rounded-2xl mr-4 flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+										<svg
+											className="w-6 h-6"
+											fill="currentColor"
+											viewBox="0 0 20 20"
 										>
-											<div className="bg-emerald-100 p-3 rounded-2xl mr-4 flex-shrink-0">
-												<svg
-													className="w-6 h-6 text-emerald-600"
-													fill="currentColor"
-													viewBox="0 0 20 20"
-													xmlns="http://www.w3.org/2000/svg"
-												>
-													<path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
-													<path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
-												</svg>
-											</div>
-											<div className="min-w-0 flex-1">
-												<h4 className="font-semibold text-slate-800 mb-1">
-													Email
-												</h4>
-												<p className="text-slate-600 text-sm sm:text-base break-all">
-													info@mimsconvention.com
-												</p>
-											</div>
-										</a>
+											<path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+										</svg>
+									</div>
+									<div className="min-w-0 flex-1">
+										<h4 className="font-bold text-slate-800 mb-2 group-hover:text-blue-600 transition-colors duration-300">
+											Call Us Now
+										</h4>
+										<p className="text-slate-600 text-sm mb-1">
+											+91 95443 11236
+										</p>
+										<span className="text-blue-600 text-sm font-medium group-hover:translate-x-1 transition-transform duration-300 inline-block">
+											Available 24/7 →
+										</span>
+									</div>
+								</a>
+							</div>
+
+							{/* Email Card */}
+							<div className="modern-card p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105 group border border-emerald-100">
+								<a
+									href="mailto:info@mimsconvention.com"
+									className="flex items-start hover:opacity-80 transition-opacity w-full"
+								>
+									<div className="bg-gradient-to-br from-emerald-500 to-emerald-600 text-white p-4 rounded-2xl mr-4 flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+										<svg
+											className="w-6 h-6"
+											fill="currentColor"
+											viewBox="0 0 20 20"
+										>
+											<path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+											<path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+										</svg>
+									</div>
+									<div className="min-w-0 flex-1">
+										<h4 className="font-bold text-slate-800 mb-2 group-hover:text-emerald-600 transition-colors duration-300">
+											Email Us
+										</h4>
+										<p className="text-slate-600 text-sm mb-1 break-all">
+											info@mimsconvention.com
+										</p>
+										<span className="text-emerald-600 text-sm font-medium group-hover:translate-x-1 transition-transform duration-300 inline-block">
+											Quick Response →
+										</span>
+									</div>
+								</a>
+							</div>
+
+							{/* Business Hours Card */}
+							<div className="modern-card p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105 group border border-purple-100">
+								<div className="flex items-start">
+									<div className="bg-gradient-to-br from-purple-500 to-purple-600 text-white p-4 rounded-2xl mr-4 flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+										<svg
+											className="w-6 h-6"
+											fill="currentColor"
+											viewBox="0 0 20 20"
+										>
+											<path
+												fillRule="evenodd"
+												d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
+												clipRule="evenodd"
+											></path>
+										</svg>
+									</div>
+									<div className="min-w-0 flex-1">
+										<h4 className="font-bold text-slate-800 mb-2 group-hover:text-purple-600 transition-colors duration-300">
+											Business Hours
+										</h4>
+										<div className="text-slate-600 text-sm space-y-1">
+											<p>Monday - Friday: 9:00 AM - 8:00 PM</p>
+											<p>Saturday - Sunday: 10:00 AM - 6:00 PM</p>
+										</div>
 									</div>
 								</div>
 							</div>
-
-							{/* Map */}
-							<Map />
 						</div>
 
-						<div className="animate-fade-in-right animation-delay-400">
+						{/* Contact Form */}
+						<div className="lg:col-span-2 animate-fade-in-right animation-delay-400">
 							<ContactForm />
+						</div>
+					</div>
+
+					{/* Additional Contact Options */}
+					<div className="mt-16 text-center animate-fade-in-up animation-delay-600">
+						<div className="bg-gradient-to-r from-teal-600 to-blue-600 text-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 group">
+							<h3 className="text-2xl font-bold mb-4 group-hover:animate-pulse">
+								Need Immediate Assistance?
+							</h3>
+							<p className="text-blue-100 mb-6 max-w-2xl mx-auto">
+								Our event planning specialists are standing by to help you
+								create the perfect event experience.
+							</p>
+							<div className="flex flex-col sm:flex-row gap-4 justify-center">
+								<a
+									href="tel:+919544311236"
+									className="bg-white text-teal-600 px-8 py-3 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300 hover:scale-105 transform shadow-lg"
+								>
+									Call Now: +91 95443 11236
+								</a>
+								<a
+									href="https://wa.me/919544311236"
+									target="_blank"
+									rel="noopener noreferrer"
+									className="bg-green-500 text-white px-8 py-3 rounded-xl font-semibold hover:bg-green-600 transition-all duration-300 hover:scale-105 transform shadow-lg"
+								>
+									WhatsApp Us
+								</a>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -974,7 +1313,7 @@ export default function Home() {
 								/>
 								<button
 									type="submit"
-									className="bg-teal-600 hover:bg-teal-700 text-white px-4 py-2 rounded-r-md transition-all duration-300 hover:scale-105 transform"
+									className="bg-gradient-to-r from-teal-600 to-blue-600 hover:from-teal-700 hover:to-blue-700 text-white px-4 py-2 rounded-r-md transition-all duration-300 hover:scale-105 transform"
 								>
 									Subscribe
 								</button>
