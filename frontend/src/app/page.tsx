@@ -1,10 +1,84 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "./components/Navbar";
 import ContactForm from "./components/ContactForm";
 import Map from "./components/Map";
+import { useState, useEffect } from "react";
 
 export default function Home() {
+	const [currentImageIndex, setCurrentImageIndex] = useState(0);
+	const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+
+	// Gallery images - you can replace these with your actual image paths
+	const galleryImages = [
+		{
+			src: "/images/convention-center.jpg",
+			alt: "Main Convention Hall",
+			title: "Grand Convention Hall",
+		},
+		{
+			src: "/images/interior.jpg",
+			alt: "Interior Design",
+			title: "Elegant Interior",
+		},
+		{
+			src: "/images/grand-hall.jpg",
+			alt: "Grand Hall Setup",
+			title: "Event Setup",
+		},
+		{
+			src: "/images/convention-center.jpg",
+			alt: "Exterior View",
+			title: "Modern Architecture",
+		},
+		{
+			src: "/images/interior.jpg",
+			alt: "Meeting Room",
+			title: "Conference Room",
+		},
+		{
+			src: "/images/grand-hall.jpg",
+			alt: "Wedding Setup",
+			title: "Wedding Venue",
+		},
+	];
+
+	const nextImage = () => {
+		setCurrentImageIndex((prev) => (prev + 1) % galleryImages.length);
+	};
+
+	const prevImage = () => {
+		setCurrentImageIndex(
+			(prev) => (prev - 1 + galleryImages.length) % galleryImages.length
+		);
+	};
+
+	const goToImage = (index: number) => {
+		setCurrentImageIndex(index);
+	};
+
+	// Auto-play functionality
+	useEffect(() => {
+		if (!isAutoPlaying) return;
+
+		const interval = setInterval(() => {
+			setCurrentImageIndex((prev) => (prev + 1) % galleryImages.length);
+		}, 5000); // Change image every 5 seconds
+
+		return () => clearInterval(interval);
+	}, [isAutoPlaying, galleryImages.length]);
+
+	// Pause auto-play on hover
+	const handleMouseEnter = () => {
+		setIsAutoPlaying(false);
+	};
+
+	const handleMouseLeave = () => {
+		setIsAutoPlaying(true);
+	};
+
 	return (
 		<div className="min-h-screen flex flex-col">
 			<Navbar />
@@ -278,6 +352,200 @@ export default function Home() {
 								experience from the moment they arrive.
 							</p>
 						</div>
+					</div>
+				</div>
+			</section>
+
+			{/* 5.5. Gallery Section */}
+			<section id="gallery" className="py-20 bg-gray-800 text-white">
+				<div className="container mx-auto px-4">
+					<div className="text-center mb-16">
+						<h2 className="text-4xl font-bold mb-4 animate-fade-in-up">
+							Our Gallery
+						</h2>
+						<div className="w-24 h-1 bg-blue-500 mx-auto mb-6 animate-scale-in animation-delay-300"></div>
+						<p className="text-gray-300 max-w-3xl mx-auto animate-fade-in-up animation-delay-500">
+							Explore our stunning venue through these captivating images
+						</p>
+					</div>
+
+					{/* Carousel Container */}
+					<div
+						className="relative max-w-6xl mx-auto animate-fade-in-up animation-delay-700"
+						onMouseEnter={handleMouseEnter}
+						onMouseLeave={handleMouseLeave}
+					>
+						{/* Auto-play Progress Bar */}
+						{isAutoPlaying && (
+							<div className="absolute top-0 left-0 right-0 h-1 bg-gray-700/30 z-10 rounded-t-xl">
+								<div className="h-full bg-blue-500 progress-bar rounded-t-xl"></div>
+							</div>
+						)}
+
+						{/* Main Image Display */}
+						<div className="relative h-96 md:h-[500px] rounded-xl overflow-hidden shadow-2xl group carousel-container">
+							<Image
+								src={galleryImages[currentImageIndex].src}
+								alt={galleryImages[currentImageIndex].alt}
+								fill
+								style={{ objectFit: "cover" }}
+								className="transition-transform duration-700 group-hover:scale-105 image-load"
+							/>
+
+							{/* Overlay with title */}
+							<div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end">
+								<div className="p-6 md:p-8">
+									<h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
+										{galleryImages[currentImageIndex].title}
+									</h3>
+									<p className="text-gray-200">
+										{galleryImages[currentImageIndex].alt}
+									</p>
+								</div>
+							</div>
+
+							{/* Navigation Arrows */}
+							<button
+								onClick={prevImage}
+								className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full transition-all duration-300 hover:scale-110 group/btn carousel-nav-button opacity-0 group-hover:opacity-100"
+								aria-label="Previous image"
+							>
+								<svg
+									className="w-6 h-6 group-hover/btn:scale-110 transition-transform duration-300"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<path
+										strokeLinecap="round"
+										strokeLinejoin="round"
+										strokeWidth={2}
+										d="M15 19l-7-7 7-7"
+									/>
+								</svg>
+							</button>
+
+							<button
+								onClick={nextImage}
+								className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full transition-all duration-300 hover:scale-110 group/btn carousel-nav-button opacity-0 group-hover:opacity-100"
+								aria-label="Next image"
+							>
+								<svg
+									className="w-6 h-6 group-hover/btn:scale-110 transition-transform duration-300"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<path
+										strokeLinecap="round"
+										strokeLinejoin="round"
+										strokeWidth={2}
+										d="M9 5l7 7-7 7"
+									/>
+								</svg>
+							</button>
+
+							{/* Play/Pause Button */}
+							<button
+								onClick={() => setIsAutoPlaying(!isAutoPlaying)}
+								className="absolute top-4 right-4 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all duration-300 hover:scale-110 opacity-0 group-hover:opacity-100"
+								aria-label={
+									isAutoPlaying ? "Pause slideshow" : "Play slideshow"
+								}
+							>
+								{isAutoPlaying ? (
+									<svg
+										className="w-5 h-5"
+										fill="none"
+										stroke="currentColor"
+										viewBox="0 0 24 24"
+									>
+										<path
+											strokeLinecap="round"
+											strokeLinejoin="round"
+											strokeWidth={2}
+											d="M10 9v6m4-6v6"
+										/>
+									</svg>
+								) : (
+									<svg
+										className="w-5 h-5"
+										fill="none"
+										stroke="currentColor"
+										viewBox="0 0 24 24"
+									>
+										<path
+											strokeLinecap="round"
+											strokeLinejoin="round"
+											strokeWidth={2}
+											d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h1m4 0h1"
+										/>
+									</svg>
+								)}
+							</button>
+						</div>
+
+						{/* Thumbnail Navigation */}
+						<div className="flex justify-center mt-6 space-x-2 overflow-x-auto pb-2 thumbnail-grid">
+							{galleryImages.map((image, index) => (
+								<button
+									key={index}
+									onClick={() => goToImage(index)}
+									className={`relative flex-shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-lg overflow-hidden transition-all duration-300 ${
+										index === currentImageIndex
+											? "ring-4 ring-blue-500 scale-110"
+											: "hover:scale-105 opacity-70 hover:opacity-100"
+									}`}
+								>
+									<Image
+										src={image.src}
+										alt={image.alt}
+										fill
+										style={{ objectFit: "cover" }}
+										className="transition-transform duration-300"
+									/>
+								</button>
+							))}
+						</div>
+
+						{/* Dots Indicator */}
+						<div className="flex justify-center mt-4 space-x-2">
+							{galleryImages.map((_, index) => (
+								<button
+									key={index}
+									onClick={() => goToImage(index)}
+									className={`w-3 h-3 rounded-full transition-all duration-300 ${
+										index === currentImageIndex
+											? "bg-blue-500 scale-125"
+											: "bg-gray-500 hover:bg-gray-400"
+									}`}
+									aria-label={`Go to image ${index + 1}`}
+								/>
+							))}
+						</div>
+					</div>
+
+					{/* View More Button */}
+					<div className="text-center mt-12 animate-fade-in-up animation-delay-900">
+						<Link
+							href="/gallery"
+							className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full text-lg font-medium transition-all duration-300 hover:scale-105 transform hover:shadow-xl group"
+						>
+							<span>View More Photos</span>
+							<svg
+								className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300"
+								fill="none"
+								stroke="currentColor"
+								viewBox="0 0 24 24"
+							>
+								<path
+									strokeLinecap="round"
+									strokeLinejoin="round"
+									strokeWidth={2}
+									d="M17 8l4 4m0 0l-4 4m4-4H3"
+								/>
+							</svg>
+						</Link>
 					</div>
 				</div>
 			</section>
