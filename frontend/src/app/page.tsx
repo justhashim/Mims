@@ -83,81 +83,175 @@ export default function Home() {
 			<Navbar />
 
 			{/* 1. Headline Section - Modern and elegant hero */}
-			<section className="min-h-screen py-24 bg-gradient-to-br from-slate-50 via-white to-blue-50 flex items-center relative overflow-hidden">
-				{/* Background decoration */}
+			<section className="min-h-screen section-padding bg-gradient-to-br from-slate-50 via-white to-blue-50 flex items-center relative overflow-hidden">
+				{/* Enhanced Background decoration */}
 				<div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] -z-10"></div>
-				<div className="absolute top-0 right-0 -translate-y-12 translate-x-12 w-96 h-96 bg-gradient-to-br from-teal-400/20 to-blue-400/20 rounded-full blur-3xl -z-10"></div>
-				<div className="absolute bottom-0 left-0 translate-y-12 -translate-x-12 w-96 h-96 bg-gradient-to-br from-blue-400/20 to-teal-400/20 rounded-full blur-3xl -z-10"></div>
+				<div className="absolute top-0 right-0 -translate-y-12 translate-x-12 w-96 h-96 bg-gradient-to-br from-teal-400/15 to-blue-400/15 rounded-full blur-3xl -z-10 animate-pulse"></div>
+				<div className="absolute bottom-0 left-0 translate-y-12 -translate-x-12 w-96 h-96 bg-gradient-to-br from-blue-400/15 to-teal-400/15 rounded-full blur-3xl -z-10 animate-pulse animation-delay-1000"></div>
+				<div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-teal-500/5 to-blue-500/5 rounded-full blur-3xl -z-10"></div>
 
-				<div className="container mx-auto px-4">
-					<div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-						{/* Left side - Value proposition */}
-						<div className="text-left modern-card p-6 md:p-10 rounded-2xl h-auto md:h-[550px] flex flex-col justify-center animate-fade-in-up">
-							<span className="text-teal-600 font-semibold mb-3 block animate-fade-in-up animation-delay-200 text-xs md:text-sm tracking-wide uppercase">
-								PREMIER EVENT VENUE
-							</span>
-							<h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-slate-900 mb-4 md:mb-6 animate-fade-in-up animation-delay-400 leading-tight">
+				<div className="container mx-auto container-padding">
+					<div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+						{/* Left side - Enhanced Value proposition */}
+						<div className="text-left modern-card p-8 lg:p-12 rounded-3xl min-h-[600px] flex flex-col justify-center animate-fade-in-up shadow-soft">
+							<div className="inline-flex items-center bg-gradient-to-r from-teal-50 to-blue-50 text-teal-700 px-4 py-2 rounded-full mb-6 animate-fade-in-up animation-delay-200 border border-teal-200">
+								<svg
+									className="w-4 h-4 mr-2"
+									fill="currentColor"
+									viewBox="0 0 20 20"
+								>
+									<path
+										fillRule="evenodd"
+										d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+										clipRule="evenodd"
+									></path>
+								</svg>
+								<span className="text-sm font-semibold tracking-wide uppercase">
+									PREMIER EVENT VENUE
+								</span>
+							</div>
+							<h1 className="heading-primary text-slate-900 mb-6 animate-fade-in-up animation-delay-400">
 								Your Perfect
-								<span className="gradient-text block">Event Space</span>
+								<span className="text-gradient block">Event Space</span>
 							</h1>
-							<p className="text-lg md:text-xl text-slate-600 mb-6 md:mb-8 max-w-xl animate-fade-in-up animation-delay-600 leading-relaxed">
+							<p className="text-body-large text-slate-600 mb-8 max-w-xl animate-fade-in-up animation-delay-600">
 								Mims Convention Centre offers versatile spaces for any occasion,
-								from corporate events to elegant weddings.
+								from corporate events to elegant weddings. Experience excellence
+								in every detail.
 							</p>
 
-							{/* Stats Cards */}
-							<div className="grid grid-cols-3 gap-2 sm:gap-3 md:gap-6 mb-8 md:mb-10 animate-fade-in-up animation-delay-800">
-								<div className="modern-card p-3 sm:p-4 md:p-6 rounded-xl md:rounded-2xl hover:shadow-2xl hover:scale-105 transition-all duration-500 group border border-teal-100">
-									<div className="text-slate-900 text-xl sm:text-2xl md:text-3xl font-bold group-hover:text-teal-600 transition-colors duration-300">
+							{/* Enhanced Stats Cards */}
+							<div className="grid grid-cols-3 gap-3 lg:gap-6 mb-10 animate-fade-in-up animation-delay-800">
+								<div className="modern-card p-4 lg:p-6 rounded-2xl transition-all duration-500 group border border-teal-100 hover:border-teal-300 hover:shadow-teal">
+									<div className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-teal-500 to-teal-600 rounded-xl mb-3 mx-auto group-hover:scale-110 transition-transform duration-300">
+										<svg
+											className="w-6 h-6 text-white"
+											fill="currentColor"
+											viewBox="0 0 20 20"
+										>
+											<path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v1h8v-1z"></path>
+										</svg>
+									</div>
+									<div className="text-slate-900 text-2xl lg:text-3xl font-bold group-hover:text-teal-600 transition-colors duration-300 text-center">
 										500+
 									</div>
-									<div className="text-slate-500 text-xs sm:text-sm font-medium leading-tight">
+									<div className="text-slate-500 text-sm font-medium leading-tight text-center">
 										Seating Capacity
 									</div>
 								</div>
-								<div className="modern-card p-3 sm:p-4 md:p-6 rounded-xl md:rounded-2xl hover:shadow-2xl hover:scale-105 transition-all duration-500 group border border-cyan-100 animation-delay-100">
-									<div className="text-slate-900 text-xl sm:text-2xl md:text-3xl font-bold group-hover:text-cyan-600 transition-colors duration-300">
+								<div className="modern-card p-4 lg:p-6 rounded-2xl transition-all duration-500 group border border-blue-100 hover:border-blue-300 hover:shadow-blue animation-delay-100">
+									<div className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl mb-3 mx-auto group-hover:scale-110 transition-transform duration-300">
+										<svg
+											className="w-6 h-6 text-white"
+											fill="currentColor"
+											viewBox="0 0 20 20"
+										>
+											<path
+												fillRule="evenodd"
+												d="M4 4a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2H4zm3 5a1 1 0 011-1h4a1 1 0 110 2H8a1 1 0 01-1-1z"
+												clipRule="evenodd"
+											></path>
+										</svg>
+									</div>
+									<div className="text-slate-900 text-2xl lg:text-3xl font-bold group-hover:text-blue-600 transition-colors duration-300 text-center">
 										250+
 									</div>
-									<div className="text-slate-500 text-xs sm:text-sm font-medium leading-tight">
+									<div className="text-slate-500 text-sm font-medium leading-tight text-center">
 										Parking Space
 									</div>
 								</div>
-								<div className="modern-card p-3 sm:p-4 md:p-6 rounded-xl md:rounded-2xl hover:shadow-2xl hover:scale-105 transition-all duration-500 group border border-emerald-100 animation-delay-200">
-									<div className="text-slate-900 text-xl sm:text-2xl md:text-3xl font-bold group-hover:text-emerald-600 transition-colors duration-300">
-										50+
+								<div className="modern-card p-4 lg:p-6 rounded-2xl transition-all duration-500 group border border-emerald-100 hover:border-emerald-300 hover:shadow-medium animation-delay-200">
+									<div className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-xl mb-3 mx-auto group-hover:scale-110 transition-transform duration-300">
+										<svg
+											className="w-6 h-6 text-white"
+											fill="currentColor"
+											viewBox="0 0 20 20"
+										>
+											<path
+												fillRule="evenodd"
+												d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+												clipRule="evenodd"
+											></path>
+										</svg>
 									</div>
-									<div className="text-slate-500 text-xs sm:text-sm font-medium leading-tight">
+									<div className="text-slate-900 text-2xl lg:text-3xl font-bold group-hover:text-emerald-600 transition-colors duration-300 text-center">
+										1000+
+									</div>
+									<div className="text-slate-500 text-sm font-medium leading-tight text-center">
 										Events Hosted
 									</div>
 								</div>
 							</div>
 
-							<div className="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fade-in-up animation-delay-1000">
-								<button className="btn-primary px-6 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl text-sm sm:text-base font-semibold shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
-									Discover & Explore
+							<div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up animation-delay-1000">
+								<button className="btn-primary px-8 py-4 rounded-2xl text-base font-semibold shadow-soft hover:shadow-teal transform hover:scale-105 transition-all duration-300 flex items-center justify-center group">
+									<span>Discover & Explore</span>
+									<svg
+										className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300"
+										fill="none"
+										stroke="currentColor"
+										viewBox="0 0 24 24"
+									>
+										<path
+											strokeLinecap="round"
+											strokeLinejoin="round"
+											strokeWidth={2}
+											d="M17 8l4 4m0 0l-4 4m4-4H3"
+										/>
+									</svg>
 								</button>
 								<Link
 									href="#contact"
-									className="btn-secondary px-6 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl text-sm sm:text-base font-semibold shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 text-center inline-block"
+									className="btn-secondary px-8 py-4 rounded-2xl text-base font-semibold shadow-soft hover:shadow-blue transform hover:scale-105 transition-all duration-300 text-center inline-flex items-center justify-center group"
 								>
-									Contact Us
+									<span>Contact Us</span>
+									<svg
+										className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300"
+										fill="none"
+										stroke="currentColor"
+										viewBox="0 0 24 24"
+									>
+										<path
+											strokeLinecap="round"
+											strokeLinejoin="round"
+											strokeWidth={2}
+											d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+										/>
+									</svg>
 								</Link>
 							</div>
 						</div>
 
-						{/* Right side - Image */}
+						{/* Right side - Enhanced Image */}
 						<div className="relative animate-fade-in-right animation-delay-500">
-							<div className="rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-500">
-								<div className="relative h-[550px] w-full">
-									<Image
-										src="/images/convention-center.jpg"
-										alt="Mims Convention Centre"
-										fill
-										style={{ objectFit: "cover" }}
-										priority
-										className="hover:scale-110 transition-transform duration-700"
-									/>
+							<div className="relative">
+								{/* Decorative elements */}
+								<div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-teal-400 to-blue-400 rounded-full opacity-20 blur-xl"></div>
+								<div className="absolute -bottom-4 -left-4 w-32 h-32 bg-gradient-to-br from-blue-400 to-teal-400 rounded-full opacity-20 blur-xl"></div>
+
+								<div className="rounded-3xl overflow-hidden shadow-strong hover:shadow-3xl transition-all duration-500 group border border-white/50">
+									<div className="relative h-[600px] w-full">
+										<Image
+											src="/images/convention-center.jpg"
+											alt="Mims Convention Centre"
+											fill
+											style={{ objectFit: "cover" }}
+											priority
+											className="group-hover:scale-105 transition-transform duration-700"
+										/>
+										{/* Overlay with gradient */}
+										<div className="absolute inset-0 bg-gradient-to-t from-slate-900/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+										{/* Floating badge */}
+										<div className="absolute top-6 left-6 bg-white/95 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
+											<div className="flex items-center space-x-2">
+												<div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+												<span className="text-sm font-semibold text-slate-700">
+													Available Now
+												</span>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -201,131 +295,315 @@ export default function Home() {
 				</div>
 			</section>
 
-			{/* 3. Benefits Section */}
+			{/* 3. Enhanced Benefits Section */}
 			<section
 				id="facilities"
-				className="py-20 bg-gradient-to-br from-slate-50 to-white relative overflow-hidden"
+				className="section-padding bg-gradient-to-br from-slate-50 to-white relative overflow-hidden"
 			>
-				{/* Background decoration */}
-				<div className="absolute top-0 right-0 w-72 h-72 bg-gradient-to-br from-teal-100 to-cyan-100 rounded-full blur-3xl opacity-60 -z-10"></div>
-				<div className="absolute bottom-0 left-0 w-72 h-72 bg-gradient-to-br from-emerald-100 to-teal-100 rounded-full blur-3xl opacity-60 -z-10"></div>
+				{/* Enhanced Background decoration */}
+				<div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-teal-100 to-cyan-100 rounded-full blur-3xl opacity-40 -z-10 animate-pulse"></div>
+				<div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-br from-emerald-100 to-teal-100 rounded-full blur-3xl opacity-40 -z-10 animate-pulse animation-delay-1000"></div>
+				<div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-teal-50/30 to-blue-50/30 rounded-full blur-3xl -z-10"></div>
 
-				<div className="container mx-auto px-4">
-					<div className="text-center mb-16">
-						<h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 animate-fade-in-up">
-							Why Choose <span className="gradient-text">Us</span>
+				<div className="container mx-auto container-padding">
+					<div className="text-center mb-20">
+						<div className="inline-flex items-center bg-gradient-to-r from-teal-50 to-blue-50 text-teal-700 px-6 py-3 rounded-full mb-6 animate-fade-in-up border border-teal-200">
+							<svg
+								className="w-5 h-5 mr-2"
+								fill="currentColor"
+								viewBox="0 0 20 20"
+							>
+								<path
+									fillRule="evenodd"
+									d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z"
+									clipRule="evenodd"
+								></path>
+							</svg>
+							<span className="font-semibold tracking-wide uppercase">
+								Our Advantages
+							</span>
+						</div>
+						<h2 className="heading-secondary text-slate-900 mb-6 animate-fade-in-up animation-delay-200">
+							Why Choose <span className="text-gradient">Us</span>
 						</h2>
-						<div className="w-24 h-1 bg-gradient-to-r from-teal-500 to-blue-500 mx-auto mb-6 animate-scale-in animation-delay-300 rounded-full"></div>
+						<div className="w-24 h-1 bg-gradient-to-r from-teal-500 to-blue-500 mx-auto mb-6 animate-scale-in animation-delay-400 rounded-full"></div>
+						<p className="text-body-large text-slate-600 max-w-3xl mx-auto animate-fade-in-up animation-delay-500">
+							Experience the difference with our world-class facilities, expert
+							team, and commitment to excellence
+						</p>
 					</div>
 
-					<div className="grid md:grid-cols-3 gap-8">
-						{/* Benefit 1 */}
-						<div className="modern-card rounded-2xl p-8 text-center shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 group animate-fade-in-up animation-delay-200 border border-teal-100">
-							<div className="bg-gradient-to-br from-teal-500 to-teal-600 text-white p-4 rounded-2xl w-16 h-16 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 shadow-lg">
-								<svg
-									className="w-8 h-8 group-hover:animate-pulse"
-									fill="currentColor"
-									viewBox="0 0 20 20"
-									xmlns="http://www.w3.org/2000/svg"
-								>
-									<path
-										fillRule="evenodd"
-										d="M6.672 1.911a1 1 0 10-1.932.518l.259.966a1 1 0 001.932-.518l-.26-.966zM2.429 4.74a1 1 0 10-.517 1.932l.966.259a1 1 0 00.517-1.932l-.966-.26zm8.814-.569a1 1 0 00-1.415-1.414l-.707.707a1 1 0 101.415 1.415l.707-.708zm-7.071 7.072l.707-.707A1 1 0 003.465 9.12l-.708.707a1 1 0 001.415 1.415zm3.2-5.171a1 1 0 00-1.3 1.3l4 10a1 1 0 001.823.075l1.38-2.759 3.018 3.02a1 1 0 001.414-1.415l-3.019-3.02 2.76-1.379a1 1 0 00-.076-1.822l-10-4z"
-										clipRule="evenodd"
-									></path>
-								</svg>
+					<div className="grid lg:grid-cols-3 gap-8 lg:gap-10">
+						{/* Enhanced Benefit 1 */}
+						<div className="modern-card rounded-3xl p-10 text-center shadow-soft hover:shadow-teal transition-all duration-500 group animate-fade-in-up animation-delay-600 border border-teal-100 hover:border-teal-300 relative overflow-hidden">
+							{/* Background pattern */}
+							<div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-teal-50 to-transparent rounded-full -translate-y-16 translate-x-16 opacity-50"></div>
+
+							<div className="relative z-10">
+								<div className="bg-gradient-to-br from-teal-500 to-teal-600 text-white p-6 rounded-3xl w-20 h-20 flex items-center justify-center mx-auto mb-8 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-teal">
+									<svg
+										className="w-10 h-10 group-hover:animate-pulse"
+										fill="currentColor"
+										viewBox="0 0 20 20"
+									>
+										<path
+											fillRule="evenodd"
+											d="M6.672 1.911a1 1 0 10-1.932.518l.259.966a1 1 0 001.932-.518l-.26-.966zM2.429 4.74a1 1 0 10-.517 1.932l.966.259a1 1 0 00.517-1.932l-.966-.26zm8.814-.569a1 1 0 00-1.415-1.414l-.707.707a1 1 0 101.415 1.415l.707-.708zm-7.071 7.072l.707-.707A1 1 0 003.465 9.12l-.708.707a1 1 0 001.415 1.415zm3.2-5.171a1 1 0 00-1.3 1.3l4 10a1 1 0 001.823.075l1.38-2.759 3.018 3.02a1 1 0 001.414-1.415l-3.019-3.02 2.76-1.379a1 1 0 00-.076-1.822l-10-4z"
+											clipRule="evenodd"
+										></path>
+									</svg>
+								</div>
+								<h3 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-teal-600 transition-colors duration-300">
+									Innovative Design
+								</h3>
+								<p className="text-slate-600 group-hover:text-slate-700 transition-colors duration-300 leading-relaxed text-lg">
+									Award-winning architecture that blends functionality with
+									aesthetic beauty for unforgettable experiences.
+								</p>
+
+								{/* Feature list */}
+								<div className="mt-6 space-y-2">
+									<div className="flex items-center justify-center text-sm text-teal-600">
+										<svg
+											className="w-4 h-4 mr-2"
+											fill="currentColor"
+											viewBox="0 0 20 20"
+										>
+											<path
+												fillRule="evenodd"
+												d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+												clipRule="evenodd"
+											></path>
+										</svg>
+										Modern Architecture
+									</div>
+									<div className="flex items-center justify-center text-sm text-teal-600">
+										<svg
+											className="w-4 h-4 mr-2"
+											fill="currentColor"
+											viewBox="0 0 20 20"
+										>
+											<path
+												fillRule="evenodd"
+												d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+												clipRule="evenodd"
+											></path>
+										</svg>
+										Flexible Layouts
+									</div>
+								</div>
 							</div>
-							<h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-teal-600 transition-colors duration-300">
-								Innovative Design
-							</h3>
-							<p className="text-slate-600 group-hover:text-slate-700 transition-colors duration-300 leading-relaxed">
-								Award-winning architecture that blends functionality with
-								aesthetic beauty.
-							</p>
 						</div>
 
-						{/* Benefit 2 */}
-						<div className="modern-card rounded-2xl p-8 text-center shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 group animate-fade-in-up animation-delay-400 border border-blue-100">
-							<div className="bg-gradient-to-br from-blue-600 to-blue-700 text-white p-4 rounded-2xl w-16 h-16 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 shadow-lg">
-								<svg
-									className="w-8 h-8 group-hover:animate-pulse"
-									fill="currentColor"
-									viewBox="0 0 20 20"
-									xmlns="http://www.w3.org/2000/svg"
-								>
-									<path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v1h8v-1zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-1a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v1h-3zM4.75 12.094A5.973 5.973 0 004 15v1H1v-1a3 3 0 013.75-2.906z"></path>
-								</svg>
+						{/* Enhanced Benefit 2 */}
+						<div className="modern-card rounded-3xl p-10 text-center shadow-soft hover:shadow-blue transition-all duration-500 group animate-fade-in-up animation-delay-700 border border-blue-100 hover:border-blue-300 relative overflow-hidden">
+							{/* Background pattern */}
+							<div className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-blue-50 to-transparent rounded-full -translate-y-16 -translate-x-16 opacity-50"></div>
+
+							<div className="relative z-10">
+								<div className="bg-gradient-to-br from-blue-600 to-blue-700 text-white p-6 rounded-3xl w-20 h-20 flex items-center justify-center mx-auto mb-8 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-blue">
+									<svg
+										className="w-10 h-10 group-hover:animate-pulse"
+										fill="currentColor"
+										viewBox="0 0 20 20"
+									>
+										<path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v1h8v-1zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-1a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v1h-3zM4.75 12.094A5.973 5.973 0 004 15v1H1v-1a3 3 0 013.75-2.906z"></path>
+									</svg>
+								</div>
+								<h3 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-blue-600 transition-colors duration-300">
+									Expert Staff
+								</h3>
+								<p className="text-slate-600 group-hover:text-slate-700 transition-colors duration-300 leading-relaxed text-lg">
+									Dedicated event professionals to ensure your event runs
+									flawlessly from start to finish.
+								</p>
+
+								{/* Feature list */}
+								<div className="mt-6 space-y-2">
+									<div className="flex items-center justify-center text-sm text-blue-600">
+										<svg
+											className="w-4 h-4 mr-2"
+											fill="currentColor"
+											viewBox="0 0 20 20"
+										>
+											<path
+												fillRule="evenodd"
+												d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+												clipRule="evenodd"
+											></path>
+										</svg>
+										24/7 Support
+									</div>
+									<div className="flex items-center justify-center text-sm text-blue-600">
+										<svg
+											className="w-4 h-4 mr-2"
+											fill="currentColor"
+											viewBox="0 0 20 20"
+										>
+											<path
+												fillRule="evenodd"
+												d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+												clipRule="evenodd"
+											></path>
+										</svg>
+										Event Coordination
+									</div>
+								</div>
 							</div>
-							<h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors duration-300">
-								Expert Staff
-							</h3>
-							<p className="text-slate-600 group-hover:text-slate-700 transition-colors duration-300 leading-relaxed">
-								Dedicated event professionals to ensure your event runs
-								flawlessly.
-							</p>
 						</div>
 
-						{/* Benefit 3 */}
-						<div className="modern-card rounded-2xl p-8 text-center shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 group animate-fade-in-up animation-delay-600 border border-emerald-100">
-							<div className="bg-gradient-to-br from-emerald-500 to-emerald-600 text-white p-4 rounded-2xl w-16 h-16 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 shadow-lg">
-								<svg
-									className="w-8 h-8 group-hover:animate-pulse"
-									fill="currentColor"
-									viewBox="0 0 20 20"
-									xmlns="http://www.w3.org/2000/svg"
-								>
-									<path
-										fillRule="evenodd"
-										d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z"
-										clipRule="evenodd"
-									></path>
-								</svg>
+						{/* Enhanced Benefit 3 */}
+						<div className="modern-card rounded-3xl p-10 text-center shadow-soft hover:shadow-medium transition-all duration-500 group animate-fade-in-up animation-delay-800 border border-emerald-100 hover:border-emerald-300 relative overflow-hidden">
+							{/* Background pattern */}
+							<div className="absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-br from-emerald-50 to-transparent rounded-full translate-y-16 translate-x-16 opacity-50"></div>
+
+							<div className="relative z-10">
+								<div className="bg-gradient-to-br from-emerald-500 to-emerald-600 text-white p-6 rounded-3xl w-20 h-20 flex items-center justify-center mx-auto mb-8 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-medium">
+									<svg
+										className="w-10 h-10 group-hover:animate-pulse"
+										fill="currentColor"
+										viewBox="0 0 20 20"
+									>
+										<path
+											fillRule="evenodd"
+											d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z"
+											clipRule="evenodd"
+										></path>
+									</svg>
+								</div>
+								<h3 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-emerald-600 transition-colors duration-300">
+									Cutting-Edge Technology
+								</h3>
+								<p className="text-slate-600 group-hover:text-slate-700 transition-colors duration-300 leading-relaxed text-lg">
+									Advanced audio-visual systems and high-speed connectivity
+									throughout the venue.
+								</p>
+
+								{/* Feature list */}
+								<div className="mt-6 space-y-2">
+									<div className="flex items-center justify-center text-sm text-emerald-600">
+										<svg
+											className="w-4 h-4 mr-2"
+											fill="currentColor"
+											viewBox="0 0 20 20"
+										>
+											<path
+												fillRule="evenodd"
+												d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+												clipRule="evenodd"
+											></path>
+										</svg>
+										4K AV Systems
+									</div>
+									<div className="flex items-center justify-center text-sm text-emerald-600">
+										<svg
+											className="w-4 h-4 mr-2"
+											fill="currentColor"
+											viewBox="0 0 20 20"
+										>
+											<path
+												fillRule="evenodd"
+												d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+												clipRule="evenodd"
+											></path>
+										</svg>
+										High-Speed WiFi
+									</div>
+								</div>
 							</div>
-							<h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-emerald-600 transition-colors duration-300">
-								Cutting-Edge Technology
-							</h3>
-							<p className="text-slate-600 group-hover:text-slate-700 transition-colors duration-300 leading-relaxed">
-								Advanced audio-visual systems and high-speed connectivity
-								throughout.
-							</p>
 						</div>
 					</div>
 				</div>
 			</section>
 
-			{/* 4. Social Proof Section */}
-			<section className="py-20 bg-gray-900 text-white">
-				<div className="container mx-auto px-4">
-					<div className="text-center mb-16">
-						<h2 className="text-4xl font-bold mb-4 animate-fade-in-up">
-							What Our Clients Say
+			{/* 4. Enhanced Social Proof Section */}
+			<section className="section-padding bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white relative overflow-hidden">
+				{/* Background decoration */}
+				<div className="absolute inset-0 bg-grid-white/[0.02] -z-10"></div>
+				<div className="absolute top-1/4 right-1/4 w-96 h-96 bg-gradient-to-br from-teal-500/15 to-blue-500/15 rounded-full blur-3xl -z-10 animate-pulse"></div>
+				<div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-gradient-to-br from-blue-500/15 to-teal-500/15 rounded-full blur-3xl -z-10 animate-pulse animation-delay-1000"></div>
+
+				<div className="container mx-auto container-padding">
+					<div className="text-center mb-20">
+						<div className="inline-flex items-center bg-gradient-to-r from-teal-50 to-blue-50 text-teal-700 px-6 py-3 rounded-full mb-8 animate-fade-in-up border border-teal-200">
+							<svg
+								className="w-5 h-5 mr-2"
+								fill="currentColor"
+								viewBox="0 0 20 20"
+							>
+								<path
+									fillRule="evenodd"
+									d="M18 13V5a2 2 0 00-2-2H4a2 2 0 00-2 2v8a2 2 0 002 2h3l3 3 3-3h3a2 2 0 002-2zM5 7a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1zm1 3a1 1 0 100 2h3a1 1 0 100-2H6z"
+									clipRule="evenodd"
+								></path>
+							</svg>
+							<span className="font-semibold tracking-wide uppercase">
+								Client Testimonials
+							</span>
+						</div>
+						<h2 className="heading-secondary text-white mb-6 animate-fade-in-up animation-delay-200">
+							What Our <span className="text-gradient">Clients Say</span>
 						</h2>
-						<div className="w-24 h-1 bg-teal-500 mx-auto animate-scale-in animation-delay-300"></div>
+						<div className="w-24 h-1 bg-gradient-to-r from-teal-500 to-blue-500 mx-auto animate-scale-in animation-delay-400 rounded-full"></div>
 					</div>
 
-					<div className="max-w-4xl mx-auto bg-gray-800 p-10 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 animate-fade-in-up animation-delay-500 group">
-						<svg
-							className="w-12 h-12 text-teal-500 mb-6 animate-bounce group-hover:animate-pulse"
-							fill="currentColor"
-							viewBox="0 0 24 24"
-						>
-							<path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-						</svg>
-						<p className="text-xl italic mb-6 animate-fade-in-up animation-delay-700 group-hover:text-teal-100 transition-colors duration-300">
-							&ldquo;Mims Convention Centre exceeded all our expectations. The
-							venue is stunning, the staff was professional, and our guests were
-							thoroughly impressed. We couldn&apos;t have asked for a better
-							experience for our annual corporate conference.&rdquo;
-						</p>
-						<div className="flex items-center animate-fade-in-up animation-delay-900">
-							<div className="w-12 h-12 bg-teal-500 rounded-full mr-4 group-hover:scale-110 transition-transform duration-300 animate-pulse"></div>
-							<div>
-								<h4 className="font-bold group-hover:text-teal-300 transition-colors duration-300">
-									Sarah Johnson
-								</h4>
-								<p className="text-teal-400 group-hover:text-teal-200 transition-colors duration-300">
-									CEO, TechCorp International
-								</p>
+					<div className="max-w-5xl mx-auto">
+						<div className="modern-card-dark rounded-3xl p-10 lg:p-16 shadow-strong hover:shadow-3xl transition-all duration-500 group border border-white/10 hover:border-teal-500/50 relative overflow-hidden">
+							{/* Background pattern */}
+							<div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-teal-500/10 to-transparent rounded-full -translate-y-20 translate-x-20"></div>
+							<div className="absolute bottom-0 left-0 w-40 h-40 bg-gradient-to-br from-blue-500/10 to-transparent rounded-full translate-y-20 -translate-x-20"></div>
+
+							<div className="relative z-10">
+								{/* Quote icon */}
+								<div className="text-center mb-10 animate-fade-in-up animation-delay-500">
+									<div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-teal-500 to-blue-500 rounded-full mb-6 group-hover:scale-110 transition-transform duration-300 shadow-teal">
+										<svg
+											className="w-10 h-10 text-white"
+											fill="currentColor"
+											viewBox="0 0 24 24"
+										>
+											<path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+										</svg>
+									</div>
+								</div>
+
+								{/* Testimonial text */}
+								<blockquote className="text-2xl lg:text-3xl text-slate-200 text-center mb-12 leading-relaxed animate-fade-in-up animation-delay-700 group-hover:text-white transition-colors duration-300 font-light italic">
+									"Mims Convention Centre exceeded all our expectations. The
+									venue is stunning, the staff was professional, and our guests
+									were thoroughly impressed. We couldn't have asked for a better
+									experience for our annual corporate conference."
+								</blockquote>
+
+								{/* Client info */}
+								<div className="flex items-center justify-center animate-fade-in-up animation-delay-900">
+									<div className="flex items-center bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+										<div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-blue-500 rounded-full mr-6 group-hover:scale-110 transition-transform duration-300 flex items-center justify-center">
+											<span className="text-white font-bold text-xl">SJ</span>
+										</div>
+										<div className="text-left">
+											<h4 className="text-xl font-bold text-white group-hover:text-teal-300 transition-colors duration-300 mb-1">
+												Sarah Johnson
+											</h4>
+											<p className="text-teal-400 group-hover:text-teal-200 transition-colors duration-300 font-medium">
+												CEO, TechCorp International
+											</p>
+											<div className="flex items-center mt-2">
+												{/* Star rating */}
+												{[...Array(5)].map((_, i) => (
+													<svg
+														key={i}
+														className="w-4 h-4 text-yellow-400 mr-1"
+														fill="currentColor"
+														viewBox="0 0 20 20"
+													>
+														<path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+													</svg>
+												))}
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
