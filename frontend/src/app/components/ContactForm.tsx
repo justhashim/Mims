@@ -91,23 +91,27 @@ const ContactForm = () => {
 	};
 
 	return (
-		<div className="modern-card p-8 lg:p-10 rounded-3xl shadow-soft hover:shadow-medium transition-all duration-500 group border border-teal-100 hover:border-teal-300 relative overflow-hidden">
+		<div className="modern-card p-4 sm:p-6 lg:p-10 rounded-3xl shadow-soft hover:shadow-medium transition-all duration-500 group border border-teal-100 hover:border-teal-300 relative overflow-hidden">
 			{/* Background pattern */}
 			<div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-teal-50 to-transparent rounded-full -translate-y-20 translate-x-20 opacity-50"></div>
 
 			<div className="relative z-10">
-				<div className="flex items-center mb-8">
-					<div className="bg-gradient-to-br from-teal-500 to-teal-600 text-white p-4 rounded-2xl mr-4 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-teal">
-						<svg className="w-7 h-7" fill="currentColor" viewBox="0 0 20 20">
+				<div className="flex flex-col sm:flex-row sm:items-center mb-6 sm:mb-8 text-center sm:text-left">
+					<div className="bg-gradient-to-br from-teal-500 to-teal-600 text-white p-3 sm:p-4 rounded-2xl mx-auto sm:mx-0 sm:mr-4 mb-4 sm:mb-0 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-teal w-fit">
+						<svg
+							className="w-6 h-6 sm:w-7 sm:h-7"
+							fill="currentColor"
+							viewBox="0 0 20 20"
+						>
 							<path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
 							<path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
 						</svg>
 					</div>
 					<div>
-						<h3 className="text-3xl font-bold text-slate-900 group-hover:text-teal-600 transition-colors duration-300 mb-1">
+						<h3 className="text-2xl sm:text-3xl font-bold text-slate-900 group-hover:text-teal-600 transition-colors duration-300 mb-1">
 							Send Us a Message
 						</h3>
-						<p className="text-slate-800 text-lg">
+						<p className="text-slate-800 text-base sm:text-lg">
 							We'll get back to you within 24 hours
 						</p>
 					</div>
@@ -171,13 +175,16 @@ const ContactForm = () => {
 					</div>
 				)}
 
-				<form onSubmit={handleSubmit} className="space-y-8 relative z-10">
+				<form
+					onSubmit={handleSubmit}
+					className="space-y-6 sm:space-y-8 relative z-10"
+				>
 					{/* Personal Information */}
-					<div className="grid lg:grid-cols-2 gap-6">
+					<div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
 						<div className="space-y-2">
 							<label
 								htmlFor="name"
-								className="block text-base font-semibold text-slate-900 mb-3"
+								className="block text-sm sm:text-base font-semibold text-slate-900 mb-2 sm:mb-3"
 							>
 								Full Name *
 							</label>
@@ -188,7 +195,7 @@ const ContactForm = () => {
 								value={formData.name}
 								onChange={handleChange}
 								required
-								className="w-full px-5 py-4 border border-slate-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-all duration-300 hover:border-teal-400 bg-white/80 backdrop-blur-sm text-lg"
+								className="w-full px-4 sm:px-5 py-3 sm:py-4 border border-slate-300 rounded-xl sm:rounded-2xl focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-all duration-300 hover:border-teal-400 bg-white/80 backdrop-blur-sm text-base sm:text-lg touch-manipulation"
 								placeholder="Enter your full name"
 							/>
 						</div>
@@ -196,7 +203,7 @@ const ContactForm = () => {
 						<div className="space-y-2">
 							<label
 								htmlFor="email"
-								className="block text-base font-semibold text-slate-900 mb-3"
+								className="block text-sm sm:text-base font-semibold text-slate-900 mb-2 sm:mb-3"
 							>
 								Email Address *
 							</label>
@@ -207,18 +214,18 @@ const ContactForm = () => {
 								value={formData.email}
 								onChange={handleChange}
 								required
-								className="w-full px-5 py-4 border border-slate-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-all duration-300 hover:border-teal-400 bg-white/80 backdrop-blur-sm text-lg"
+								className="w-full px-4 sm:px-5 py-3 sm:py-4 border border-slate-300 rounded-xl sm:rounded-2xl focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-all duration-300 hover:border-teal-400 bg-white/80 backdrop-blur-sm text-base sm:text-lg touch-manipulation"
 								placeholder="your.email@example.com"
 							/>
 						</div>
 					</div>
 
 					{/* Contact Information */}
-					<div className="grid lg:grid-cols-2 gap-6">
+					<div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
 						<div className="space-y-2">
 							<label
 								htmlFor="phone"
-								className="block text-base font-semibold text-slate-900 mb-3"
+								className="block text-sm sm:text-base font-semibold text-slate-900 mb-2 sm:mb-3"
 							>
 								Phone Number
 							</label>
@@ -228,7 +235,7 @@ const ContactForm = () => {
 								name="phone"
 								value={formData.phone}
 								onChange={handleChange}
-								className="w-full px-5 py-4 border border-slate-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-all duration-300 hover:border-teal-400 bg-white/80 backdrop-blur-sm text-lg"
+								className="w-full px-4 sm:px-5 py-3 sm:py-4 border border-slate-300 rounded-xl sm:rounded-2xl focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-all duration-300 hover:border-teal-400 bg-white/80 backdrop-blur-sm text-base sm:text-lg touch-manipulation"
 								placeholder="+91 98765 43210"
 							/>
 						</div>
@@ -236,7 +243,7 @@ const ContactForm = () => {
 						<div className="space-y-2">
 							<label
 								htmlFor="eventType"
-								className="block text-base font-semibold text-slate-900 mb-3"
+								className="block text-sm sm:text-base font-semibold text-slate-900 mb-2 sm:mb-3"
 							>
 								Event Type
 							</label>
@@ -245,7 +252,7 @@ const ContactForm = () => {
 								name="eventType"
 								value={formData.eventType}
 								onChange={handleChange}
-								className="w-full px-5 py-4 border border-slate-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-all duration-300 hover:border-teal-400 bg-white/80 backdrop-blur-sm text-lg appearance-none cursor-pointer"
+								className="w-full px-4 sm:px-5 py-3 sm:py-4 border border-slate-300 rounded-xl sm:rounded-2xl focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-all duration-300 hover:border-teal-400 bg-white/80 backdrop-blur-sm text-base sm:text-lg appearance-none cursor-pointer touch-manipulation"
 							>
 								<option value="">Select event type</option>
 								{eventTypes.map((type) => (
@@ -258,11 +265,11 @@ const ContactForm = () => {
 					</div>
 
 					{/* Event Details */}
-					<div className="grid lg:grid-cols-2 gap-6">
+					<div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
 						<div className="space-y-2">
 							<label
 								htmlFor="eventDate"
-								className="block text-base font-semibold text-slate-900 mb-3"
+								className="block text-sm sm:text-base font-semibold text-slate-900 mb-2 sm:mb-3"
 							>
 								Preferred Event Date
 							</label>
@@ -273,14 +280,14 @@ const ContactForm = () => {
 								value={formData.eventDate}
 								onChange={handleChange}
 								min={new Date().toISOString().split("T")[0]}
-								className="w-full px-5 py-4 border border-slate-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-all duration-300 hover:border-teal-400 bg-white/80 backdrop-blur-sm text-lg"
+								className="w-full px-4 sm:px-5 py-3 sm:py-4 border border-slate-300 rounded-xl sm:rounded-2xl focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-all duration-300 hover:border-teal-400 bg-white/80 backdrop-blur-sm text-base sm:text-lg touch-manipulation"
 							/>
 						</div>
 
 						<div className="space-y-2">
 							<label
 								htmlFor="guestCount"
-								className="block text-base font-semibold text-slate-900 mb-3"
+								className="block text-sm sm:text-base font-semibold text-slate-900 mb-2 sm:mb-3"
 							>
 								Expected Guest Count
 							</label>
@@ -289,7 +296,7 @@ const ContactForm = () => {
 								name="guestCount"
 								value={formData.guestCount}
 								onChange={handleChange}
-								className="w-full px-5 py-4 border border-slate-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-all duration-300 hover:border-teal-400 bg-white/80 backdrop-blur-sm text-lg appearance-none cursor-pointer"
+								className="w-full px-4 sm:px-5 py-3 sm:py-4 border border-slate-300 rounded-xl sm:rounded-2xl focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-all duration-300 hover:border-teal-400 bg-white/80 backdrop-blur-sm text-base sm:text-lg appearance-none cursor-pointer touch-manipulation"
 							>
 								<option value="">Select guest count</option>
 								{guestCounts.map((count) => (
@@ -305,7 +312,7 @@ const ContactForm = () => {
 					<div className="space-y-2">
 						<label
 							htmlFor="message"
-							className="block text-base font-semibold text-slate-900 mb-3"
+							className="block text-sm sm:text-base font-semibold text-slate-900 mb-2 sm:mb-3"
 						>
 							Message *
 						</label>
@@ -315,18 +322,18 @@ const ContactForm = () => {
 							value={formData.message}
 							onChange={handleChange}
 							required
-							rows={6}
-							className="w-full px-5 py-4 border border-slate-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-all duration-300 hover:border-teal-400 resize-none bg-white/80 backdrop-blur-sm text-lg"
+							rows={5}
+							className="w-full px-4 sm:px-5 py-3 sm:py-4 border border-slate-300 rounded-xl sm:rounded-2xl focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-all duration-300 hover:border-teal-400 resize-none bg-white/80 backdrop-blur-sm text-base sm:text-lg touch-manipulation"
 							placeholder="Tell us about your event requirements, special needs, or any questions you have..."
 						/>
 					</div>
 
 					{/* Enhanced Submit Button */}
-					<div className="pt-4">
+					<div className="pt-2 sm:pt-4">
 						<button
 							type="submit"
 							disabled={isSubmitting}
-							className="w-full bg-gradient-to-r from-teal-600 to-blue-600 hover:from-teal-700 hover:to-blue-700 disabled:from-slate-400 disabled:to-slate-500 text-white py-5 px-8 rounded-2xl font-semibold text-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 hover:scale-105 transform disabled:hover:scale-100 disabled:cursor-not-allowed shadow-soft hover:shadow-teal group relative overflow-hidden"
+							className="w-full bg-gradient-to-r from-teal-600 to-blue-600 hover:from-teal-700 hover:to-blue-700 disabled:from-slate-400 disabled:to-slate-500 text-white py-4 sm:py-5 px-6 sm:px-8 rounded-xl sm:rounded-2xl font-semibold text-base sm:text-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 hover:scale-105 transform disabled:hover:scale-100 disabled:cursor-not-allowed shadow-soft hover:shadow-teal group relative overflow-hidden touch-manipulation min-h-[48px]"
 						>
 							{/* Button background animation */}
 							<div className="absolute inset-0 bg-gradient-to-r from-teal-700 to-blue-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -379,30 +386,32 @@ const ContactForm = () => {
 					</div>
 
 					{/* Enhanced Additional Info */}
-					<div className="text-center pt-8 border-t border-slate-200/50">
-						<div className="bg-gradient-to-r from-teal-50 to-blue-50 p-6 rounded-2xl border border-teal-100">
-							<div className="flex items-center justify-center mb-3">
-								<svg
-									className="w-5 h-5 text-teal-600 mr-2"
-									fill="currentColor"
-									viewBox="0 0 20 20"
-								>
-									<path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
-								</svg>
-								<span className="text-lg font-semibold text-slate-900">
-									Need immediate assistance?
-								</span>
+					<div className="text-center pt-6 sm:pt-8 border-t border-slate-200/50">
+						<div className="bg-gradient-to-r from-teal-50 to-blue-50 p-4 sm:p-6 rounded-xl sm:rounded-2xl border border-teal-100">
+							<div className="flex flex-col sm:flex-row sm:items-center justify-center mb-3">
+								<div className="flex items-center justify-center mb-2 sm:mb-0 sm:mr-2">
+									<svg
+										className="w-4 h-4 sm:w-5 sm:h-5 text-teal-600 mr-2"
+										fill="currentColor"
+										viewBox="0 0 20 20"
+									>
+										<path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+									</svg>
+									<span className="text-base sm:text-lg font-semibold text-slate-900">
+										Need immediate assistance?
+									</span>
+								</div>
 							</div>
-							<p className="text-slate-800 mb-3">
+							<p className="text-slate-800 mb-4 text-sm sm:text-base">
 								Our team is available 24/7 to help with your event planning
 								needs
 							</p>
 							<a
 								href="tel:+919544311236"
-								className="inline-flex items-center bg-gradient-to-r from-teal-600 to-blue-600 hover:from-teal-700 hover:to-blue-700 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105 transform shadow-soft hover:shadow-teal"
+								className="inline-flex items-center bg-gradient-to-r from-teal-600 to-blue-600 hover:from-teal-700 hover:to-blue-700 text-white px-4 sm:px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105 transform shadow-soft hover:shadow-teal text-sm sm:text-base touch-manipulation min-h-[44px]"
 							>
 								<svg
-									className="w-5 h-5 mr-2"
+									className="w-4 h-4 sm:w-5 sm:h-5 mr-2"
 									fill="currentColor"
 									viewBox="0 0 20 20"
 								>

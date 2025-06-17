@@ -93,10 +93,10 @@ export default function Home() {
 				<div className="container mx-auto container-padding">
 					<div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 						{/* Left side - Enhanced Value proposition */}
-						<div className="text-left modern-card p-8 lg:p-12 rounded-3xl min-h-[600px] flex flex-col justify-center animate-fade-in-up shadow-soft">
-							<div className="inline-flex items-center bg-gradient-to-r from-teal-50 to-blue-50 text-teal-700 px-4 py-2 rounded-full mb-6 animate-fade-in-up animation-delay-200 border border-teal-200">
+						<div className="text-left modern-card p-6 sm:p-8 lg:p-12 rounded-3xl min-h-[500px] sm:min-h-[600px] flex flex-col justify-center animate-fade-in-up shadow-soft">
+							<div className="inline-flex items-center bg-gradient-to-r from-teal-50 to-blue-50 text-teal-700 px-3 sm:px-4 py-2 rounded-full mb-4 sm:mb-6 animate-fade-in-up animation-delay-200 border border-teal-200 text-center sm:text-left">
 								<svg
-									className="w-4 h-4 mr-2"
+									className="w-3 h-3 sm:w-4 sm:h-4 mr-2"
 									fill="currentColor"
 									viewBox="0 0 20 20"
 								>
@@ -106,7 +106,7 @@ export default function Home() {
 										clipRule="evenodd"
 									></path>
 								</svg>
-								<span className="text-sm font-semibold tracking-wide uppercase">
+								<span className="text-xs sm:text-sm font-semibold tracking-wide uppercase">
 									PREMIER EVENT VENUE
 								</span>
 							</div>
@@ -121,28 +121,28 @@ export default function Home() {
 							</p>
 
 							{/* Enhanced Stats Cards */}
-							<div className="grid grid-cols-3 gap-3 lg:gap-6 mb-10 animate-fade-in-up animation-delay-800">
-								<div className="modern-card p-4 lg:p-6 rounded-2xl transition-all duration-500 group border border-teal-100 hover:border-teal-300 hover:shadow-teal">
-									<div className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-teal-500 to-teal-600 rounded-xl mb-3 mx-auto group-hover:scale-110 transition-transform duration-300">
+							<div className="grid grid-cols-3 gap-2 sm:gap-3 lg:gap-6 mb-8 sm:mb-10 animate-fade-in-up animation-delay-800">
+								<div className="modern-card p-3 sm:p-4 lg:p-6 rounded-xl sm:rounded-2xl transition-all duration-500 group border border-teal-100 hover:border-teal-300 hover:shadow-teal">
+									<div className="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-teal-500 to-teal-600 rounded-lg sm:rounded-xl mb-2 sm:mb-3 mx-auto group-hover:scale-110 transition-transform duration-300">
 										<svg
-											className="w-6 h-6 text-white"
+											className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white"
 											fill="currentColor"
 											viewBox="0 0 20 20"
 										>
 											<path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v1h8v-1z"></path>
 										</svg>
 									</div>
-									<div className="text-slate-900 text-2xl lg:text-3xl font-bold group-hover:text-teal-600 transition-colors duration-300 text-center">
+									<div className="text-slate-900 text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold group-hover:text-teal-600 transition-colors duration-300 text-center">
 										500+
 									</div>
-									<div className="text-slate-500 text-sm font-medium leading-tight text-center">
+									<div className="text-slate-500 text-xs sm:text-sm font-medium leading-tight text-center">
 										Seating Capacity
 									</div>
 								</div>
-								<div className="modern-card p-4 lg:p-6 rounded-2xl transition-all duration-500 group border border-blue-100 hover:border-blue-300 hover:shadow-blue animation-delay-100">
-									<div className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl mb-3 mx-auto group-hover:scale-110 transition-transform duration-300">
+								<div className="modern-card p-3 sm:p-4 lg:p-6 rounded-xl sm:rounded-2xl transition-all duration-500 group border border-blue-100 hover:border-blue-300 hover:shadow-blue animation-delay-100">
+									<div className="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg sm:rounded-xl mb-2 sm:mb-3 mx-auto group-hover:scale-110 transition-transform duration-300">
 										<svg
-											className="w-6 h-6 text-white"
+											className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white"
 											fill="currentColor"
 											viewBox="0 0 20 20"
 										>
@@ -153,17 +153,17 @@ export default function Home() {
 											></path>
 										</svg>
 									</div>
-									<div className="text-slate-900 text-2xl lg:text-3xl font-bold group-hover:text-blue-600 transition-colors duration-300 text-center">
-										250+
+									<div className="text-slate-900 text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold group-hover:text-blue-600 transition-colors duration-300 text-center">
+										150+
 									</div>
-									<div className="text-slate-500 text-sm font-medium leading-tight text-center">
+									<div className="text-slate-500 text-xs sm:text-sm font-medium leading-tight text-center">
 										Parking Space
 									</div>
 								</div>
-								<div className="modern-card p-4 lg:p-6 rounded-2xl transition-all duration-500 group border border-emerald-100 hover:border-emerald-300 hover:shadow-medium animation-delay-200">
-									<div className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-xl mb-3 mx-auto group-hover:scale-110 transition-transform duration-300">
+								<div className="modern-card p-3 sm:p-4 lg:p-6 rounded-xl sm:rounded-2xl transition-all duration-500 group border border-emerald-100 hover:border-emerald-300 hover:shadow-medium animation-delay-200">
+									<div className="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-lg sm:rounded-xl mb-2 sm:mb-3 mx-auto group-hover:scale-110 transition-transform duration-300">
 										<svg
-											className="w-6 h-6 text-white"
+											className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white"
 											fill="currentColor"
 											viewBox="0 0 20 20"
 										>
@@ -174,20 +174,20 @@ export default function Home() {
 											></path>
 										</svg>
 									</div>
-									<div className="text-slate-900 text-2xl lg:text-3xl font-bold group-hover:text-emerald-600 transition-colors duration-300 text-center">
+									<div className="text-slate-900 text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold group-hover:text-emerald-600 transition-colors duration-300 text-center">
 										1000+
 									</div>
-									<div className="text-slate-500 text-sm font-medium leading-tight text-center">
+									<div className="text-slate-500 text-xs sm:text-sm font-medium leading-tight text-center">
 										Events Hosted
 									</div>
 								</div>
 							</div>
 
-							<div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up animation-delay-1000">
-								<button className="btn-primary px-8 py-4 rounded-2xl text-base font-semibold shadow-soft hover:shadow-teal transform hover:scale-105 transition-all duration-300 flex items-center justify-center group">
+							<div className="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fade-in-up animation-delay-1000">
+								<button className="btn-primary px-6 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl text-sm sm:text-base font-semibold shadow-soft hover:shadow-teal transform hover:scale-105 transition-all duration-300 flex items-center justify-center group touch-manipulation min-h-[48px]">
 									<span>Discover & Explore</span>
 									<svg
-										className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300"
+										className="w-4 h-4 sm:w-5 sm:h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300"
 										fill="none"
 										stroke="currentColor"
 										viewBox="0 0 24 24"
@@ -202,11 +202,11 @@ export default function Home() {
 								</button>
 								<Link
 									href="#contact"
-									className="btn-secondary px-8 py-4 rounded-2xl text-base font-semibold shadow-soft hover:shadow-blue transform hover:scale-105 transition-all duration-300 text-center inline-flex items-center justify-center group"
+									className="btn-secondary px-6 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl text-sm sm:text-base font-semibold shadow-soft hover:shadow-blue transform hover:scale-105 transition-all duration-300 text-center inline-flex items-center justify-center group touch-manipulation min-h-[48px]"
 								>
 									<span>Contact Us</span>
 									<svg
-										className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300"
+										className="w-4 h-4 sm:w-5 sm:h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300"
 										fill="none"
 										stroke="currentColor"
 										viewBox="0 0 24 24"
@@ -706,14 +706,14 @@ export default function Home() {
 								</div>
 							</div>
 
-							{/* Navigation Arrows */}
+							{/* Navigation Arrows - Always visible on mobile */}
 							<button
 								onClick={prevImage}
-								className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full transition-all duration-300 hover:scale-110 group/btn carousel-nav-button opacity-0 group-hover:opacity-100"
+								className="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 sm:p-3 rounded-full transition-all duration-300 hover:scale-110 group/btn carousel-nav-button opacity-100 sm:opacity-0 sm:group-hover:opacity-100 touch-manipulation"
 								aria-label="Previous image"
 							>
 								<svg
-									className="w-6 h-6 group-hover/btn:scale-110 transition-transform duration-300"
+									className="w-5 h-5 sm:w-6 sm:h-6 group-hover/btn:scale-110 transition-transform duration-300"
 									fill="none"
 									stroke="currentColor"
 									viewBox="0 0 24 24"
@@ -729,11 +729,11 @@ export default function Home() {
 
 							<button
 								onClick={nextImage}
-								className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full transition-all duration-300 hover:scale-110 group/btn carousel-nav-button opacity-0 group-hover:opacity-100"
+								className="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 sm:p-3 rounded-full transition-all duration-300 hover:scale-110 group/btn carousel-nav-button opacity-100 sm:opacity-0 sm:group-hover:opacity-100 touch-manipulation"
 								aria-label="Next image"
 							>
 								<svg
-									className="w-6 h-6 group-hover/btn:scale-110 transition-transform duration-300"
+									className="w-5 h-5 sm:w-6 sm:h-6 group-hover/btn:scale-110 transition-transform duration-300"
 									fill="none"
 									stroke="currentColor"
 									viewBox="0 0 24 24"
@@ -750,14 +750,14 @@ export default function Home() {
 							{/* Play/Pause Button */}
 							<button
 								onClick={() => setIsAutoPlaying(!isAutoPlaying)}
-								className="absolute top-4 right-4 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all duration-300 hover:scale-110 opacity-0 group-hover:opacity-100"
+								className="absolute top-2 sm:top-4 right-2 sm:right-4 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all duration-300 hover:scale-110 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 touch-manipulation"
 								aria-label={
 									isAutoPlaying ? "Pause slideshow" : "Play slideshow"
 								}
 							>
 								{isAutoPlaying ? (
 									<svg
-										className="w-5 h-5"
+										className="w-4 h-4 sm:w-5 sm:h-5"
 										fill="none"
 										stroke="currentColor"
 										viewBox="0 0 24 24"
@@ -771,7 +771,7 @@ export default function Home() {
 									</svg>
 								) : (
 									<svg
-										className="w-5 h-5"
+										className="w-4 h-4 sm:w-5 sm:h-5"
 										fill="none"
 										stroke="currentColor"
 										viewBox="0 0 24 24"
@@ -793,7 +793,7 @@ export default function Home() {
 								<button
 									key={index}
 									onClick={() => goToImage(index)}
-									className={`relative flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-lg overflow-hidden transition-all duration-300 ${
+									className={`relative flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-lg overflow-hidden transition-all duration-300 touch-manipulation ${
 										index === currentImageIndex
 											? "ring-2 sm:ring-4 ring-teal-500 scale-110"
 											: "hover:scale-105 opacity-70 hover:opacity-100"
@@ -816,13 +816,21 @@ export default function Home() {
 								<button
 									key={index}
 									onClick={() => goToImage(index)}
-									className={`w-3 h-3 rounded-full transition-all duration-300 ${
+									className={`w-3 h-3 sm:w-4 sm:h-4 rounded-full transition-all duration-300 touch-manipulation min-w-[24px] min-h-[24px] flex items-center justify-center ${
 										index === currentImageIndex
 											? "bg-teal-500 scale-125"
 											: "bg-gray-500 hover:bg-gray-400"
 									}`}
 									aria-label={`Go to image ${index + 1}`}
-								/>
+								>
+									<span
+										className={`w-3 h-3 sm:w-4 sm:h-4 rounded-full ${
+											index === currentImageIndex
+												? "bg-teal-500"
+												: "bg-gray-500"
+										}`}
+									></span>
+								</button>
 							))}
 						</div>
 					</div>

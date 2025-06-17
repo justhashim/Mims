@@ -211,22 +211,34 @@ const Navbar = () => {
 					<div className="md:hidden">
 						<button
 							onClick={toggleMobileMenu}
-							className="flex items-center p-2 text-gray-900 rounded-full hover:bg-gray-100"
+							className="flex items-center p-3 text-gray-900 rounded-full hover:bg-gray-100 transition-all duration-200 touch-manipulation min-h-[44px] min-w-[44px] justify-center"
 							aria-label="Toggle mobile menu"
+							aria-expanded={mobileMenuOpen}
 						>
 							<svg
-								className="w-6 h-6"
+								className={`w-6 h-6 transition-transform duration-300 ${
+									mobileMenuOpen ? "rotate-90" : ""
+								}`}
 								fill="none"
 								stroke="currentColor"
 								viewBox="0 0 24 24"
 								xmlns="http://www.w3.org/2000/svg"
 							>
-								<path
-									strokeLinecap="round"
-									strokeLinejoin="round"
-									strokeWidth="2"
-									d="M4 6h16M4 12h16M4 18h16"
-								></path>
+								{mobileMenuOpen ? (
+									<path
+										strokeLinecap="round"
+										strokeLinejoin="round"
+										strokeWidth="2"
+										d="M6 18L18 6M6 6l12 12"
+									/>
+								) : (
+									<path
+										strokeLinecap="round"
+										strokeLinejoin="round"
+										strokeWidth="2"
+										d="M4 6h16M4 12h16M4 18h16"
+									/>
+								)}
 							</svg>
 						</button>
 					</div>
@@ -234,15 +246,15 @@ const Navbar = () => {
 
 				{/* Mobile menu */}
 				{mobileMenuOpen && (
-					<div className="md:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-lg shadow-xl border-t border-slate-200/50 py-6 px-4 transition-all duration-300 ease-in-out animate-fade-in-up">
-						<div className="flex flex-col space-y-2">
+					<div className="md:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-lg shadow-xl border-t border-slate-200/50 py-4 sm:py-6 px-4 transition-all duration-300 ease-in-out animate-fade-in-up z-50">
+						<div className="flex flex-col space-y-1 sm:space-y-2">
 							<Link
 								href="/"
 								onClick={(e) => {
 									scrollToTop(e);
 									setMobileMenuOpen(false);
 								}}
-								className="px-4 py-3 text-slate-700 hover:text-teal-600 hover:bg-teal-50 transition-all duration-300 text-base font-semibold cursor-pointer rounded-xl"
+								className="px-4 py-4 text-slate-700 hover:text-teal-600 hover:bg-teal-50 transition-all duration-300 text-base font-semibold cursor-pointer rounded-xl touch-manipulation min-h-[48px] flex items-center"
 							>
 								Home
 							</Link>
@@ -252,7 +264,7 @@ const Navbar = () => {
 									scrollToSection(e, "about");
 									setMobileMenuOpen(false);
 								}}
-								className="px-4 py-3 text-slate-700 hover:text-teal-600 hover:bg-teal-50 transition-all duration-300 text-base font-semibold cursor-pointer rounded-xl"
+								className="px-4 py-4 text-slate-700 hover:text-teal-600 hover:bg-teal-50 transition-all duration-300 text-base font-semibold cursor-pointer rounded-xl touch-manipulation min-h-[48px] flex items-center"
 							>
 								About
 							</Link>
@@ -262,7 +274,7 @@ const Navbar = () => {
 									scrollToSection(e, "facilities");
 									setMobileMenuOpen(false);
 								}}
-								className="px-4 py-3 text-slate-700 hover:text-teal-600 hover:bg-teal-50 transition-all duration-300 text-base font-semibold cursor-pointer rounded-xl"
+								className="px-4 py-4 text-slate-700 hover:text-teal-600 hover:bg-teal-50 transition-all duration-300 text-base font-semibold cursor-pointer rounded-xl touch-manipulation min-h-[48px] flex items-center"
 							>
 								Facilities
 							</Link>
@@ -286,7 +298,7 @@ const Navbar = () => {
 										window.location.href = "/gallery";
 									}
 								}}
-								className="px-4 py-3 text-slate-700 hover:text-teal-600 hover:bg-teal-50 transition-all duration-300 text-base font-semibold cursor-pointer rounded-xl"
+								className="px-4 py-4 text-slate-700 hover:text-teal-600 hover:bg-teal-50 transition-all duration-300 text-base font-semibold cursor-pointer rounded-xl touch-manipulation min-h-[48px] flex items-center"
 							>
 								Gallery
 							</Link>
@@ -295,7 +307,7 @@ const Navbar = () => {
 								target="_blank"
 								rel="noopener noreferrer"
 								onClick={() => setMobileMenuOpen(false)}
-								className="px-4 py-3 text-slate-700 hover:text-teal-600 hover:bg-teal-50 transition-all duration-300 text-base font-semibold cursor-pointer rounded-xl flex items-center gap-2"
+								className="px-4 py-4 text-slate-700 hover:text-teal-600 hover:bg-teal-50 transition-all duration-300 text-base font-semibold cursor-pointer rounded-xl flex items-center gap-2 touch-manipulation min-h-[48px]"
 							>
 								<svg
 									className="w-5 h-5"
@@ -307,10 +319,10 @@ const Navbar = () => {
 								</svg>
 								Location
 							</a>
-							<div className="border-t border-slate-200/50 my-4"></div>
+							<div className="border-t border-slate-200/50 my-3 sm:my-4"></div>
 							<a
 								href="tel:+919544311236"
-								className="px-6 py-4 bg-gradient-to-r from-teal-600 to-blue-600 hover:from-teal-700 hover:to-blue-700 text-white rounded-2xl transition-all duration-300 shadow-lg hover:shadow-xl text-base text-center flex items-center justify-center gap-2 font-semibold"
+								className="px-6 py-4 bg-gradient-to-r from-teal-600 to-blue-600 hover:from-teal-700 hover:to-blue-700 text-white rounded-2xl transition-all duration-300 shadow-lg hover:shadow-xl text-base text-center flex items-center justify-center gap-2 font-semibold touch-manipulation min-h-[52px]"
 								onClick={() => setMobileMenuOpen(false)}
 							>
 								<svg
