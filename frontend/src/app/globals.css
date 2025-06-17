@@ -4,14 +4,14 @@
 	--background: #ffffff;
 	--foreground: #0f172a;
 
-	/* Modern Color Palette */
-	--primary: #6366f1;
-	--primary-dark: #4f46e5;
-	--primary-light: #818cf8;
-	--secondary: #f59e0b;
-	--secondary-dark: #d97706;
-	--accent: #06b6d4;
-	--accent-dark: #0891b2;
+	/* Professional Teal Color Palette - Based on Logo #00AC9D */
+	--primary: #00ac9d;
+	--primary-dark: #008a7b;
+	--primary-light: #26d0c1;
+	--secondary: #0d7377;
+	--secondary-dark: #14a085;
+	--accent: #329d9c;
+	--accent-dark: #205072;
 
 	/* Neutral Colors */
 	--neutral-50: #f8fafc;
@@ -305,7 +305,7 @@ body {
 
 .btn-primary:hover {
 	transform: translateY(-2px);
-	box-shadow: 0 10px 25px rgba(99, 102, 241, 0.3);
+	box-shadow: 0 10px 25px rgba(0, 172, 157, 0.3);
 }
 
 .btn-secondary {
@@ -317,7 +317,7 @@ body {
 
 .btn-secondary:hover {
 	transform: translateY(-2px);
-	box-shadow: 0 10px 25px rgba(245, 158, 11, 0.3);
+	box-shadow: 0 10px 25px rgba(13, 115, 119, 0.3);
 }
 
 /* Smooth scrolling */
@@ -378,12 +378,12 @@ html {
 .floating-maps-btn {
 	width: 60px;
 	height: 60px;
-	background: linear-gradient(to right, #6366f1, #06b6d4);
+	background: linear-gradient(to right, #00ac9d, #329d9c);
 	border-radius: 50%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	box-shadow: 0 8px 25px rgba(99, 102, 241, 0.3);
+	box-shadow: 0 8px 25px rgba(0, 172, 157, 0.3);
 	transition: all 0.3s ease;
 	cursor: pointer;
 	border: none;
@@ -391,9 +391,9 @@ html {
 }
 
 .floating-maps-btn:hover {
-	background: linear-gradient(to right, #4f46e5, #0891b2);
+	background: linear-gradient(to right, #008a7b, #0d7377);
 	transform: translateY(-2px) scale(1.05);
-	box-shadow: 0 12px 35px rgba(99, 102, 241, 0.4);
+	box-shadow: 0 12px 35px rgba(0, 172, 157, 0.4);
 }
 
 .floating-maps-btn:active {
@@ -418,12 +418,12 @@ html {
 .floating-call-btn {
 	width: 60px;
 	height: 60px;
-	background: linear-gradient(to right, #6366f1, #06b6d4);
+	background: linear-gradient(to right, #00ac9d, #329d9c);
 	border-radius: 50%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	box-shadow: 0 8px 25px rgba(99, 102, 241, 0.3);
+	box-shadow: 0 8px 25px rgba(0, 172, 157, 0.3);
 	transition: all 0.3s ease;
 	cursor: pointer;
 	border: none;
@@ -431,9 +431,9 @@ html {
 }
 
 .floating-call-btn:hover {
-	background: linear-gradient(to right, #4f46e5, #0891b2);
+	background: linear-gradient(to right, #008a7b, #0d7377);
 	transform: translateY(-2px) scale(1.05);
-	box-shadow: 0 12px 35px rgba(99, 102, 241, 0.4);
+	box-shadow: 0 12px 35px rgba(0, 172, 157, 0.4);
 }
 
 .floating-call-btn:active {
