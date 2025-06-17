@@ -356,12 +356,26 @@ html {
 	}
 }
 
-/* Floating Google Maps Button */
-.floating-maps-btn {
+/* Floating Buttons Container */
+.floating-buttons-stack {
 	position: fixed;
-	bottom: 6rem;
+	bottom: 2rem;
 	right: 2rem;
 	z-index: 9999;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+/* Floating Google Maps Button */
+.floating-maps-container {
+	position: fixed;
+	bottom: 8rem;
+	right: 2rem;
+	z-index: 9999;
+}
+
+.floating-maps-btn {
 	width: 60px;
 	height: 60px;
 	background: linear-gradient(to right, #6366f1, #06b6d4);
@@ -373,6 +387,7 @@ html {
 	transition: all 0.3s ease;
 	cursor: pointer;
 	border: none;
+	position: relative;
 }
 
 .floating-maps-btn:hover {
@@ -392,18 +407,94 @@ html {
 	filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
 }
 
+/* Floating Call Button */
+.floating-call-container {
+	position: fixed;
+	bottom: 2rem;
+	right: 2rem;
+	z-index: 9999;
+}
+
+.floating-call-btn {
+	width: 60px;
+	height: 60px;
+	background: linear-gradient(to right, #6366f1, #06b6d4);
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0 8px 25px rgba(99, 102, 241, 0.3);
+	transition: all 0.3s ease;
+	cursor: pointer;
+	border: none;
+	position: relative;
+}
+
+.floating-call-btn:hover {
+	background: linear-gradient(to right, #4f46e5, #0891b2);
+	transform: translateY(-2px) scale(1.05);
+	box-shadow: 0 12px 35px rgba(99, 102, 241, 0.4);
+}
+
+.floating-call-btn:active {
+	transform: translateY(-1px) scale(1.02);
+}
+
+.floating-call-icon {
+	width: 24px;
+	height: 24px;
+	color: white;
+	filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+/* Call Button Tooltip */
+.floating-call-tooltip {
+	position: absolute;
+	right: 70px;
+	top: 50%;
+	transform: translateY(-50%);
+	background: rgba(0, 0, 0, 0.8);
+	color: white;
+	padding: 0.5rem 0.75rem;
+	border-radius: 0.5rem;
+	font-size: 0.875rem;
+	white-space: nowrap;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.3s ease;
+}
+
+.floating-call-btn:hover .floating-call-tooltip {
+	opacity: 1;
+}
+
 /* Mobile floating button adjustments */
 @media (max-width: 768px) {
-	.floating-maps-btn {
-		bottom: 5rem;
+	.floating-maps-container {
+		bottom: 6.5rem;
 		right: 1.5rem;
+	}
+
+	.floating-call-container {
+		bottom: 1.5rem;
+		right: 1.5rem;
+	}
+
+	.floating-maps-btn,
+	.floating-call-btn {
 		width: 56px;
 		height: 56px;
 	}
 
-	.floating-maps-btn svg {
+	.floating-maps-btn svg,
+	.floating-call-icon {
 		width: 20px;
 		height: 20px;
+	}
+
+	.floating-maps-tooltip,
+	.floating-call-tooltip {
+		display: none;
 	}
 }
 
