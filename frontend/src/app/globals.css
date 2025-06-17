@@ -375,6 +375,14 @@ html {
 	z-index: 9999;
 }
 
+/* Hide floating buttons on laptops and larger screens */
+@media (min-width: 1024px) {
+	.floating-maps-container,
+	.floating-call-container {
+		display: none;
+	}
+}
+
 .floating-maps-btn {
 	width: 60px;
 	height: 60px;

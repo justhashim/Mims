@@ -83,26 +83,6 @@ export default function Home() {
 		<div className="min-h-screen flex flex-col">
 			<Navbar />
 
-			{/* Floating Google Maps Button */}
-			<div className="floating-maps-container">
-				<div className="floating-maps-tooltip">View on Google Maps</div>
-				<a
-					href="https://maps.app.goo.gl/hGPrwY4bsFPdP9XG9"
-					target="_blank"
-					rel="noopener noreferrer"
-					className="floating-maps-btn"
-					aria-label="Open Google Maps"
-				>
-					<svg
-						viewBox="0 0 24 24"
-						fill="currentColor"
-						xmlns="http://www.w3.org/2000/svg"
-					>
-						<path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
-					</svg>
-				</a>
-			</div>
-
 			{/* 1. Headline Section - Modern and elegant hero */}
 			<section className="min-h-screen py-24 bg-gradient-to-br from-slate-50 via-white to-teal-50 flex items-center relative overflow-hidden">
 				{/* Background decoration */}

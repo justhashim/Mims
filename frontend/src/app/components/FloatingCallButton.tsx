@@ -6,8 +6,15 @@ const FloatingCallButton = () => {
 	const [isVisible, setIsVisible] = useState(false);
 
 	useEffect(() => {
-		// Show on all devices now (not just mobile)
-		setIsVisible(true);
+		// Only show on mobile devices (tablets and phones)
+		const checkDevice = () => {
+			setIsVisible(window.innerWidth < 1024); // Hide on laptops (1024px+)
+		};
+
+		checkDevice();
+		window.addEventListener("resize", checkDevice);
+
+		return () => window.removeEventListener("resize", checkDevice);
 	}, []);
 
 	if (!isVisible) return null;
