@@ -104,10 +104,10 @@ const ContactForm = () => {
 						</svg>
 					</div>
 					<div>
-						<h3 className="text-3xl font-bold text-slate-800 group-hover:text-teal-600 transition-colors duration-300 mb-1">
+						<h3 className="text-3xl font-bold text-slate-900 group-hover:text-teal-600 transition-colors duration-300 mb-1">
 							Send Us a Message
 						</h3>
-						<p className="text-slate-600 text-lg">
+						<p className="text-slate-800 text-lg">
 							We'll get back to you within 24 hours
 						</p>
 					</div>
@@ -177,7 +177,7 @@ const ContactForm = () => {
 						<div className="space-y-2">
 							<label
 								htmlFor="name"
-								className="block text-base font-semibold text-slate-700 mb-3"
+								className="block text-base font-semibold text-slate-900 mb-3"
 							>
 								Full Name *
 							</label>
@@ -196,7 +196,7 @@ const ContactForm = () => {
 						<div className="space-y-2">
 							<label
 								htmlFor="email"
-								className="block text-base font-semibold text-slate-700 mb-3"
+								className="block text-base font-semibold text-slate-900 mb-3"
 							>
 								Email Address *
 							</label>
@@ -218,7 +218,7 @@ const ContactForm = () => {
 						<div className="space-y-2">
 							<label
 								htmlFor="phone"
-								className="block text-base font-semibold text-slate-700 mb-3"
+								className="block text-base font-semibold text-slate-900 mb-3"
 							>
 								Phone Number
 							</label>
@@ -236,7 +236,7 @@ const ContactForm = () => {
 						<div className="space-y-2">
 							<label
 								htmlFor="eventType"
-								className="block text-base font-semibold text-slate-700 mb-3"
+								className="block text-base font-semibold text-slate-900 mb-3"
 							>
 								Event Type
 							</label>
@@ -262,7 +262,7 @@ const ContactForm = () => {
 						<div className="space-y-2">
 							<label
 								htmlFor="eventDate"
-								className="block text-base font-semibold text-slate-700 mb-3"
+								className="block text-base font-semibold text-slate-900 mb-3"
 							>
 								Preferred Event Date
 							</label>
@@ -280,7 +280,7 @@ const ContactForm = () => {
 						<div className="space-y-2">
 							<label
 								htmlFor="guestCount"
-								className="block text-base font-semibold text-slate-700 mb-3"
+								className="block text-base font-semibold text-slate-900 mb-3"
 							>
 								Expected Guest Count
 							</label>
@@ -305,7 +305,7 @@ const ContactForm = () => {
 					<div className="space-y-2">
 						<label
 							htmlFor="message"
-							className="block text-base font-semibold text-slate-700 mb-3"
+							className="block text-base font-semibold text-slate-900 mb-3"
 						>
 							Message *
 						</label>
@@ -389,11 +389,11 @@ const ContactForm = () => {
 								>
 									<path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
 								</svg>
-								<span className="text-lg font-semibold text-slate-700">
+								<span className="text-lg font-semibold text-slate-900">
 									Need immediate assistance?
 								</span>
 							</div>
-							<p className="text-slate-600 mb-3">
+							<p className="text-slate-800 mb-3">
 								Our team is available 24/7 to help with your event planning
 								needs
 							</p>
