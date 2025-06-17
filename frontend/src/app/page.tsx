@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "./components/Navbar";
 import ContactForm from "./components/ContactForm";
-import Map from "./components/Map";
 import { useState, useEffect } from "react";
 
 export default function Home() {
@@ -669,119 +668,190 @@ export default function Home() {
 			</section>
 
 			{/* Contact Section */}
-			<section id="contact" className="py-20 bg-white">
+			<section
+				id="contact"
+				className="py-20 bg-gradient-to-br from-slate-50 via-white to-blue-50 relative overflow-hidden"
+			>
+				{/* Background decoration */}
+				<div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] -z-10"></div>
+				<div className="absolute top-0 right-0 -translate-y-12 translate-x-12 w-96 h-96 bg-gradient-to-br from-teal-400/10 to-blue-400/10 rounded-full blur-3xl -z-10"></div>
+				<div className="absolute bottom-0 left-0 translate-y-12 -translate-x-12 w-96 h-96 bg-gradient-to-br from-blue-400/10 to-teal-400/10 rounded-full blur-3xl -z-10"></div>
+
 				<div className="container mx-auto px-4">
 					<div className="text-center mb-16">
-						<h2 className="text-4xl font-bold text-gray-800 mb-4 animate-fade-in-up">
-							Get In Touch
+						<span className="text-teal-600 font-semibold mb-3 block animate-fade-in-up text-sm tracking-wide uppercase">
+							CONTACT US
+						</span>
+						<h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 animate-fade-in-up animation-delay-200">
+							Get In <span className="gradient-text">Touch</span>
 						</h2>
-						<div className="w-24 h-1 bg-teal-500 mx-auto mb-6 animate-scale-in animation-delay-300"></div>
-						<p className="text-gray-600 max-w-3xl mx-auto animate-fade-in-up animation-delay-500">
-							Have questions or ready to book your event? Contact us today.
+						<div className="w-24 h-1 bg-gradient-to-r from-teal-500 to-blue-500 mx-auto mb-6 animate-scale-in animation-delay-400 rounded-full"></div>
+						<p className="text-slate-600 max-w-3xl mx-auto animate-fade-in-up animation-delay-500 text-lg leading-relaxed">
+							Ready to make your event extraordinary? We're here to help you
+							every step of the way.
 						</p>
 					</div>
 
-					<div className="grid md:grid-cols-2 gap-8 md:gap-12">
-						<div className="space-y-6 animate-fade-in-left animation-delay-200">
-							<div className="modern-card p-6 md:p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105 group">
-								<h3 className="text-2xl font-bold text-gray-800 mb-6 group-hover:text-teal-600 transition-colors duration-300">
-									Contact Information
-								</h3>
-
-								<div className="space-y-4 sm:space-y-6">
-									<div className="flex items-start">
-										<a
-											href="https://maps.app.goo.gl/hGPrwY4bsFPdP9XG9"
-											target="_blank"
-											className="flex items-start hover:opacity-80 transition-opacity w-full"
+					<div className="grid lg:grid-cols-3 gap-8 md:gap-12">
+						{/* Contact Information Cards */}
+						<div className="lg:col-span-1 space-y-6 animate-fade-in-left animation-delay-200">
+							{/* Address Card */}
+							<div className="modern-card p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105 group border border-teal-100">
+								<a
+									href="https://maps.app.goo.gl/hGPrwY4bsFPdP9XG9"
+									target="_blank"
+									rel="noopener noreferrer"
+									className="flex items-start hover:opacity-80 transition-opacity w-full"
+								>
+									<div className="bg-gradient-to-br from-teal-500 to-teal-600 text-white p-4 rounded-2xl mr-4 flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+										<svg
+											className="w-6 h-6"
+											fill="currentColor"
+											viewBox="0 0 20 20"
 										>
-											<div className="bg-teal-100 p-3 rounded-2xl mr-4 flex-shrink-0">
-												<svg
-													className="w-6 h-6 text-teal-600"
-													fill="currentColor"
-													viewBox="0 0 20 20"
-													xmlns="http://www.w3.org/2000/svg"
-												>
-													<path
-														fillRule="evenodd"
-														d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
-														clipRule="evenodd"
-													></path>
-												</svg>
-											</div>
-											<div className="min-w-0 flex-1">
-												<h4 className="font-semibold text-slate-800 mb-1">
-													Address
-												</h4>
-												<p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-													2FF4+J5X, Ernakulam - Thekkady Rd, Pattimattom, Kerala
-													683562
-												</p>
-											</div>
-										</a>
+											<path
+												fillRule="evenodd"
+												d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+												clipRule="evenodd"
+											></path>
+										</svg>
 									</div>
-
-									<div className="flex items-start">
-										<a
-											href="tel:+919544311236"
-											className="flex items-start hover:opacity-80 transition-opacity w-full"
-										>
-											<div className="bg-cyan-100 p-3 rounded-2xl mr-4 flex-shrink-0">
-												<svg
-													className="w-6 h-6 text-cyan-600"
-													fill="currentColor"
-													viewBox="0 0 20 20"
-													xmlns="http://www.w3.org/2000/svg"
-												>
-													<path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
-												</svg>
-											</div>
-											<div className="min-w-0 flex-1">
-												<h4 className="font-semibold text-slate-800 mb-1">
-													Phone
-												</h4>
-												<p className="text-slate-600 text-sm sm:text-base">
-													+91 95443 11236
-												</p>
-											</div>
-										</a>
+									<div className="min-w-0 flex-1">
+										<h4 className="font-bold text-slate-800 mb-2 group-hover:text-teal-600 transition-colors duration-300">
+											Visit Our Venue
+										</h4>
+										<p className="text-slate-600 text-sm leading-relaxed">
+											2FF4+J5X, Ernakulam - Thekkady Rd
+											<br />
+											Pattimattom, Kerala 683562
+										</p>
+										<span className="text-teal-600 text-sm font-medium mt-2 inline-block group-hover:translate-x-1 transition-transform duration-300">
+											View on Maps →
+										</span>
 									</div>
+								</a>
+							</div>
 
-									<div className="flex items-start">
-										<a
-											href="mailto:info@mimsconvention.com"
-											className="flex items-start hover:opacity-80 transition-opacity w-full"
+							{/* Phone Card */}
+							<div className="modern-card p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105 group border border-blue-100">
+								<a
+									href="tel:+919544311236"
+									className="flex items-start hover:opacity-80 transition-opacity w-full"
+								>
+									<div className="bg-gradient-to-br from-blue-600 to-blue-700 text-white p-4 rounded-2xl mr-4 flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+										<svg
+											className="w-6 h-6"
+											fill="currentColor"
+											viewBox="0 0 20 20"
 										>
-											<div className="bg-emerald-100 p-3 rounded-2xl mr-4 flex-shrink-0">
-												<svg
-													className="w-6 h-6 text-emerald-600"
-													fill="currentColor"
-													viewBox="0 0 20 20"
-													xmlns="http://www.w3.org/2000/svg"
-												>
-													<path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
-													<path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
-												</svg>
-											</div>
-											<div className="min-w-0 flex-1">
-												<h4 className="font-semibold text-slate-800 mb-1">
-													Email
-												</h4>
-												<p className="text-slate-600 text-sm sm:text-base break-all">
-													info@mimsconvention.com
-												</p>
-											</div>
-										</a>
+											<path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+										</svg>
+									</div>
+									<div className="min-w-0 flex-1">
+										<h4 className="font-bold text-slate-800 mb-2 group-hover:text-blue-600 transition-colors duration-300">
+											Call Us Now
+										</h4>
+										<p className="text-slate-600 text-sm mb-1">
+											+91 95443 11236
+										</p>
+										<span className="text-blue-600 text-sm font-medium group-hover:translate-x-1 transition-transform duration-300 inline-block">
+											Available 24/7 →
+										</span>
+									</div>
+								</a>
+							</div>
+
+							{/* Email Card */}
+							<div className="modern-card p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105 group border border-emerald-100">
+								<a
+									href="mailto:info@mimsconvention.com"
+									className="flex items-start hover:opacity-80 transition-opacity w-full"
+								>
+									<div className="bg-gradient-to-br from-emerald-500 to-emerald-600 text-white p-4 rounded-2xl mr-4 flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+										<svg
+											className="w-6 h-6"
+											fill="currentColor"
+											viewBox="0 0 20 20"
+										>
+											<path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+											<path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+										</svg>
+									</div>
+									<div className="min-w-0 flex-1">
+										<h4 className="font-bold text-slate-800 mb-2 group-hover:text-emerald-600 transition-colors duration-300">
+											Email Us
+										</h4>
+										<p className="text-slate-600 text-sm mb-1 break-all">
+											info@mimsconvention.com
+										</p>
+										<span className="text-emerald-600 text-sm font-medium group-hover:translate-x-1 transition-transform duration-300 inline-block">
+											Quick Response →
+										</span>
+									</div>
+								</a>
+							</div>
+
+							{/* Business Hours Card */}
+							<div className="modern-card p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105 group border border-purple-100">
+								<div className="flex items-start">
+									<div className="bg-gradient-to-br from-purple-500 to-purple-600 text-white p-4 rounded-2xl mr-4 flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+										<svg
+											className="w-6 h-6"
+											fill="currentColor"
+											viewBox="0 0 20 20"
+										>
+											<path
+												fillRule="evenodd"
+												d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
+												clipRule="evenodd"
+											></path>
+										</svg>
+									</div>
+									<div className="min-w-0 flex-1">
+										<h4 className="font-bold text-slate-800 mb-2 group-hover:text-purple-600 transition-colors duration-300">
+											Business Hours
+										</h4>
+										<div className="text-slate-600 text-sm space-y-1">
+											<p>Monday - Friday: 9:00 AM - 8:00 PM</p>
+											<p>Saturday - Sunday: 10:00 AM - 6:00 PM</p>
+										</div>
 									</div>
 								</div>
 							</div>
-
-							{/* Map */}
-							<Map />
 						</div>
 
-						<div className="animate-fade-in-right animation-delay-400">
+						{/* Contact Form */}
+						<div className="lg:col-span-2 animate-fade-in-right animation-delay-400">
 							<ContactForm />
+						</div>
+					</div>
+
+					{/* Additional Contact Options */}
+					<div className="mt-16 text-center animate-fade-in-up animation-delay-600">
+						<div className="bg-gradient-to-r from-teal-600 to-blue-600 text-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 group">
+							<h3 className="text-2xl font-bold mb-4 group-hover:animate-pulse">
+								Need Immediate Assistance?
+							</h3>
+							<p className="text-blue-100 mb-6 max-w-2xl mx-auto">
+								Our event planning specialists are standing by to help you
+								create the perfect event experience.
+							</p>
+							<div className="flex flex-col sm:flex-row gap-4 justify-center">
+								<a
+									href="tel:+919544311236"
+									className="bg-white text-teal-600 px-8 py-3 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300 hover:scale-105 transform shadow-lg"
+								>
+									Call Now: +91 95443 11236
+								</a>
+								<a
+									href="https://wa.me/919544311236"
+									target="_blank"
+									rel="noopener noreferrer"
+									className="bg-green-500 text-white px-8 py-3 rounded-xl font-semibold hover:bg-green-600 transition-all duration-300 hover:scale-105 transform shadow-lg"
+								>
+									WhatsApp Us
+								</a>
+							</div>
 						</div>
 					</div>
 				</div>
