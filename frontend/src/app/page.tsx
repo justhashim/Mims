@@ -83,172 +83,174 @@ export default function Home() {
 			<Navbar />
 
 			{/* 1. Headline Section - Modern and elegant hero */}
-			<section className="min-h-screen section-padding bg-gradient-to-br from-slate-50 via-white to-blue-50 flex items-center relative overflow-hidden">
+			<section className="min-h-screen section-padding bg-gradient-to-br from-slate-50 via-white to-blue-50 relative overflow-hidden pt-24 sm:pt-28 lg:pt-24">
 				{/* Enhanced Background decoration */}
 				<div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] -z-10"></div>
 				<div className="absolute top-0 right-0 -translate-y-12 translate-x-12 w-96 h-96 bg-gradient-to-br from-teal-400/15 to-blue-400/15 rounded-full blur-3xl -z-10 animate-pulse"></div>
 				<div className="absolute bottom-0 left-0 translate-y-12 -translate-x-12 w-96 h-96 bg-gradient-to-br from-blue-400/15 to-teal-400/15 rounded-full blur-3xl -z-10 animate-pulse animation-delay-1000"></div>
 				<div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-teal-500/5 to-blue-500/5 rounded-full blur-3xl -z-10"></div>
 
-				<div className="container mx-auto container-padding">
-					<div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-						{/* Left side - Enhanced Value proposition */}
-						<div className="text-left modern-card p-6 sm:p-8 lg:p-12 rounded-3xl min-h-[500px] sm:min-h-[600px] flex flex-col justify-center animate-fade-in-up shadow-soft">
-							<div className="inline-flex items-center bg-gradient-to-r from-teal-50 to-blue-50 text-teal-700 px-3 sm:px-4 py-2 rounded-full mb-4 sm:mb-6 animate-fade-in-up animation-delay-200 border border-teal-200 text-center sm:text-left">
-								<svg
-									className="w-3 h-3 sm:w-4 sm:h-4 mr-2"
-									fill="currentColor"
-									viewBox="0 0 20 20"
-								>
-									<path
-										fillRule="evenodd"
-										d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-										clipRule="evenodd"
-									></path>
-								</svg>
-								<span className="text-xs sm:text-sm font-semibold tracking-wide uppercase">
-									PREMIER EVENT VENUE
-								</span>
-							</div>
-							<h1 className="heading-primary text-slate-900 mb-6 animate-fade-in-up animation-delay-400">
-								Your Perfect
-								<span className="text-gradient block">Event Space</span>
-							</h1>
-							<p className="text-body-large text-slate-600 mb-8 max-w-xl animate-fade-in-up animation-delay-600">
-								Mims Convention Centre offers versatile spaces for any occasion,
-								from corporate events to elegant weddings. Experience excellence
-								in every detail.
-							</p>
-
-							{/* Enhanced Stats Cards */}
-							<div className="grid grid-cols-3 gap-2 sm:gap-3 lg:gap-6 mb-8 sm:mb-10 animate-fade-in-up animation-delay-800">
-								<div className="modern-card p-3 sm:p-4 lg:p-6 rounded-xl sm:rounded-2xl transition-all duration-500 group border border-teal-100 hover:border-teal-300 hover:shadow-teal">
-									<div className="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-teal-500 to-teal-600 rounded-lg sm:rounded-xl mb-2 sm:mb-3 mx-auto group-hover:scale-110 transition-transform duration-300">
-										<svg
-											className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white"
-											fill="currentColor"
-											viewBox="0 0 20 20"
-										>
-											<path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v1h8v-1z"></path>
-										</svg>
-									</div>
-									<div className="text-slate-900 text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold group-hover:text-teal-600 transition-colors duration-300 text-center">
-										500+
-									</div>
-									<div className="text-slate-500 text-xs sm:text-sm font-medium leading-tight text-center">
-										Seating Capacity
-									</div>
-								</div>
-								<div className="modern-card p-3 sm:p-4 lg:p-6 rounded-xl sm:rounded-2xl transition-all duration-500 group border border-blue-100 hover:border-blue-300 hover:shadow-blue animation-delay-100">
-									<div className="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg sm:rounded-xl mb-2 sm:mb-3 mx-auto group-hover:scale-110 transition-transform duration-300">
-										<svg
-											className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white"
-											fill="currentColor"
-											viewBox="0 0 20 20"
-										>
-											<path
-												fillRule="evenodd"
-												d="M4 4a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2H4zm3 5a1 1 0 011-1h4a1 1 0 110 2H8a1 1 0 01-1-1z"
-												clipRule="evenodd"
-											></path>
-										</svg>
-									</div>
-									<div className="text-slate-900 text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold group-hover:text-blue-600 transition-colors duration-300 text-center">
-										150+
-									</div>
-									<div className="text-slate-500 text-xs sm:text-sm font-medium leading-tight text-center">
-										Parking Space
-									</div>
-								</div>
-								<div className="modern-card p-3 sm:p-4 lg:p-6 rounded-xl sm:rounded-2xl transition-all duration-500 group border border-emerald-100 hover:border-emerald-300 hover:shadow-medium animation-delay-200">
-									<div className="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-lg sm:rounded-xl mb-2 sm:mb-3 mx-auto group-hover:scale-110 transition-transform duration-300">
-										<svg
-											className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white"
-											fill="currentColor"
-											viewBox="0 0 20 20"
-										>
-											<path
-												fillRule="evenodd"
-												d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-												clipRule="evenodd"
-											></path>
-										</svg>
-									</div>
-									<div className="text-slate-900 text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold group-hover:text-emerald-600 transition-colors duration-300 text-center">
-										1000+
-									</div>
-									<div className="text-slate-500 text-xs sm:text-sm font-medium leading-tight text-center">
-										Events Hosted
-									</div>
-								</div>
-							</div>
-
-							<div className="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fade-in-up animation-delay-1000">
-								<button className="btn-primary px-6 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl text-sm sm:text-base font-semibold shadow-soft hover:shadow-teal transform hover:scale-105 transition-all duration-300 flex items-center justify-center group touch-manipulation min-h-[48px]">
-									<span>Discover & Explore</span>
+				<div className="container mx-auto container-padding flex items-center min-h-screen">
+					<div className="w-full mt-20 sm:mt-16 md:mt-12 lg:mt-0">
+						<div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+							{/* Left side - Enhanced Value proposition */}
+							<div className="text-center lg:text-left modern-card p-6 sm:p-8 lg:p-12 rounded-3xl min-h-[500px] sm:min-h-[600px] flex flex-col justify-center animate-fade-in-up shadow-soft">
+								<div className="inline-flex items-center bg-gradient-to-r from-teal-50 to-blue-50 text-teal-700 px-3 sm:px-4 py-2 rounded-full mb-4 sm:mb-6 animate-fade-in-up animation-delay-200 border border-teal-200 text-center sm:text-left">
 									<svg
-										className="w-4 h-4 sm:w-5 sm:h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300"
-										fill="none"
-										stroke="currentColor"
-										viewBox="0 0 24 24"
+										className="w-3 h-3 sm:w-4 sm:h-4 mr-2"
+										fill="currentColor"
+										viewBox="0 0 20 20"
 									>
 										<path
-											strokeLinecap="round"
-											strokeLinejoin="round"
-											strokeWidth={2}
-											d="M17 8l4 4m0 0l-4 4m4-4H3"
-										/>
+											fillRule="evenodd"
+											d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+											clipRule="evenodd"
+										></path>
 									</svg>
-								</button>
-								<Link
-									href="#contact"
-									className="btn-secondary px-6 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl text-sm sm:text-base font-semibold shadow-soft hover:shadow-blue transform hover:scale-105 transition-all duration-300 text-center inline-flex items-center justify-center group touch-manipulation min-h-[48px]"
-								>
-									<span>Contact Us</span>
-									<svg
-										className="w-4 h-4 sm:w-5 sm:h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300"
-										fill="none"
-										stroke="currentColor"
-										viewBox="0 0 24 24"
+									<span className="text-xs sm:text-sm font-semibold tracking-wide uppercase">
+										PREMIER EVENT VENUE
+									</span>
+								</div>
+								<h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl font-bold text-slate-900 mb-6 animate-fade-in-up animation-delay-400 leading-tight">
+									Your Perfect
+									<span className="text-gradient block">Event Space</span>
+								</h1>
+								<p className="text-body-large text-slate-600 mb-8 max-w-xl animate-fade-in-up animation-delay-600">
+									Mims Convention Centre offers versatile spaces for any
+									occasion, from corporate events to elegant weddings.
+									Experience excellence in every detail.
+								</p>
+
+								{/* Enhanced Stats Cards */}
+								<div className="grid grid-cols-3 gap-2 sm:gap-3 lg:gap-6 mb-8 sm:mb-10 animate-fade-in-up animation-delay-800">
+									<div className="modern-card p-3 sm:p-4 lg:p-6 rounded-xl sm:rounded-2xl transition-all duration-500 group border border-teal-100 hover:border-teal-300 hover:shadow-teal">
+										<div className="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-teal-500 to-teal-600 rounded-lg sm:rounded-xl mb-2 sm:mb-3 mx-auto group-hover:scale-110 transition-transform duration-300">
+											<svg
+												className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white"
+												fill="currentColor"
+												viewBox="0 0 20 20"
+											>
+												<path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v1h8v-1z"></path>
+											</svg>
+										</div>
+										<div className="text-slate-900 text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold group-hover:text-teal-600 transition-colors duration-300 text-center">
+											500+
+										</div>
+										<div className="text-slate-500 text-xs sm:text-sm font-medium leading-tight text-center">
+											Seating Capacity
+										</div>
+									</div>
+									<div className="modern-card p-3 sm:p-4 lg:p-6 rounded-xl sm:rounded-2xl transition-all duration-500 group border border-blue-100 hover:border-blue-300 hover:shadow-blue animation-delay-100">
+										<div className="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg sm:rounded-xl mb-2 sm:mb-3 mx-auto group-hover:scale-110 transition-transform duration-300">
+											<svg
+												className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white"
+												fill="currentColor"
+												viewBox="0 0 20 20"
+											>
+												<path
+													fillRule="evenodd"
+													d="M4 4a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2H4zm3 5a1 1 0 011-1h4a1 1 0 110 2H8a1 1 0 01-1-1z"
+													clipRule="evenodd"
+												></path>
+											</svg>
+										</div>
+										<div className="text-slate-900 text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold group-hover:text-blue-600 transition-colors duration-300 text-center">
+											150+
+										</div>
+										<div className="text-slate-500 text-xs sm:text-sm font-medium leading-tight text-center">
+											Parking Space
+										</div>
+									</div>
+									<div className="modern-card p-3 sm:p-4 lg:p-6 rounded-xl sm:rounded-2xl transition-all duration-500 group border border-emerald-100 hover:border-emerald-300 hover:shadow-medium animation-delay-200">
+										<div className="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-lg sm:rounded-xl mb-2 sm:mb-3 mx-auto group-hover:scale-110 transition-transform duration-300">
+											<svg
+												className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white"
+												fill="currentColor"
+												viewBox="0 0 20 20"
+											>
+												<path
+													fillRule="evenodd"
+													d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+													clipRule="evenodd"
+												></path>
+											</svg>
+										</div>
+										<div className="text-slate-900 text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold group-hover:text-emerald-600 transition-colors duration-300 text-center">
+											1000+
+										</div>
+										<div className="text-slate-500 text-xs sm:text-sm font-medium leading-tight text-center">
+											Events Hosted
+										</div>
+									</div>
+								</div>
+
+								<div className="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fade-in-up animation-delay-1000">
+									<button className="btn-primary px-6 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl text-sm sm:text-base font-semibold shadow-soft hover:shadow-teal transform hover:scale-105 transition-all duration-300 flex items-center justify-center group touch-manipulation min-h-[48px]">
+										<span>Discover & Explore</span>
+										<svg
+											className="w-4 h-4 sm:w-5 sm:h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300"
+											fill="none"
+											stroke="currentColor"
+											viewBox="0 0 24 24"
+										>
+											<path
+												strokeLinecap="round"
+												strokeLinejoin="round"
+												strokeWidth={2}
+												d="M17 8l4 4m0 0l-4 4m4-4H3"
+											/>
+										</svg>
+									</button>
+									<Link
+										href="#contact"
+										className="btn-secondary px-6 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl text-sm sm:text-base font-semibold shadow-soft hover:shadow-blue transform hover:scale-105 transition-all duration-300 text-center inline-flex items-center justify-center group touch-manipulation min-h-[48px]"
 									>
-										<path
-											strokeLinecap="round"
-											strokeLinejoin="round"
-											strokeWidth={2}
-											d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
-										/>
-									</svg>
-								</Link>
+										<span>Contact Us</span>
+										<svg
+											className="w-4 h-4 sm:w-5 sm:h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300"
+											fill="none"
+											stroke="currentColor"
+											viewBox="0 0 24 24"
+										>
+											<path
+												strokeLinecap="round"
+												strokeLinejoin="round"
+												strokeWidth={2}
+												d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+											/>
+										</svg>
+									</Link>
+								</div>
 							</div>
-						</div>
 
-						{/* Right side - Enhanced Image */}
-						<div className="relative animate-fade-in-right animation-delay-500">
-							<div className="relative">
-								{/* Decorative elements */}
-								<div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-teal-400 to-blue-400 rounded-full opacity-20 blur-xl"></div>
-								<div className="absolute -bottom-4 -left-4 w-32 h-32 bg-gradient-to-br from-blue-400 to-teal-400 rounded-full opacity-20 blur-xl"></div>
+							{/* Right side - Enhanced Image */}
+							<div className="relative animate-fade-in-right animation-delay-500">
+								<div className="relative">
+									{/* Decorative elements */}
+									<div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-teal-400 to-blue-400 rounded-full opacity-20 blur-xl"></div>
+									<div className="absolute -bottom-4 -left-4 w-32 h-32 bg-gradient-to-br from-blue-400 to-teal-400 rounded-full opacity-20 blur-xl"></div>
 
-								<div className="rounded-3xl overflow-hidden shadow-strong hover:shadow-3xl transition-all duration-500 group border border-white/50">
-									<div className="relative h-[600px] w-full">
-										<Image
-											src="/images/convention-center.jpg"
-											alt="Mims Convention Centre"
-											fill
-											style={{ objectFit: "cover" }}
-											priority
-											className="group-hover:scale-105 transition-transform duration-700"
-										/>
-										{/* Overlay with gradient */}
-										<div className="absolute inset-0 bg-gradient-to-t from-slate-900/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+									<div className="rounded-3xl overflow-hidden shadow-strong hover:shadow-3xl transition-all duration-500 group border border-white/50">
+										<div className="relative h-[600px] w-full">
+											<Image
+												src="/images/convention-center.jpg"
+												alt="Mims Convention Centre"
+												fill
+												style={{ objectFit: "cover" }}
+												priority
+												className="group-hover:scale-105 transition-transform duration-700"
+											/>
+											{/* Overlay with gradient */}
+											<div className="absolute inset-0 bg-gradient-to-t from-slate-900/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
-										{/* Floating badge */}
-										<div className="absolute top-6 left-6 bg-white/95 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
-											<div className="flex items-center space-x-2">
-												<div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-												<span className="text-sm font-semibold text-slate-700">
-													Available Now
-												</span>
+											{/* Floating badge */}
+											<div className="absolute top-6 left-6 bg-white/95 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
+												<div className="flex items-center space-x-2">
+													<div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+													<span className="text-sm font-semibold text-slate-700">
+														Available Now
+													</span>
+												</div>
 											</div>
 										</div>
 									</div>
